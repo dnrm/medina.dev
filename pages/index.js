@@ -10,11 +10,14 @@ import {
     Divider,
 } from "@chakra-ui/react";
 import Project from "../components/Project";
+import Technologies from "../components/Technologies";
+import Footer from "../components/Footer";
 
 export default function Home() {
+    const width = "80ch";
     return (
         <>
-            <Container pt={32}>
+            <Container pt={{ base: "4", md: "32" }} maxW={width}>
                 <Heading fontFamily="Work Sans">
                     Hi, I&apos;m Daniel Medina 👋
                 </Heading>
@@ -23,7 +26,7 @@ export default function Home() {
                     Next.js and AWS. Check out my projects below!
                 </Text>
             </Container>
-            <Container pt={16}>
+            <Container pt={16} maxW={width}>
                 <Heading fontFamily="Work Sans">About Me</Heading>
                 <Text
                     textColor="gray.500"
@@ -50,7 +53,7 @@ export default function Home() {
                     here.
                 </Text>
             </Container>
-            <Container pt={16}>
+            <Container pt={16} maxW={width}>
                 <Heading fontFamily="Work Sans" mb={3}>
                     My Projects
                 </Heading>
@@ -74,31 +77,25 @@ export default function Home() {
                     />
                 </Grid>
             </Container>
-            <Container pt={16} pb={10}>
-                <Heading fontFamily="Work Sans">
+            <Container pt={16} pb={10} maxW={width}>
+                <Heading pb={2} fontFamily="Work Sans">
                     My Favourite Technologies
                 </Heading>
-                <UnorderedList textColor="gray.500">
-                    <ListItem fontSize={{ base: "0.8em", md: "0.9em" }}>
-                        Next.js
-                    </ListItem>
-                    <ListItem fontSize={{ base: "0.8em", md: "0.9em" }}>
-                        MongoDB
-                    </ListItem>
-                    <ListItem fontSize={{ base: "0.8em", md: "0.9em" }}>
-                        React
-                    </ListItem>
-                    <ListItem fontSize={{ base: "0.8em", md: "0.9em" }}>
-                        Tailwind CSS
-                    </ListItem>
-                    <ListItem fontSize={{ base: "0.8em", md: "0.9em" }}>
-                        Chakra UI
-                    </ListItem>
-                </UnorderedList>
+                <Technologies
+                    items={[
+                        "Next.js",
+                        "MongoDB",
+                        "React",
+                        "Tailwind CSS",
+                        "ChakraUI",
+                        "Vercel",
+                    ]}
+                />
             </Container>
-            <Container pb={10}>
+            <Container pb={10} maxW={width}>
                 <Divider />
             </Container>
+            <Footer />
         </>
     );
 }
