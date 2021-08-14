@@ -1,14 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
-import {
-    Container,
-    Heading,
-    Text,
-    Grid,
-    UnorderedList,
-    ListItem,
-    Divider,
-} from "@chakra-ui/react";
+import { Container, Heading, Text, Grid, Divider } from "@chakra-ui/react";
 import Project from "../components/Project";
 import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
@@ -16,7 +7,24 @@ import Footer from "../components/Footer";
 export default function Home() {
     const width = "80ch";
     return (
-        <>
+        <div>
+            <Head>
+                <title>Daniel Medina - Web developer</title>
+                <meta
+                    name="description"
+                    content="My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey..."
+                />
+                <meta property="og:url" content="https://danielmedina.dev/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Daniel Medina - Web developer" />
+                <meta property="og:description" content="My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey..." />
+                <meta property="og:image" content="https://source.unsplash.com/collection/94997000/"></meta>
+                <link
+                    rel="shortcut icon"
+                    href="https://cdn.medina.dev/favicon.png"
+                    type="image/x-icon"
+                />
+            </Head>
             <Container pt={{ base: "4", md: "32" }} maxW={width}>
                 <Heading fontFamily="Work Sans">
                     Hi, I&apos;m Daniel Medina 👋
@@ -75,6 +83,14 @@ export default function Home() {
                         title="🌲 Crypto Charts"
                         description="Small project where you choose a cryptocurrency and then a graph is shown showing historical prices."
                     />
+                    <Project
+                        title="🍀 codingacademy.mx"
+                        description="A website for a client built using React and Tailwind CSS."
+                    />
+                    <Project
+                        title="🌿 Something - Official website"
+                        description="Client website built with Next.js to promote a Roblox game. Deployed to Vercel."
+                    />
                 </Grid>
             </Container>
             <Container pt={16} pb={10} maxW={width}>
@@ -96,6 +112,6 @@ export default function Home() {
                 <Divider />
             </Container>
             <Footer />
-        </>
+        </div>
     );
 }
