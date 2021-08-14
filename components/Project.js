@@ -9,6 +9,7 @@ const Project = (props) => {
             p={2}
             rounded="md"
             pb={6}
+            h={28}
         >
             <Heading
                 pt={1}
