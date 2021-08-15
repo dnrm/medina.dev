@@ -1,5 +1,13 @@
 import Head from "next/head";
-import { Container, Heading, Text, Grid, Divider, Badge, Flex } from "@chakra-ui/react";
+import {
+    Container,
+    Heading,
+    Text,
+    Grid,
+    Divider,
+    Badge,
+    Flex,
+} from "@chakra-ui/react";
 import Project from "../components/Project";
 import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
@@ -37,7 +45,10 @@ export default function Home() {
                 />
             </Head>
             <Container pt={{ base: "12", md: "32" }} maxW={width} px={padding}>
-                <Heading fontFamily="Work Sans" fontSize={{ base: '2.3em', md: '3em' }}>
+                <Heading
+                    fontFamily="Work Sans"
+                    fontSize={{ base: "2.3em", md: "3em" }}
+                >
                     Hi, I&apos;m Daniel Medina 👋
                 </Heading>
                 <Text textColor="gray.500">
@@ -73,60 +84,233 @@ export default function Home() {
                 </Text>
             </Container>
             <Container pt={16} maxW={width} px={padding}>
-                <Heading fontFamily="Work Sans" mb={1}>My Skills 💪</Heading>
-                <Flex justifyContent="start" alignItems="center" direction="row" wrap="wrap" gap={4}>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="teal">Next.js</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="messenger">Typescript</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="yellow">Javascript</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="red">Angular</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="cyan">React</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="green">Node.js</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="blue">CSS</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="teal">HTML</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="orange">AWS</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="blue">Docker</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="blackAlpha">GitHub Actions</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="pink">Sass</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="teal">Tailwind CSS</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="facebook">Chakra UI</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="blackAlpha">Vercel</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="purple">Bootstrap</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="green">MongoDB</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="purple">FaunaDB</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="yellow">MySQL</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="cyan">PostgreSQL</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="orange">Linux</Badge>
-                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="yellow">Git</Badge>
+                <Heading fontFamily="Work Sans" mb={1}>
+                    My Skills 💪
+                </Heading>
+                <Flex
+                    justifyContent="start"
+                    alignItems="center"
+                    direction="row"
+                    wrap="wrap"
+                    gap={4}
+                >
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="teal"
+                    >
+                        Next.js
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="messenger"
+                    >
+                        Typescript
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="yellow"
+                    >
+                        Javascript
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="red"
+                    >
+                        Angular
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="cyan"
+                    >
+                        React
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="green"
+                    >
+                        Node.js
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="blue"
+                    >
+                        CSS
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="teal"
+                    >
+                        HTML
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="orange"
+                    >
+                        AWS
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="blue"
+                    >
+                        Docker
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="blackAlpha"
+                    >
+                        GitHub Actions
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="pink"
+                    >
+                        Sass
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="teal"
+                    >
+                        Tailwind CSS
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="facebook"
+                    >
+                        Chakra UI
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="blackAlpha"
+                    >
+                        Vercel
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="purple"
+                    >
+                        Bootstrap
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="green"
+                    >
+                        MongoDB
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="purple"
+                    >
+                        FaunaDB
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="yellow"
+                    >
+                        MySQL
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="cyan"
+                    >
+                        PostgreSQL
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="orange"
+                    >
+                        Linux
+                    </Badge>
+                    <Badge
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorScheme="yellow"
+                    >
+                        Git
+                    </Badge>
                 </Flex>
             </Container>
             <Container pt={16} maxW={width} px={padding}>
                 <Heading fontFamily="Work Sans" mb={3}>
                     My Projects 🔨
                 </Heading>
-                <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)"}} gap={4}>
+                <Grid
+                    templateColumns={{
+                        base: "repeat(1, 1fr)",
+                        md: "repeat(2, 1fr)",
+                    }}
+                    gap={4}
+                >
+                    <Project
+                        title="🍀 codingacademy.mx"
+                        url="https://codingacademy.mx"
+                        description="A website for a client built using React and Tailwind CSS."
+                    />
                     <Project
                         title="🌱 Amethyst"
+                        url="https://aws.medina.dev"
                         description="A user friendly way to manage your API Gateway keys. Built with
                 Next.js and the AWS Javascript SDK."
                     />
                     <Project
-                        title="🌳 Sapphire"
-                        description="A full stack photo gallery app that uses an S3 bucket, user authentication, and resizes uploaded images using a Lambda function."
-                    />
-                    <Project
                         title="🌵 Crystal"
+                        url="https://crystal.medina.dev"
                         description="Social media website built with Next.js and Tailwind CSS. The backend uses MongoDB and S3 for file uploads."
                     />
                     <Project
+                        title="🌳  Sapphire"
+                        description="A full stack photo gallery app that uses an S3 bucket, user authentication, and resizes uploaded images using a Lambda function."
+                    />
+                    <Project
                         title="🌲 Crypto Charts"
+                        url="https://crypto-charts.netlify.app/"
                         description="Small project where you choose a cryptocurrency and then a graph is shown showing historical prices."
                     />
                     <Project
-                        title="🍀 codingacademy.mx"
-                        description="A website for a client built using React and Tailwind CSS."
-                    />
-                    <Project
                         title="🌿 Something - Official website"
+                        url="https://something-roblox.vercel.app/"
                         description="Client website built with Next.js to promote a Roblox game. Deployed to Vercel."
                     />
                 </Grid>
