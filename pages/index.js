@@ -96,6 +96,7 @@ export default function Home() {
                     <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="yellow">MySQL</Badge>
                     <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="cyan">PostgreSQL</Badge>
                     <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="orange">Linux</Badge>
+                    <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="yellow">Git</Badge>
                 </Flex>
             </Container>
             <Container pt={16} maxW={width} px={padding}>
