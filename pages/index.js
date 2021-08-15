@@ -7,10 +7,12 @@ import {
     Divider,
     Badge,
     Flex,
+    Link,
 } from "@chakra-ui/react";
 import Project from "../components/Project";
 import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
+import Posts from "../components/Posts";
 
 export default function Home() {
     const width = "90ch";
@@ -46,7 +48,7 @@ export default function Home() {
             </Head>
             <Container pt={{ base: "12", md: "32" }} maxW={width} px={padding}>
                 <Heading
-                    fontFamily="Work Sans"
+                    fontFamily="Work Sans, sans-serif"
                     fontSize={{ base: "2.3em", md: "3em" }}
                 >
                     Hi, I&apos;m Daniel Medina 👋
@@ -57,19 +59,24 @@ export default function Home() {
                 </Text>
             </Container>
             <Container pt={16} maxW={width} px={padding}>
-                <Heading fontFamily="Work Sans">About Me 👨‍💻</Heading>
+                <Heading fontFamily="Work Sans, sans-serif">
+                    About Me 👨‍💻
+                </Heading>
                 <Text
                     textColor="gray.500"
                     fontSize={{ base: "0.9em", md: "1em" }}
                 >
-                    My name is Daniel Medina. I am a high school student at
-                    Tecnológico de Monterrey. I started my journey as a web
-                    developer in January of 2020. During the COVID-19 pandemic I
-                    had a lot of free time therefore I was able to really bump
-                    up my skills. I started experimenting with all kinds of
-                    technologies and projects. As of August 2021 I have made 4
-                    big projects which are listed above. I have also done some
-                    small projects which can be found in my Github profile.
+                    My name is Daniel Medina. I am a high school student at{" "}
+                    <Link href="https://tec.mx">Tecnológico de Monterrey</Link>.
+                    I started my journey as a web developer in January of 2020.
+                    During the COVID-19 pandemic I had a lot of free time
+                    therefore I was able to really bump up my skills. I started
+                    experimenting with all kinds of technologies and projects.
+                    As of August 2021 I have made 6 big projects which are
+                    listed below. I have also done some small projects which can
+                    be found in{" "}
+                    <Link href="https://github.com/dnrm">my Github</Link> a
+                    profile.
                 </Text>
                 <br />
                 <Text
@@ -84,7 +91,7 @@ export default function Home() {
                 </Text>
             </Container>
             <Container pt={16} maxW={width} px={padding}>
-                <Heading fontFamily="Work Sans" mb={1}>
+                <Heading fontFamily="Work Sans, sans-serif" mb={1}>
                     My Skills 💪
                 </Heading>
                 <Flex
@@ -273,7 +280,7 @@ export default function Home() {
                 </Flex>
             </Container>
             <Container pt={16} maxW={width} px={padding}>
-                <Heading fontFamily="Work Sans" mb={3}>
+                <Heading fontFamily="Work Sans, sans-serif" mb={3}>
                     My Projects 🔨
                 </Heading>
                 <Grid
@@ -315,8 +322,9 @@ export default function Home() {
                     />
                 </Grid>
             </Container>
+            <Posts width={width} padding={padding} />
             <Container pt={16} pb={10} maxW={width} px={padding}>
-                <Heading pb={2} fontFamily="Work Sans">
+                <Heading pb={2} fontFamily="Work Sans, sans-serif">
                     My Favourite Technologies ⭐️
                 </Heading>
                 <Technologies
