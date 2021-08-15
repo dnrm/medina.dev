@@ -5,8 +5,8 @@ import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
 
 export default function Home() {
-    const width = "80ch";
-    const padding = 12;
+    const width = "90ch";
+    const padding = 10;
 
     return (
         <div>
