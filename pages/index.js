@@ -291,7 +291,7 @@ export default function Home() {
             </Container>
             <Container pt={16} maxW={width} px={padding}>
                 <Heading fontFamily="Work Sans, sans-serif" mb={3}>
-                    My Projects 🔨
+                    Projects 🔨
                 </Heading>
                 <Grid
                     templateColumns={{
