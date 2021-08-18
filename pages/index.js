@@ -8,6 +8,7 @@ import {
     Badge,
     Flex,
     Link,
+    Avatar,
 } from "@chakra-ui/react";
 import Project from "../components/Project";
 import Technologies from "../components/Technologies";
@@ -46,7 +47,16 @@ export default function Home() {
                     type="image/x-icon"
                 />
             </Head>
-            <Container pt={{ base: "12", md: "32" }} maxW={width} px={padding}>
+            <Container pt={{ base: "12", md: "28" }} maxW={width} px={padding}>
+                <Avatar
+                    borderWidth="6px"
+                    borderColor="gray.100"
+                    h={32}
+                    w={32}
+                    src="/me.jpg"
+                ></Avatar>
+            </Container>
+            <Container pt={4} maxW={width} px={padding}>
                 <Heading
                     fontFamily="Work Sans, sans-serif"
                     fontSize={{ base: "2.3em", md: "3em" }}
