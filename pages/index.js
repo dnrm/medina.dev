@@ -14,6 +14,8 @@ import Project from "../components/Project";
 import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
 import Posts from "../components/Posts";
+import Skills from "../components/Skills";
+import Certification from "../components/Certification";
 
 export default function Home() {
     const width = "90ch";
@@ -100,194 +102,42 @@ export default function Home() {
                     here.
                 </Text>
             </Container>
+            <Skills width={width} padding={padding} />
             <Container pt={16} maxW={width} px={padding}>
-                <Heading fontFamily="Work Sans, sans-serif" mb={1}>
-                    My Skills 💪
+                <Heading fontFamily="Work Sans, sans-serif" mb={3}>
+                    My Certifications 🥇
                 </Heading>
-                <Flex
-                    justifyContent="start"
-                    alignItems="center"
-                    direction="row"
-                    wrap="wrap"
+                <Grid
+                    templateColumns={{
+                        base: "repeat(1, 1fr)",
+                        md: "repeat(2, 1fr)",
+                    }}
                     gap={4}
                 >
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="teal"
+                    <Certification
+                        href="https://courses.w3schools.com/certificates/certified-javascript-developer-539.pdf"
+                        src="/w3-javascript.png"
+                        title="Certified Javascript Developer | W3Schools"
                     >
-                        Next.js
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="messenger"
+                        This certification was given to me by W3Schools. Upon
+                        passing their exam.
+                    </Certification>
+                    <Certification
+                        href="https://www.coursera.org/account/accomplishments/verify/8ZFVH8NHQFLX"
+                        src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~8ZFVH8NHQFLX/CERTIFICATE_LANDING_PAGE~8ZFVH8NHQFLX.jpeg"
+                        title="Certified Javascript Developer | W3Schools"
                     >
-                        Typescript
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="yellow"
+                        I got this certification by completing the Technical
+                        Support Fundamentals course by Google on Coursera.
+                    </Certification>
+                    <Certification
+                        href="https://www.udemy.com/certificate/UC-afc022c3-548f-4018-9066-d47db483e6a4/"
+                        src="https://udemy-certificate.s3.amazonaws.com/image/UC-afc022c3-548f-4018-9066-d47db483e6a4.jpg?v=1613942510000"
+                        title="Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS | Victor Robles"
                     >
-                        Javascript
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="red"
-                    >
-                        Angular
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="cyan"
-                    >
-                        React
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="green"
-                    >
-                        Node.js
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="blue"
-                    >
-                        CSS
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="teal"
-                    >
-                        HTML
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="orange"
-                    >
-                        AWS
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="blue"
-                    >
-                        Docker
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="blackAlpha"
-                    >
-                        GitHub Actions
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="pink"
-                    >
-                        Sass
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="teal"
-                    >
-                        Tailwind CSS
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="facebook"
-                    >
-                        Chakra UI
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="blackAlpha"
-                    >
-                        Vercel
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="purple"
-                    >
-                        Bootstrap
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="green"
-                    >
-                        MongoDB
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="purple"
-                    >
-                        FaunaDB
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="yellow"
-                    >
-                        MySQL
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="cyan"
-                    >
-                        PostgreSQL
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="orange"
-                    >
-                        Linux
-                    </Badge>
-                    <Badge
-                        mx={1}
-                        my={1}
-                        fontSize={{ base: "0.9em", md: "1em" }}
-                        colorScheme="yellow"
-                    >
-                        Git
-                    </Badge>
-                </Flex>
+                        This certifies the completion of the Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS course by Victor Robles.
+                    </Certification>
+                </Grid>
             </Container>
             <Container pt={16} maxW={width} px={padding}>
                 <Heading fontFamily="Work Sans, sans-serif" mb={3}>
