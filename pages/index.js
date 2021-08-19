@@ -176,7 +176,31 @@ export default function Home() {
                     />
                 </Grid>
             </Container>
-            
+            <Container pt={16} maxW={width} px={padding}>
+                <Heading fontFamily="Work Sans, sans-serif" mb={3}>
+                    My Certifications 🥇
+                </Heading>
+                <Grid
+                    templateColumns={{
+                        base: "repeat(1, 1fr)",
+                        md: "repeat(2, 1fr)",
+                    }}
+                    gap={4}
+                >
+                    {certifications.map((i) => {
+                        return (
+                            <Certification
+                                key={i.title}
+                                title={i.title}
+                                href={i.href}
+                                src={i.src}
+                            >
+                                {i.description}
+                            </Certification>
+                        );
+                    })}
+                </Grid>
+            </Container>
             <Posts width={width} padding={padding} />
             <Container pt={16} pb={10} maxW={width} px={padding}>
                 <Heading pb={2} fontFamily="Work Sans, sans-serif">
