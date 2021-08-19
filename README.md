@@ -2,7 +2,7 @@
 
 ---
 
-![Screenshot of medina.dev](https://www.screenshotmachine.com/serve.php?file=result&1629415329924)
+![Screenshot of medina.dev](https://raw.githubusercontent.com/dnrm/dnrm/master/img/medina.dev.jpeg)
 
 ### My personal portfolio
 
