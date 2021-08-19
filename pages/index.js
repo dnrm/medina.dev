@@ -17,6 +17,36 @@ import Posts from "../components/Posts";
 import Skills from "../components/Skills";
 import Certification from "../components/Certification";
 
+const certifications = [
+    {
+        title: "Certified Javascript Developer | W3Schools",
+        description:
+            "This certification was given to me by W3Schools. Upon passing their exam.",
+        href:
+            "https://courses.w3schools.com/certificates/certified-javascript-developer-539.pdf",
+        src: "/w3-javascript.png",
+    },
+    {
+        href:
+            "https://www.coursera.org/account/accomplishments/verify/8ZFVH8NHQFLX",
+        src:
+            "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~8ZFVH8NHQFLX/CERTIFICATE_LANDING_PAGE~8ZFVH8NHQFLX.jpeg",
+        title: "Technical Support Fundamentals | W3Schools",
+        description:
+            "I got this certification by completing the Technical Support Fundamentals course by Google on Coursera.",
+    },
+    {
+        href:
+            "https://www.udemy.com/certificate/UC-afc022c3-548f-4018-9066-d47db483e6a4/",
+        src:
+            "https://udemy-certificate.s3.amazonaws.com/image/UC-afc022c3-548f-4018-9066-d47db483e6a4.jpg?v=1613942510000",
+        title:
+            "Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS | Victor Robles",
+        description:
+            "This certifies the completion of the Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS course by Victor Robles.",
+    },
+];
+
 export default function Home() {
     const width = "90ch";
     const padding = 10;
@@ -114,30 +144,20 @@ export default function Home() {
                     }}
                     gap={4}
                 >
-                    <Certification
-                        href="https://courses.w3schools.com/certificates/certified-javascript-developer-539.pdf"
-                        src="/w3-javascript.png"
-                        title="Certified Javascript Developer | W3Schools"
-                    >
-                        This certification was given to me by W3Schools. Upon
-                        passing their exam.
-                    </Certification>
-                    <Certification
-                        href="https://www.coursera.org/account/accomplishments/verify/8ZFVH8NHQFLX"
-                        src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~8ZFVH8NHQFLX/CERTIFICATE_LANDING_PAGE~8ZFVH8NHQFLX.jpeg"
-                        title="Certified Javascript Developer | W3Schools"
-                    >
-                        I got this certification by completing the Technical
-                        Support Fundamentals course by Google on Coursera.
-                    </Certification>
-                    <Certification
-                        href="https://www.udemy.com/certificate/UC-afc022c3-548f-4018-9066-d47db483e6a4/"
-                        src="https://udemy-certificate.s3.amazonaws.com/image/UC-afc022c3-548f-4018-9066-d47db483e6a4.jpg?v=1613942510000"
-                        title="Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS | Victor Robles"
-                    >
-                        This certifies the completion of the Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS course by Victor Robles.
-                    </Certification>
+                    {certifications.map((i) => {
+                        return (
+                            <Certification
+                                key={i.title}
+                                title={i.title}
+                                href={i.href}
+                                src={i.src}
+                            >
+                                {i.description}
+                            </Certification>
+                        );
+                    })}
                 </Grid>
+
             </Container>
             <Container pt={16} maxW={width} px={padding}>
                 <Heading fontFamily="Work Sans, sans-serif" mb={3}>
