@@ -45,6 +45,12 @@ const certifications = [
         description:
             "This certifies the completion of the Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS course by Victor Robles.",
     },
+    {
+        href: "https://www.freecodecamp.org/certification/dnrm/responsive-web-design",
+        src: "https://screenshotapi-dot-net.storage.googleapis.com/www_freecodecamp_org_certification_dnrm_responsive_web_design_cddb55bcf414.png",
+        title: "Responsive Web Design Certification | freeCodeCamp",
+        description: "I got this certification by completing the Responsive Web Design course."
+    }
 ];
 
 export default function Home() {
