@@ -23,7 +23,7 @@ const Footer = () => {
     }, []);
 
     return (
-        <Container h={"20vh"}>
+        <Container h={"20vh"} mb={16}>
             <Flex justifyContent="start" alignItems="center" textColor="gray.500">
                 <Stack h={5} w={5} mr={2}>
                     <svg viewBox="0 0 168 168">
