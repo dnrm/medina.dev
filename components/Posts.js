@@ -79,7 +79,7 @@ const Posts = (props) => {
                                     <Image
                                         src={i.coverImage}
                                         rounded="md"
-                                        h={36}
+                                        h={48}
                                         objectFit="cover"
                                         alt="Cover"
                                     ></Image>
