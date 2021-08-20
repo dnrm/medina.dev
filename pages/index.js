@@ -212,8 +212,9 @@ export default function Home() {
                         "MongoDB",
                         "React",
                         "Tailwind CSS",
-                        "ChakraUI",
+                        "Chakra UI",
                         "Vercel",
+                        "GitHub"
                     ]}
                 />
             </Container>
