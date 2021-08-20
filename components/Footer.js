@@ -63,6 +63,9 @@ const Footer = () => {
                     </StyledLink>
                 </Stack>
                 <Stack>
+                    <Link href="/certifications" passHref>
+                        <StyledLink>Certifications</StyledLink>
+                    </Link>
                     <Link href="/uses" passHref>
                         <StyledLink>Uses</StyledLink>
                     </Link>
