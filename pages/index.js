@@ -1,11 +1,12 @@
 import Head from "next/head";
+import Link from "next/link";
 import {
   Container,
   Heading,
   Text,
   Grid,
   Divider,
-  Link,
+  Link as StyledLink,
   Avatar,
 } from "@chakra-ui/react";
 import Project from "../components/Project";
@@ -29,21 +30,6 @@ const certifications = [
     title: "Technical Support Fundamentals | W3Schools",
     description:
       "I got this certification by completing the Technical Support Fundamentals course by Google on Coursera.",
-  },
-  {
-    href: "https://www.udemy.com/certificate/UC-afc022c3-548f-4018-9066-d47db483e6a4/",
-    src: "https://udemy-certificate.s3.amazonaws.com/image/UC-afc022c3-548f-4018-9066-d47db483e6a4.jpg?v=1613942510000",
-    title:
-      "Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS | Victor Robles",
-    description:
-      "This certifies the completion of the Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS course by Victor Robles.",
-  },
-  {
-    href: "https://www.freecodecamp.org/certification/dnrm/responsive-web-design",
-    src: "https://screenshotapi-dot-net.storage.googleapis.com/www_freecodecamp_org_certification_dnrm_responsive_web_design_cddb55bcf414.png",
-    title: "Responsive Web Design Certification | freeCodeCamp",
-    description:
-      "I got this certification by completing the Responsive Web Design course.",
   },
 ];
 
@@ -101,13 +87,17 @@ export default function Home() {
         <Heading fontFamily="Work Sans, sans-serif">About Me 👨‍💻</Heading>
         <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
           My name is Daniel Medina. I am a high school student at{" "}
-          <Link href="https://tec.mx">Tecnológico de Monterrey</Link>. I started
-          my journey as a web developer in January of 2020. During the COVID-19
-          pandemic I had a lot of free time therefore I was able to really bump
-          up my skills. I started experimenting with all kinds of technologies
-          and projects. As of August 2021 I have made 6 big projects which are
-          listed below. I have also done some small projects which can be found
-          in <Link href="https://github.com/dnrm">my Github</Link> a profile.
+          <StyledLink href="https://tec.mx">
+            Tecnológico de Monterrey
+          </StyledLink>
+          . I started my journey as a web developer in January of 2020. During
+          the COVID-19 pandemic I had a lot of free time therefore I was able to
+          really bump up my skills. I started experimenting with all kinds of
+          technologies and projects. As of August 2021 I have made 6 big
+          projects which are listed below. I have also done some small projects
+          which can be found in{" "}
+          <StyledLink href="https://github.com/dnrm">my Github</StyledLink> a
+          profile.
         </Text>
         <br />
         <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
@@ -185,6 +175,9 @@ export default function Home() {
             );
           })}
         </Grid>
+        <Link href="/certifications" passHref>
+          <StyledLink textColor="blue.500" textAlign="center" w="100%" display="block" pt={4}>View All</StyledLink>
+        </Link>
       </Container>
       <Posts width={width} padding={padding} />
       <Container pt={16} pb={10} maxW={width} px={padding}>
