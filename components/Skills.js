@@ -1,7 +1,11 @@
 import React from "react";
 import { Container, Heading, Flex, Badge } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const Skills = ({ padding, width }) => {
+
+    const color = useColorModeValue("blackAlpha", "gray")
+
     return (
         <Container pt={16} maxW={width} px={padding}>
             <Heading fontFamily="Work Sans, sans-serif" mb={1}>
@@ -98,7 +102,7 @@ const Skills = ({ padding, width }) => {
                     mx={1}
                     my={1}
                     fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="blackAlpha"
+                    colorScheme={color}
                 >
                     GitHub Actions
                 </Badge>
@@ -130,7 +134,7 @@ const Skills = ({ padding, width }) => {
                     mx={1}
                     my={1}
                     fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="blackAlpha"
+                    colorScheme={color}
                 >
                     Vercel
                 </Badge>
