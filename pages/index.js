@@ -15,6 +15,7 @@ import Footer from "../components/Footer";
 import Posts from "../components/Posts";
 import Skills from "../components/Skills";
 import Certification from "../components/Certification";
+import Navbar from "../components/Navbar";
 
 const certifications = [
   {
@@ -62,7 +63,8 @@ export default function Home() {
           type="image/x-icon"
         />
       </Head>
-      <Container pt={{ base: "12", md: "28" }} maxW={width} px={padding}>
+      <Navbar width={width} padding={padding} />
+      <Container pt={{ base: "12", md: "16" }} maxW={width} px={padding}>
         <Avatar
           borderWidth="6px"
           borderColor="gray.100"
