@@ -1,7 +1,8 @@
 import React from "react";
-import { Container, Heading, Stack, Flex, Image } from "@chakra-ui/react";
+import { Container, Heading, Stack, Flex, Image, Divider } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import { useColorModeValue } from "@chakra-ui/color-mode";
+import Footer from "../components/Footer";
 
 const width = "90ch";
 const padding = 6;
@@ -35,8 +36,7 @@ const collection = [
 ];
 
 const vinyl = () => {
-
-    const bg = useColorModeValue("gray.100", "gray.700")
+  const bg = useColorModeValue("gray.100", "gray.700");
 
   return (
     <div>
@@ -52,14 +52,22 @@ const vinyl = () => {
       <Container pt={4} maxW={width} px={padding} pb={16}>
         {collection.map((i) => {
           return (
-            <Flex bgColor={bg} h={24} justifyContent="start" alignItems="center" my={2} p={2} rounded="md">
-                <Stack h={'full'} mr={3}>
-                    <Image h={'full'} src={i.cover} />
-                </Stack>
+            <Flex
+              bgColor={bg}
+              h={32}
+              justifyContent="start"
+              alignItems="center"
+              my={2}
+              p={4}
+              rounded="md"
+            >
+              <Stack h={"full"} mr={3}>
+                <Image h={"full"} src={i.cover} />
+              </Stack>
               <Stack>
                 <Heading
-                  fontWeight="regular"
-                  fontSize={{ base: "1em", md: "1.2em" }}
+                  fontWeight="bold"
+                  fontSize={{ base: "1.4em", md: "1.6em" }}
                 >
                   {i.title}
                 </Heading>
@@ -67,6 +75,12 @@ const vinyl = () => {
             </Flex>
           );
         })}
+      </Container>
+      <Container pb={10} maxW={width} px={padding}>
+        <Divider />
+      </Container>
+      <Container maxW={width} px={padding}>
+        <Footer />
       </Container>
     </div>
   );
