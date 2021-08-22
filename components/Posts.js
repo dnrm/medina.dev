@@ -8,6 +8,7 @@ import {
     Image,
     Link,
 } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const Posts = (props) => {
     const { width, padding } = props;
@@ -48,6 +49,8 @@ const Posts = (props) => {
         get(GET_USER_ARTICLES, { page: 0 });
     }, []);
 
+    const border = useColorModeValue("gray.300", "gray.600")
+
     return (
         <Container pt={16} pb={0} maxW={width} px={padding}>
             <Heading pb={2} fontFamily="Work Sans, sans-serif">
@@ -72,7 +75,7 @@ const Posts = (props) => {
                             >
                                 <Stack
                                     borderWidth="2px"
-                                    borderColor="gray.300"
+                                    borderColor={border}
                                     rounded="md"
                                     p={2}
                                 >
