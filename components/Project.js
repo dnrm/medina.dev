@@ -1,11 +1,15 @@
 import React from "react";
 import { Stack, Heading, Text, Link } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const Project = (props) => {
+
+    const border = useColorModeValue("gray.300", "gray.600")
+
     return (
         <Stack
             borderWidth="2px"
-            borderColor="gray.300"
+            borderColor={border}
             p={2}
             rounded="md"
             pb={6}
