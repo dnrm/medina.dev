@@ -1,7 +1,8 @@
 import Head from "next/head";
-import { Container, Heading, Grid } from "@chakra-ui/react";
+import { Container, Heading, Grid, Divider } from "@chakra-ui/react";
 import Certification from "../components/Certification";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const width = "90ch";
 const padding = 6;
@@ -110,6 +111,12 @@ const certifications = () => {
             );
           })}
         </Grid>
+      </Container>
+      <Container pb={10} maxW={width} px={padding}>
+        <Divider />
+      </Container>
+      <Container maxW={width} px={padding}>
+        <Footer />
       </Container>
     </div>
   );
