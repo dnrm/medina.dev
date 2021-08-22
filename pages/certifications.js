@@ -1,9 +1,10 @@
 import Head from "next/head";
 import { Container, Heading, Grid } from "@chakra-ui/react";
 import Certification from "../components/Certification";
+import Navbar from "../components/Navbar";
 
 const width = "90ch";
-const padding = 10;
+const padding = 6;
 
 const certificationsObj = [
   {
@@ -84,7 +85,8 @@ const certifications = () => {
           type="image/x-icon"
         />
       </Head>
-      <Container pt={24} maxW={width} px={padding} pb={16}>
+      <Navbar width={width} padding={padding} />
+      <Container pt={16} maxW={width} px={padding} pb={16}>
         <Heading fontFamily="Work Sans, sans-serif" mb={3}>
           My Certifications 🥇
         </Heading>
