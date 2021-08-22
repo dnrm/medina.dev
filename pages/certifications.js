@@ -3,6 +3,7 @@ import { Container, Heading, Grid, Divider } from "@chakra-ui/react";
 import Certification from "../components/Certification";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const width = "90ch";
 const padding = 6;
@@ -60,7 +61,10 @@ const certificationsObj = [
   },
 ];
 
-const certifications = () => {
+const Certifications = () => {
+
+  const border = useColorModeValue("gray.300", "gray.600")
+
   return (
     <div>
       <Head>
@@ -122,4 +126,4 @@ const certifications = () => {
   );
 };
 
-export default certifications;
+export default Certifications;
