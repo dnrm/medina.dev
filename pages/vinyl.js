@@ -1,5 +1,12 @@
 import React from "react";
-import { Container, Heading, Stack, Flex, Image, Divider } from "@chakra-ui/react";
+import {
+  Container,
+  Heading,
+  Stack,
+  Flex,
+  Image,
+  Divider,
+} from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import Footer from "../components/Footer";
@@ -53,6 +60,7 @@ const Vinyl = () => {
         {collection.map((i) => {
           return (
             <Flex
+              key={i.title}
               bgColor={bg}
               h={32}
               justifyContent="start"
@@ -62,7 +70,11 @@ const Vinyl = () => {
               rounded="md"
             >
               <Stack h={"full"} mr={3}>
-                <Image h={"full"} src={i.cover} />
+                <Image
+                  h={"full"}
+                  src={i.cover}
+                  alt={`${i.title} by ${i.artist}`}
+                />
               </Stack>
               <Stack>
                 <Heading
