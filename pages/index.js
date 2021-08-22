@@ -36,7 +36,7 @@ const certifications = [
 
 export default function Home() {
   const width = "90ch";
-  const padding = 10;
+  const padding = 6;
 
   return (
     <div>
