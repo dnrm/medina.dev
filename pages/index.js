@@ -176,7 +176,15 @@ export default function Home() {
           })}
         </Grid>
         <Link href="/certifications" passHref>
-          <StyledLink textColor="blue.500" textAlign="center" w="100%" display="block" pt={4}>View All</StyledLink>
+          <StyledLink
+            textColor="blue.500"
+            textAlign="center"
+            w="100%"
+            display="block"
+            pt={4}
+          >
+            View All
+          </StyledLink>
         </Link>
       </Container>
       <Posts width={width} padding={padding} />
