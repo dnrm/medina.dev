@@ -35,7 +35,7 @@ const collection = [
   },
 ];
 
-const vinyl = () => {
+const Vinyl = () => {
   const bg = useColorModeValue("gray.100", "gray.700");
 
   return (
@@ -86,4 +86,4 @@ const vinyl = () => {
   );
 };
 
-export default vinyl;
+export default Vinyl;
