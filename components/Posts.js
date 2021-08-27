@@ -47,7 +47,7 @@ const Posts = (props) => {
         };
 
         get(GET_USER_ARTICLES, { page: 0 });
-    }, []);
+    }, [GET_USER_ARTICLES]);
 
     const border = useColorModeValue("gray.300", "gray.600")
 
