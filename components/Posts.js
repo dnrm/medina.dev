@@ -89,7 +89,6 @@ const Posts = (props) => {
                                     <Heading
                                         fontWeight="regular"
                                         fontSize={{ base: "1em", md: "1.1em" }}
-                                        textColor="gray.700"
                                     >
                                         {i.title}
                                     </Heading>
