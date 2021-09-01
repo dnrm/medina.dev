@@ -43,6 +43,7 @@ const Posts = (props) => {
             });
             const json = await response.json();
             setPosts(json.data.user.publication.posts);
+            console.log(json.data.user.publication.posts);
         };
 
         get(GET_USER_ARTICLES, { page: 0 });
