@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build-docker": "docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t dnrm/medina.dev:latest --push ."
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.15",
