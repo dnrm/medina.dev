@@ -1,15 +1,9 @@
 import React from "react";
-import {
-  Container,
-  Heading,
-  Stack,
-  Flex,
-  Image,
-  Divider,
-} from "@chakra-ui/react";
+import { Container, Heading, Stack, Flex, Divider } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import Footer from "../components/Footer";
+import Image from "next/image";
 
 const width = "90ch";
 const padding = 6;
@@ -69,21 +63,22 @@ const Vinyl = () => {
               p={4}
               rounded="md"
             >
-              <Stack h={"full"} mr={3}>
+              <Stack mr={3} minW="24">
                 <Image
-                  h={"full"}
                   src={i.cover}
                   alt={`${i.title} by ${i.artist}`}
+                  height="1000"
+                  width="1000"
+                  layout="responsive"
+                  objectFit="cover"
                 />
               </Stack>
-              <Stack>
-                <Heading
-                  fontWeight="bold"
-                  fontSize={{ base: "1.4em", md: "1.6em" }}
-                >
-                  {i.title}
-                </Heading>
-              </Stack>
+              <Heading
+                fontWeight="bold"
+                fontSize={{ base: "1.4em", md: "1.6em" }}
+              >
+                {i.title}
+              </Heading>
             </Flex>
           );
         })}
