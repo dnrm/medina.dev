@@ -71,13 +71,18 @@ const Vinyl = () => {
                   width="1000"
                   layout="responsive"
                   objectFit="cover"
+                  placeholder="blur"
+                  blurDataURL="/album.png"
                 />
               </Stack>
               <Heading
                 fontWeight="bold"
                 fontSize={{ base: "1.4em", md: "1.6em" }}
+                letterSpacing="tighter"
               >
-                {i.title}
+                <a href={i.cover} target="_blank" rel="noreferrer">
+                  {i.title}
+                </a>
               </Heading>
             </Flex>
           );
