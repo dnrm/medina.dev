@@ -68,7 +68,7 @@ const Certifications = () => {
   return (
     <div>
       <Head>
-        <title>Daniel Medina - Web developer</title>
+        <title>Certifications | Daniel Medina - Web Developer</title>
         <meta
           name="description"
           content="My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey..."

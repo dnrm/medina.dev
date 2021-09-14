@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import Head from 'next/head'
 
 const width = "90ch";
 const padding = 6;
@@ -41,6 +42,9 @@ const Vinyl = () => {
 
   return (
     <div>
+      <Head>
+        <title>Vinyl | Daniel Medina - Web Developer</title>
+      </Head>
       <Navbar width={width} padding={padding} />
       <Container pt={{ base: "12", md: "16" }} maxW={width} px={padding}>
         <Heading
