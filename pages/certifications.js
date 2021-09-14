@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Container, Heading, Grid, Divider } from "@chakra-ui/react";
+import { Container, Heading, Grid, Divider, Text } from "@chakra-ui/react";
 import Certification from "../components/Certification";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -18,14 +18,14 @@ const certificationsObj = [
   },
   {
     href: "https://www.coursera.org/account/accomplishments/verify/8ZFVH8NHQFLX",
-    src: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~8ZFVH8NHQFLX/CERTIFICATE_LANDING_PAGE~8ZFVH8NHQFLX.jpeg",
+    src: "/coursera_google.jpeg",
     title: "Technical Support Fundamentals | W3Schools",
     description:
       "I got this certification by completing the Technical Support Fundamentals course by Google on Coursera.",
   },
   {
     href: "https://www.udemy.com/certificate/UC-afc022c3-548f-4018-9066-d47db483e6a4/",
-    src: "https://udemy-certificate.s3.amazonaws.com/image/UC-afc022c3-548f-4018-9066-d47db483e6a4.jpg?v=1613942510000",
+    src: "/udemy_js.jpg",
     title:
       "Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS | Victor Robles",
     description:
@@ -33,28 +33,28 @@ const certificationsObj = [
   },
   {
     href: "https://www.freecodecamp.org/certification/dnrm/responsive-web-design",
-    src: "https://screenshotapi-dot-net.storage.googleapis.com/www_freecodecamp_org_certification_dnrm_responsive_web_design_cddb55bcf414.png",
+    src: "/fcc_responsive.png",
     title: "Responsive Web Design Certification | freeCodeCamp",
     description:
       "I got this certification by completing the Responsive Web Design course.",
   },
   {
     href: "https://www.freecodecamp.org/certification/dnrm/javascript-algorithms-and-data-structures",
-    src: "https://screenshotapi-dot-net.storage.googleapis.com/www_freecodecamp_org_certification_dnrm_javascript_algorithms_and_data_structures_8afc9de8c472.png",
+    src: "/fcc_js.png",
     title: "Javascript Algorithms and Data Structures",
     description:
       "This certifies completion of the Javascript Algorithms and Data Structures course.",
   },
   {
     href: "https://www.freecodecamp.org/certification/dnrm/front-end-libraries",
-    src: "https://screenshotapi-dot-net.storage.googleapis.com/www_freecodecamp_org_certification_dnrm_front_end_libraries_27ab5c0936c7.png",
+    src: "/fcc_frontend.png",
     title: "Front End Libraries Certification",
     description:
       "I was awarded this certification upon completion of the Front End Libraries course offered by freeCodeCamp",
   },
   {
     href: "https://www.freecodecamp.org/certification/dnrm/apis-and-microservices",
-    src: "https://screenshotapi-dot-net.storage.googleapis.com/www_freecodecamp_org_certification_dnrm_apis_and_microservices_e2d6069bd391.png",
+    src: "/fcc_microservices.png",
     title: "APIs and Microservices",
     description:
       "I got this certification for successfully submitting all 5 projects required in the APIs and Microservices course by freeCodeCamp.",
@@ -92,9 +92,10 @@ const Certifications = () => {
       </Head>
       <Navbar width={width} padding={padding} />
       <Container pt={16} maxW={width} px={padding} pb={16}>
-        <Heading fontFamily="Work Sans, sans-serif" mb={3}>
+        <Heading fontFamily="Work Sans, sans-serif">
           My Certifications 🥇
         </Heading>
+        <Text mb={4} textColor="gray.500">These are most of the certifications I&apos;ve gotten since starting my career.</Text>
         <Grid
           templateColumns={{
             base: "repeat(1, 1fr)",

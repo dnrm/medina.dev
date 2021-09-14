@@ -27,7 +27,7 @@ const certifications = [
   },
   {
     href: "https://www.coursera.org/account/accomplishments/verify/8ZFVH8NHQFLX",
-    src: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~8ZFVH8NHQFLX/CERTIFICATE_LANDING_PAGE~8ZFVH8NHQFLX.jpeg",
+    src: "/coursera_google.jpeg",
     title: "Technical Support Fundamentals | W3Schools",
     description:
       "I got this certification by completing the Technical Support Fundamentals course by Google on Coursera.",
