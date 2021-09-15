@@ -4,7 +4,8 @@ import Navbar from "../components/Navbar";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import Footer from "../components/Footer";
 import Image from "next/image";
-import Head from 'next/head'
+import Head from "next/head";
+import { motion } from "framer-motion";
 
 const width = "90ch";
 const padding = 6;
@@ -46,58 +47,64 @@ const Vinyl = () => {
         <title>Vinyl | Daniel Medina - Web Developer</title>
       </Head>
       <Navbar width={width} padding={padding} />
-      <Container pt={{ base: "12", md: "16" }} maxW={width} px={padding}>
-        <Heading
-          fontFamily="Work Sans, sans-serif"
-          fontSize={{ base: "2.3em", md: "3em" }}
-        >
-          My Vinyl Collection
-        </Heading>
-      </Container>
-      <Container pt={4} maxW={width} px={padding} pb={16}>
-        {collection.map((i) => {
-          return (
-            <Flex
-              key={i.title}
-              bgColor={bg}
-              h={32}
-              justifyContent="start"
-              alignItems="center"
-              my={2}
-              p={4}
-              rounded="md"
-            >
-              <Stack mr={3} minW="24">
-                <Image
-                  src={i.cover}
-                  alt={`${i.title} by ${i.artist}`}
-                  height="1000"
-                  width="1000"
-                  layout="responsive"
-                  objectFit="cover"
-                  placeholder="blur"
-                  blurDataURL="/album.png"
-                />
-              </Stack>
-              <Heading
-                fontWeight="bold"
-                fontSize={{ base: "1.4em", md: "1.6em" }}
-                letterSpacing="tighter"
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.25, type: "tween" }}
+      >
+        <Container pt={{ base: "12", md: "16" }} maxW={width} px={padding}>
+          <Heading
+            fontFamily="Work Sans, sans-serif"
+            fontSize={{ base: "2.3em", md: "3em" }}
+          >
+            My Vinyl Collection
+          </Heading>
+        </Container>
+        <Container pt={4} maxW={width} px={padding} pb={16}>
+          {collection.map((i) => {
+            return (
+              <Flex
+                key={i.title}
+                bgColor={bg}
+                h={32}
+                justifyContent="start"
+                alignItems="center"
+                my={2}
+                p={4}
+                rounded="md"
               >
-                <a href={i.cover} target="_blank" rel="noreferrer">
-                  {i.title}
-                </a>
-              </Heading>
-            </Flex>
-          );
-        })}
-      </Container>
-      <Container pb={10} maxW={width} px={padding}>
-        <Divider />
-      </Container>
-      <Container maxW={width} px={padding}>
-        <Footer />
-      </Container>
+                <Stack mr={3} minW="24">
+                  <Image
+                    src={i.cover}
+                    alt={`${i.title} by ${i.artist}`}
+                    height="1000"
+                    width="1000"
+                    layout="responsive"
+                    objectFit="cover"
+                    placeholder="blur"
+                    blurDataURL="/album.png"
+                  />
+                </Stack>
+                <Heading
+                  fontWeight="bold"
+                  fontSize={{ base: "1.4em", md: "1.6em" }}
+                  letterSpacing="tighter"
+                >
+                  <a href={i.cover} target="_blank" rel="noreferrer">
+                    {i.title}
+                  </a>
+                </Heading>
+              </Flex>
+            );
+          })}
+        </Container>
+        <Container pb={10} maxW={width} px={padding}>
+          <Divider />
+        </Container>
+        <Container maxW={width} px={padding}>
+          <Footer />
+        </Container>
+      </motion.div>
     </div>
   );
 };
