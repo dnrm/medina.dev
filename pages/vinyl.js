@@ -36,6 +36,11 @@ const collection = [
     artist: "Pulp",
     cover: "https://i.scdn.co/image/ab67616d0000b273fd952bece8f049dbcd7df93f",
   },
+  {
+    title: "(What's The Story) Morning Glory?",
+    artist: "Oasis",
+    cover: "https://i.scdn.co/image/ab67616d0000b2737a4c8c59851c88f6794c3cbf",
+  },
 ];
 
 const Vinyl = () => {
