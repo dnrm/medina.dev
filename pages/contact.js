@@ -78,7 +78,11 @@ const Contact = () => {
         />
       </Head>
       <Navbar />
-      <motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.25, type: "tween" }}
+      >
         <Container pt={16} maxW={"90ch"} px={6} pb={4}>
           <Heading
             fontFamily="Work Sans, sans-serif"
@@ -100,7 +104,7 @@ const Contact = () => {
                   flexDir="column"
                   key={i.name}
                 >
-                  <Link href={i.href} target="_blank" w={'full'}>
+                  <Link href={i.href} target="_blank" w={"full"}>
                     <Flex
                       rounded="md"
                       justifyContent="space-between"
