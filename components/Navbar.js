@@ -8,25 +8,25 @@ const Navbar = ({ width, padding }) => {
   const { toggleColorMode } = useColorMode();
 
   return (
-    <Container pt={{ base: "12", md: "28" }} maxW={width} px={padding}>
+    <Container pt={{ base: "12", md: "28" }} maxW={width || "90ch"} px={padding || 6}>
       <Flex justifyContent="space-between" alignItems="center">
         <Flex>
-          <Link href="/">
+          <Link href="/" passHref>
             <StyledLink textColor="gray.600" pr={2}>
               Home
             </StyledLink>
           </Link>
-          <Link href="/certifications">
+          <Link href="/certifications" passHref>
             <StyledLink textColor="gray.600" px={2}>
               Certifications
             </StyledLink>
           </Link>
-          <Link href="/uses">
+          <Link href="/contact" passHref>
             <StyledLink textColor="gray.600" px={2}>
-              Uses
+              Contact
             </StyledLink>
           </Link>
-          <Link href="/vinyl">
+          <Link href="/vinyl" passHref>
             <StyledLink textColor="gray.600" pl={2}>
               Vinyl
             </StyledLink>

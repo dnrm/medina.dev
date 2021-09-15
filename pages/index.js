@@ -16,6 +16,7 @@ import Posts from "../components/Posts";
 import Skills from "../components/Skills";
 import Certification from "../components/Certification";
 import Navbar from "../components/Navbar";
+import { motion } from "framer-motion";
 
 const certifications = [
   {
@@ -64,154 +65,160 @@ export default function Home() {
         />
       </Head>
       <Navbar width={width} padding={padding} />
-      <Container pt={{ base: "12", md: "16" }} maxW={width} px={padding}>
-        <Avatar
-          borderWidth="6px"
-          borderColor="gray.100"
-          h={32}
-          w={32}
-          src="/me.jpg"
-        ></Avatar>
-      </Container>
-      <Container pt={4} maxW={width} px={padding}>
-        <Heading
-          fontFamily="Work Sans, sans-serif"
-          fontSize={{ base: "2.3em", md: "3em" }}
-        >
-          Hi, I&apos;m Daniel Medina 👋
-        </Heading>
-        <Text textColor="gray.500">
-          I&apos;m a web developer from Mexico. I love to work with Next.js and
-          AWS. Check out my projects below!
-        </Text>
-      </Container>
-      <Container pt={16} maxW={width} px={padding}>
-        <Heading fontFamily="Work Sans, sans-serif">About Me 👨‍💻</Heading>
-        <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
-          My name is Daniel Medina. I am a high school student at{" "}
-          <StyledLink href="https://tec.mx">
-            Tecnológico de Monterrey
-          </StyledLink>
-          . I started my journey as a web developer in January of 2020. During
-          the COVID-19 pandemic I had a lot of free time therefore I was able to
-          really bump up my skills. I started experimenting with all kinds of
-          technologies and projects. As of August 2021 I have made 6 big
-          projects which are listed below. I have also done some small projects
-          which can be found in{" "}
-          <StyledLink href="https://github.com/dnrm">my Github</StyledLink> a
-          profile.
-        </Text>
-        <br />
-        <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
-          I spend my free time listening and composing music, taking photos,
-          sailing, and coding. I also love collecting vinyl records. I currently
-          have a small collection of them, but plan to expand it indefinitely.
-          Check out my collection here.
-        </Text>
-      </Container>
-      <Skills width={width} padding={padding} />
-      <Container pt={16} maxW={width} px={padding}>
-        <Heading fontFamily="Work Sans, sans-serif" mb={3}>
-          Projects 🔨
-        </Heading>
-        <Grid
-          templateColumns={{
-            base: "repeat(1, 1fr)",
-            md: "repeat(2, 1fr)",
-          }}
-          gap={4}
-        >
-          <Project
-            title="🍀 codingacademy.mx"
-            url="https://codingacademy.mx"
-            description="A website for a client built using React and Tailwind CSS."
-          />
-          <Project
-            title="🌱 Amethyst"
-            url="https://aws.medina.dev"
-            description="A user friendly way to manage your API Gateway keys. Built with
-                Next.js and the AWS Javascript SDK."
-          />
-          <Project
-            title="🌵 Crystal"
-            url="https://crystal.medina.dev"
-            description="Social media website built with Next.js and Tailwind CSS. The backend uses MongoDB and S3 for file uploads."
-          />
-          <Project
-            title="🌳  Sapphire"
-            description="A full stack photo gallery app that uses an S3 bucket, user authentication, and resizes uploaded images using a Lambda function."
-          />
-          <Project
-            title="🌲 Crypto Charts"
-            url="https://crypto-charts.netlify.app/"
-            description="Small project where you choose a cryptocurrency and then a graph is shown showing historical prices."
-          />
-          <Project
-            title="🌿 Something - Official website"
-            url="https://something-roblox.vercel.app/"
-            description="Client website built with Next.js to promote a Roblox game. Deployed to Vercel."
-          />
-        </Grid>
-      </Container>
-      <Container pt={16} maxW={width} px={padding}>
-        <Heading fontFamily="Work Sans, sans-serif" mb={3}>
-          My Certifications 🥇
-        </Heading>
-        <Grid
-          templateColumns={{
-            base: "repeat(1, 1fr)",
-            md: "repeat(2, 1fr)",
-          }}
-          gap={4}
-        >
-          {certifications.map((i) => {
-            return (
-              <Certification
-                key={i.title}
-                title={i.title}
-                href={i.href}
-                src={i.src}
-              >
-                {i.description}
-              </Certification>
-            );
-          })}
-        </Grid>
-        <Link href="/certifications" passHref>
-          <StyledLink
-            textColor="blue.500"
-            textAlign="center"
-            w="100%"
-            display="block"
-            pt={4}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.25, type: 'tween' }}
+      >
+        <Container pt={{ base: "12", md: "16" }} maxW={width} px={padding}>
+          <Avatar
+            borderWidth="6px"
+            borderColor="gray.100"
+            h={32}
+            w={32}
+            src="/me.jpg"
+          ></Avatar>
+        </Container>
+        <Container pt={4} maxW={width} px={padding}>
+          <Heading
+            fontFamily="Work Sans, sans-serif"
+            fontSize={{ base: "2.3em", md: "3em" }}
           >
-            View All
-          </StyledLink>
-        </Link>
-      </Container>
-      <Posts width={width} padding={padding} />
-      <Container pt={16} pb={10} maxW={width} px={padding}>
-        <Heading pb={2} fontFamily="Work Sans, sans-serif">
-          My Favourite Technologies ⭐️
-        </Heading>
-        <Technologies
-          items={[
-            "Next.js",
-            "MongoDB",
-            "React",
-            "Tailwind CSS",
-            "Chakra UI",
-            "Vercel",
-            "GitHub",
-          ]}
-        />
-      </Container>
-      <Container pb={10} maxW={width} px={padding}>
-        <Divider />
-      </Container>
-      <Container maxW={width} px={padding}>
-        <Footer />
-      </Container>
+            Hi, I&apos;m Daniel Medina 👋
+          </Heading>
+          <Text textColor="gray.500">
+            I&apos;m a web developer from Mexico. I love to work with Next.js
+            and AWS. Check out my projects below!
+          </Text>
+        </Container>
+        <Container pt={16} maxW={width} px={padding}>
+          <Heading fontFamily="Work Sans, sans-serif">About Me 👨‍💻</Heading>
+          <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
+            My name is Daniel Medina. I am a high school student at{" "}
+            <StyledLink href="https://tec.mx">
+              Tecnológico de Monterrey
+            </StyledLink>
+            . I started my journey as a web developer in January of 2020. During
+            the COVID-19 pandemic I had a lot of free time therefore I was able
+            to really bump up my skills. I started experimenting with all kinds
+            of technologies and projects. As of August 2021 I have made 6 big
+            projects which are listed below. I have also done some small
+            projects which can be found in{" "}
+            <StyledLink href="https://github.com/dnrm">my Github</StyledLink> a
+            profile.
+          </Text>
+          <br />
+          <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
+            I spend my free time listening and composing music, taking photos,
+            sailing, and coding. I also love collecting vinyl records. I
+            currently have a small collection of them, but plan to expand it
+            indefinitely. Check out my collection here.
+          </Text>
+        </Container>
+        <Skills width={width} padding={padding} />
+        <Container pt={16} maxW={width} px={padding}>
+          <Heading fontFamily="Work Sans, sans-serif" mb={3}>
+            Projects 🔨
+          </Heading>
+          <Grid
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              md: "repeat(2, 1fr)",
+            }}
+            gap={4}
+          >
+            <Project
+              title="🍀 codingacademy.mx"
+              url="https://codingacademy.mx"
+              description="A website for a client built using React and Tailwind CSS."
+            />
+            <Project
+              title="🌱 Amethyst"
+              url="https://aws.medina.dev"
+              description="A user friendly way to manage your API Gateway keys. Built with
+                  Next.js and the AWS Javascript SDK."
+            />
+            <Project
+              title="🌵 Crystal"
+              url="https://crystal.medina.dev"
+              description="Social media website built with Next.js and Tailwind CSS. The backend uses MongoDB and S3 for file uploads."
+            />
+            <Project
+              title="🌳  Sapphire"
+              description="A full stack photo gallery app that uses an S3 bucket, user authentication, and resizes uploaded images using a Lambda function."
+            />
+            <Project
+              title="🌲 Crypto Charts"
+              url="https://crypto-charts.netlify.app/"
+              description="Small project where you choose a cryptocurrency and then a graph is shown showing historical prices."
+            />
+            <Project
+              title="🌿 Something - Official website"
+              url="https://something-roblox.vercel.app/"
+              description="Client website built with Next.js to promote a Roblox game. Deployed to Vercel."
+            />
+          </Grid>
+        </Container>
+        <Container pt={16} maxW={width} px={padding}>
+          <Heading fontFamily="Work Sans, sans-serif" mb={3}>
+            My Certifications 🥇
+          </Heading>
+          <Grid
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              md: "repeat(2, 1fr)",
+            }}
+            gap={4}
+          >
+            {certifications.map((i) => {
+              return (
+                <Certification
+                  key={i.title}
+                  title={i.title}
+                  href={i.href}
+                  src={i.src}
+                >
+                  {i.description}
+                </Certification>
+              );
+            })}
+          </Grid>
+          <Link href="/certifications" passHref>
+            <StyledLink
+              textColor="blue.500"
+              textAlign="center"
+              w="100%"
+              display="block"
+              pt={4}
+            >
+              View All
+            </StyledLink>
+          </Link>
+        </Container>
+        <Posts width={width} padding={padding} />
+        <Container pt={16} pb={10} maxW={width} px={padding}>
+          <Heading pb={2} fontFamily="Work Sans, sans-serif">
+            My Favourite Technologies ⭐️
+          </Heading>
+          <Technologies
+            items={[
+              "Next.js",
+              "MongoDB",
+              "React",
+              "Tailwind CSS",
+              "Chakra UI",
+              "Vercel",
+              "GitHub",
+            ]}
+          />
+        </Container>
+        <Container pb={10} maxW={width} px={padding}>
+          <Divider />
+        </Container>
+        <Container maxW={width} px={padding}>
+          <Footer />
+        </Container>
+      </motion.div>
     </div>
   );
 }
