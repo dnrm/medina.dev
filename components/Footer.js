@@ -66,8 +66,8 @@ const Footer = () => {
                     <Link href="/certifications" passHref>
                         <StyledLink>Certifications</StyledLink>
                     </Link>
-                    <Link href="/uses" passHref>
-                        <StyledLink>Uses</StyledLink>
+                    <Link href="/contact" passHref>
+                        <StyledLink>Contact</StyledLink>
                     </Link>
                     <Link href="/vinyl" passHref>
                         <StyledLink>Vinyl Collection</StyledLink>
