@@ -33,7 +33,7 @@ const socials = [
   },
   {
     name: "Youtube 🎥",
-    href: "https://www.youtube.com/channel/UC7nYyV6-jETyDNzvrFkYR_g",
+    href: "https://www.youtube.com/channel/UC38r0XbtKBC98yW42c3cQZA",
     description: "Watch old videos i've done.",
   },
   {
