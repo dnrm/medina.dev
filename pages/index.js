@@ -134,7 +134,7 @@ export default function Home() {
             />
             <Project
               title="🌱 Amethyst"
-              url="https://aws.medina.dev"
+              url="https://amethyst.medina.dev"
               description="A user friendly way to manage your API Gateway keys. Built with
                   Next.js and the AWS Javascript SDK."
             />
