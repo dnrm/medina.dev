@@ -9,6 +9,8 @@ import { motion } from "framer-motion";
 const width = "90ch";
 const padding = 6;
 
+// ! Object with all my certifications
+
 const certificationsObj = [
   {
     title: "Certified Javascript Developer | W3Schools",
@@ -60,6 +62,12 @@ const certificationsObj = [
     description:
       "I got this certification for successfully submitting all 5 projects required in the APIs and Microservices course by freeCodeCamp.",
   },
+  {
+    href: "/creative-js-course.png",
+    src: "/creative-js-course.png",
+    title: "The Creative JavaScript Course",
+    description: "This certification proves completion of The Creative JavaScript Course",
+  }
 ];
 
 const Certifications = () => {
