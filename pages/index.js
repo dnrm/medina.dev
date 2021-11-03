@@ -10,6 +10,7 @@ import {
   Avatar,
 } from "@chakra-ui/react";
 import Project from "../components/Project";
+import Image from "next/image";
 import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
 import Posts from "../components/Posts";
@@ -68,7 +69,7 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.25, type: 'tween' }}
+        transition={{ duration: 0.25, type: "tween" }}
       >
         <Container pt={{ base: "12", md: "16" }} maxW={width} px={padding}>
           <Avatar
@@ -95,7 +96,11 @@ export default function Home() {
           <Heading fontFamily="Work Sans, sans-serif">About Me 👨‍💻</Heading>
           <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
             My name is Daniel Medina. I am a high school student at{" "}
-            <StyledLink href="https://tec.mx">
+            <StyledLink
+              _hover={{ color: "blue.500" }}
+              textDecor="underline"
+              href="https://tec.mx"
+            >
               Tecnológico de Monterrey
             </StyledLink>
             . I started my journey as a web developer in January of 2020. During
@@ -104,15 +109,27 @@ export default function Home() {
             of technologies and projects. As of August 2021 I have made 6 big
             projects which are listed below. I have also done some small
             projects which can be found in{" "}
-            <StyledLink href="https://github.com/dnrm">my Github</StyledLink> a
-            profile.
+            <StyledLink
+              _hover={{ color: "blue.500" }}
+              textDecor="underline"
+              href="https://github.com/dnrm"
+            >
+              my Github
+            </StyledLink>{" "}
+            a profile.
           </Text>
           <br />
           <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
             I spend my free time listening and composing music, taking photos,
             sailing, and coding. I also love collecting vinyl records. I
-            currently have a small collection of them, but plan to expand it
-            indefinitely. Check out my collection here.
+            currently have a small collection of them, but have been getting
+            more and more lately. Check out my collection{" "}
+            <Link href="/vinyl" passHref>
+              <StyledLink _hover={{ color: "blue.500" }} textDecor="underline">
+                here
+              </StyledLink>
+            </Link>
+            .
           </Text>
         </Container>
         <Skills width={width} padding={padding} />
@@ -196,6 +213,54 @@ export default function Home() {
           </Link>
         </Container>
         <Posts width={width} padding={padding} />
+        <Container pt={16} maxW={width} px={padding}>
+          <Heading pb={2} fontFamily="Work Sans, sans-serif">
+            Hobbies 🎧
+          </Heading>
+          <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
+            I love to discover and make new types of coffee. My personal
+            favourite coffees are cold brew and espresso. Another thing i really
+            enjoy doing is collecting vinyl records. My favourite music genre is
+            rock. I enjoy music from{" "}
+            <b>
+              <i>
+                Oasis, The Beatles, The Verve, Pulp, Radiohead, and The
+                Cranberries
+              </i>
+            </b>
+            . . I also like other artists that aren&apos;t rock such as{" "}
+            <b>
+              <i>Billie Eilish, Cavetown, Conan Gray, FINNEAS, Coldplay</i>
+            </b>
+            , and more. I have a pet dog called Toby, he&apos;s a Golden Doodle.
+          </Text>
+          <Grid mt={8} templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }} h={{ base: "120vh", md: "45vh"}} gap={4}>
+            <Container position="relative" border="2px solid white">
+              <Image
+                objectFit="cover"
+                src="/espresso.jpg"
+                layout="fill"
+                alt="Espresso cup"
+              />
+            </Container>
+            <Container position="relative" border="2px solid white">
+              <Image
+                objectFit="cover"
+                src="/cold-brew.jpg"
+                layout="fill"
+                alt="Cold brew glass"
+              />
+            </Container>
+            <Container position="relative" border="2px solid white">
+              <Image
+                objectFit="cover"
+                src="/toby.jpg"
+                layout="fill"
+                alt="Toby"
+              />
+            </Container>
+          </Grid>
+        </Container>
         <Container pt={16} pb={10} maxW={width} px={padding}>
           <Heading pb={2} fontFamily="Work Sans, sans-serif">
             My Favourite Technologies ⭐️
