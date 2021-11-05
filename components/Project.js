@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Heading, Text, Link } from "@chakra-ui/react";
+import { Stack, Heading, Text, Link, Image } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const Project = (props) => {
@@ -15,6 +15,9 @@ const Project = (props) => {
             pb={6}
             minHeight={28}
         >
+            { props.image && (
+                <Image borderRadius="md" className="" src={props.image} alt={props.title} />
+            )}
             <Heading
                 pt={1}
                 fontWeight="regular"
