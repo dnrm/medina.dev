@@ -148,12 +148,14 @@ export default function Home() {
               title="🍀 codingacademy.mx"
               url="https://codingacademy.mx"
               description="A website for a client built using React and Tailwind CSS."
+              image="/crystal-medina-dev.png"
             />
             <Project
               title="🌱 Amethyst"
               url="https://amethyst.medina.dev"
               description="A user friendly way to manage your API Gateway keys. Built with
                   Next.js and the AWS Javascript SDK."
+              image="/amethyst-medina-dev.png"
             />
             <Project
               title="🌵 Crystal"
