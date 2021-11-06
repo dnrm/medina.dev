@@ -243,6 +243,8 @@ export default function Home() {
                 src="/espresso.jpg"
                 layout="fill"
                 alt="Espresso cup"
+                blurDataURL="/espresso.min.jpg"
+                placeholder="blur"
               />
             </Container>
             <Container position="relative" border="2px solid white">
@@ -251,6 +253,8 @@ export default function Home() {
                 src="/cold-brew.jpg"
                 layout="fill"
                 alt="Cold brew glass"
+                blurDataURL="/cold-brew.min.jpg"
+                placeholder="blur"
               />
             </Container>
             <Container position="relative" border="2px solid white">
@@ -259,6 +263,8 @@ export default function Home() {
                 src="/toby.jpg"
                 layout="fill"
                 alt="Toby"
+                blurDataURL="/toby.min.jpg"
+                placeholder="blur"
               />
             </Container>
           </Grid>
