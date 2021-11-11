@@ -148,7 +148,7 @@ export default function Home() {
               title="🍀 codingacademy.mx"
               url="https://codingacademy.mx"
               description="A website for a client built using React and Tailwind CSS."
-              image="/crystal-medina-dev.png"
+              image="/codingacademy-mx.png"
             />
             <Project
               title="🌱 Amethyst"
@@ -161,20 +161,24 @@ export default function Home() {
               title="🌵 Crystal"
               url="https://crystal.medina.dev"
               description="Social media website built with Next.js and Tailwind CSS. The backend uses MongoDB and S3 for file uploads."
+              image="/crystal-medina-dev.png"
             />
             <Project
               title="🌳  Sapphire"
               description="A full stack photo gallery app that uses an S3 bucket, user authentication, and resizes uploaded images using a Lambda function."
+              image="/dnrm-sapphire.png"
             />
             <Project
               title="🌲 Crypto Charts"
               url="https://crypto-charts.netlify.app/"
               description="Small project where you choose a cryptocurrency and then a graph is shown showing historical prices."
+              image="/crypto-charts.png"
             />
             <Project
               title="🌿 Something - Official website"
-              url="https://something-roblox.vercel.app/"
+              url="https://prog.dnrm.me/"
               description="Client website built with Next.js to promote a Roblox game. Deployed to Vercel."
+              image="something-dnrm-me.png"
             />
           </Grid>
         </Container>
