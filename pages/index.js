@@ -279,13 +279,13 @@ export default function Home() {
           </Heading>
           <Technologies
             items={[
-              "Next.js",
-              "MongoDB",
-              "React",
-              "Tailwind CSS",
-              "Chakra UI",
-              "Vercel",
-              "GitHub",
+              { name: "Next.js", description: "Next.js is a framework for building server-rendered applications." },
+              { name: "MongoDB", description: "MongoDB is a document-oriented database." },
+              { name: "React", description: "React is a library for building user interfaces." },
+              { name: "Tailwind CSS", description: "Tailwind CSS is a utility-first CSS framework." },
+              { name: "Chakra UI", description: "Chakra UI is a React UI library." },
+              { name: "Vercel", description: "Vercel is a hosting platform for static and dynamic websites." },
+              { name: "GitHub", description: "GitHub is a web-based version control system." },
             ]}
           />
         </Container>
