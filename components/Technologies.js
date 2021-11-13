@@ -1,18 +1,27 @@
 import React from "react";
-import { UnorderedList, ListItem } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
+import Technology from "./Technology";
 
 const Technologies = (props) => {
-    return (
-        <UnorderedList textColor="gray.500">
-            {props.items.map((i) => {
-                return (
-                    <ListItem key={i} fontSize={{ base: "0.8em", md: "0.9em" }}>
-                        {i}
-                    </ListItem>
-                );
-            })}
-        </UnorderedList>
-    );
+  return (
+    <Grid
+      templateColumns={{ base: "1fr", md: "1fr 1fr" }}
+      gap={2}
+      mt={2}
+      textColor="gray.500"
+    >
+      {props.items.map((i) => {
+        return (
+          <Technology
+            title={i.name}
+            key={i.name}
+            description={i.description}
+            fontSize={{ base: "0.8em", md: "0.9em" }}
+          />
+        );
+      })}
+    </Grid>
+  );
 };
 
 export default Technologies;

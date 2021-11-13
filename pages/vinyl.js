@@ -62,7 +62,7 @@ const collection = [
     link: "https://open.spotify.com/album/0JGOiO34nwfUdDrD612dOp?si=UGHhEai3QAatUqFEobVm9Q"
   },
   {
-    title: "Double Fantasy",
+    title: "Double Fantasy (Original 1980 Pressing)",
     artist: "John Lennon & Yoko Ono",
     cover: "https://i.scdn.co/image/ab67616d0000b2730488a5c4e21edc24526652ae",
     link: "https://open.spotify.com/album/1NWA2fPLUAW5df7UGI5thp?si=20d588db7c97488b"
@@ -105,7 +105,7 @@ const Vinyl = () => {
                 rounded="md"
               >
                 <Stack mr={3} minW="24">
-                  <a href={i.cover}>
+                  <a target="_blank" rel="noreferrer" href={i.cover}>
                     <Image
                       src={i.cover}
                       alt={`${i.title} by ${i.artist}`}
