@@ -240,7 +240,12 @@ export default function Home() {
             </b>
             , and more. I have a pet dog called Toby, he&apos;s a Golden Doodle.
           </Text>
-          <Grid mt={8} templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }} h={{ base: "120vh", md: "45vh"}} gap={4}>
+          <Grid
+            mt={8}
+            templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
+            h={{ base: "120vh", md: "45vh" }}
+            gap={4}
+          >
             <Container position="relative" border="2px solid white">
               <Image
                 objectFit="cover"
@@ -279,13 +284,48 @@ export default function Home() {
           </Heading>
           <Technologies
             items={[
-              { name: "Next.js", description: "Next.js is a framework for building server-rendered applications." },
-              { name: "MongoDB", description: "MongoDB is a document-oriented database." },
-              { name: "React", description: "React is a library for building user interfaces." },
-              { name: "Tailwind CSS", description: "Tailwind CSS is a utility-first CSS framework." },
-              { name: "Chakra UI", description: "Chakra UI is a React UI library." },
-              { name: "Vercel", description: "Vercel is a hosting platform for static and dynamic websites." },
-              { name: "GitHub", description: "GitHub is a web-based version control system." },
+              {
+                name: "Next.js",
+                description:
+                  "Next.js is a framework for building server-rendered applications.",
+                src: "/nextjs.svg",
+              },
+              {
+                name: "MongoDB",
+                description: "MongoDB is a document-oriented database.",
+                src: "/mongodb.svg",
+              },
+              {
+                name: "React",
+                description: "React is a library for building user interfaces.",
+                src: "/react.svg",
+              },
+              {
+                name: "Tailwind CSS",
+                description: "Tailwind CSS is a utility-first CSS framework.",
+                src: "/tailwind.svg",
+              },
+              {
+                name: "Chakra UI",
+                description: "Chakra UI is a React UI library.",
+                src: "/chakra.png",
+              },
+              {
+                name: "Vercel",
+                description:
+                  "Vercel is a hosting platform for static and dynamic websites.",
+                src: "/vercel.png",
+              },
+              {
+                name: "GitHub",
+                description: "GitHub is a web-based version control system.",
+                src: "/github.png",
+              },
+              {
+                name: "AWS",
+                description: "AWS is a cloud computing platform.",
+                src: "aws.svg",
+              },
             ]}
           />
         </Container>
