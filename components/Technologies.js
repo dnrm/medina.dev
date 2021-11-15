@@ -5,7 +5,7 @@ import Technology from "./Technology";
 const Technologies = (props) => {
   return (
     <Grid
-      templateColumns={{ base: "1fr", md: "1fr 1fr" }}
+      templateColumns={{ base: "1fr", md: "50% 50%" }}
       gap={2}
       mt={2}
       textColor="gray.500"
@@ -15,6 +15,7 @@ const Technologies = (props) => {
           <Technology
             title={i.name}
             key={i.name}
+            src={i.src}
             description={i.description}
             fontSize={{ base: "0.8em", md: "0.9em" }}
           />
