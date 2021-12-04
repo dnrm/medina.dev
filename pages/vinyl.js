@@ -103,7 +103,10 @@ const Vinyl = () => {
             My Vinyl Collection
           </Heading>
         </Container>
-        <Container pt={4} maxW={width} px={padding} pb={16}>
+          <Container pt={4} maxW={width} px={padding}>
+            <Text fontWeight="bold" textColor="gray.400">{collection.length} Records in total</Text>
+          </Container>
+        <Container pt={2} maxW={width} px={padding} pb={16}>
           {collection.map((i) => {
             return (
               <Flex
