@@ -72,6 +72,12 @@ const collection = [
     artist: "Coldplay",
     cover: "https://i.scdn.co/image/ab67616d0000b2734b3f858e8ace8ca943695ace",
     link: "https://open.spotify.com/track/4MJmHcZn440Wf7oIeMbhD1"
+  },
+  {
+    title: "Music of the Spheres 2xLP Recycled Colored Vinyl",
+    artist: "Coldplay",
+    cover: "https://i.scdn.co/image/ab67616d0000b273ec10f247b100da1ce0d80b6d",
+    link: "https://open.spotify.com/album/06mXfvDsRZNfnsGZvX2zpb?si=DvYDXUIuTdmPL5ZR6Vp7dQ"
   }
 ];
 
