@@ -2,6 +2,6 @@ module.exports = {
   reactStrictMode: true,
   basePath: process.env.BASE_PATH || '',
   images: {
-    domains: ['i.scdn.co']
+    domains: ['i.scdn.co', 'upload.wikimedia.org']
   }
 }

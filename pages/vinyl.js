@@ -62,7 +62,7 @@ const collection = [
     link: "https://open.spotify.com/album/0JGOiO34nwfUdDrD612dOp?si=UGHhEai3QAatUqFEobVm9Q"
   },
   {
-    title: "Double Fantasy (Original 1980 Mexican Pressing)",
+    title: "Double Fantasy (Original 1980 Geffen Records Mexican Pressing)",
     artist: "John Lennon & Yoko Ono",
     cover: "https://i.scdn.co/image/ab67616d0000b2730488a5c4e21edc24526652ae",
     link: "https://open.spotify.com/album/1NWA2fPLUAW5df7UGI5thp?si=20d588db7c97488b"
@@ -78,6 +78,24 @@ const collection = [
     artist: "Coldplay",
     cover: "https://i.scdn.co/image/ab67616d0000b273ec10f247b100da1ce0d80b6d",
     link: "https://open.spotify.com/album/06mXfvDsRZNfnsGZvX2zpb?si=DvYDXUIuTdmPL5ZR6Vp7dQ"
+  },
+  {
+    title: "Optimist 1xLP Walmart Exclusive",
+    artist: "FINNEAS",
+    cover: "https://i.scdn.co/image/ab67616d0000b2733bfed0974a996bfd87ea1c9a",
+    link: "https://open.spotify.com/album/3KChz6qdEH9AfHE6VCBshZ"
+  },
+  {
+    title: "Sgt Pepper's Lonely Hearts Club Band (Original Capitol Records '67 Pressing)",
+    artist: "The Beatles",
+    cover: "https://i.scdn.co/image/ab67616d0000b27334ef8f7d06cf2fc2146f420a",
+    link: "https://open.spotify.com/album/6QaVfG1pHYl1z15ZxkvVDW?si=aef5c1e422674634"
+  },
+  {
+    title: "I Want To Hold Your Hand / I Saw Her Standing There (Original 1963 Capitol Records Pressing)",
+    artist: "The Beatles",
+    cover: "https://upload.wikimedia.org/wikipedia/en/b/bf/I_saw_her_standing_there_single.png",
+    link: "https://open.spotify.com/playlist/0ccS4zrSTfYKFSBN3PbKzR"
   }
 ];
 
