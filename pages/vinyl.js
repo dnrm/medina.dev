@@ -6,7 +6,7 @@ import {
   Flex,
   Divider,
   Text,
-  Link
+  Link,
 } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import { useColorModeValue } from "@chakra-ui/color-mode";
@@ -23,80 +23,83 @@ const collection = [
     title: "Definitely Maybe (Remastered)",
     artist: "Oasis",
     cover: "https://i.scdn.co/image/ab67616d0000b273d86a1e021e7acc7c07c7d668",
-    link: "https://open.spotify.com/album/50xG9YujTzMGaLHfJTskBy?si=05PZTYgtRY2npzMCBXKepA"
+    link: "https://open.spotify.com/album/50xG9YujTzMGaLHfJTskBy?si=05PZTYgtRY2npzMCBXKepA",
   },
   {
     title: "Be Here Now (Remastered)",
     artist: "Oasis",
     cover: "https://i.scdn.co/image/ab67616d0000b273aeda362a434f01d0eff70b4e",
-    link: "https://open.spotify.com/album/5WsCU95SaumguegxnC87TV?si=roj9rrKaTHOy4tgMe_ttgA"
+    link: "https://open.spotify.com/album/5WsCU95SaumguegxnC87TV?si=roj9rrKaTHOy4tgMe_ttgA",
   },
   {
     title: "A Rush of Blood to the Head 1xLP",
     artist: "Coldplay",
     cover: "https://i.scdn.co/image/ab67616d0000b27390afd8e4ec6d787114ed6c40",
-    link: "https://open.spotify.com/album/0RHX9XECH8IVI3LNgWDpmQ?si=rNn19WQ7QC-rVcLKLvzLpQ"
+    link: "https://open.spotify.com/album/0RHX9XECH8IVI3LNgWDpmQ?si=rNn19WQ7QC-rVcLKLvzLpQ",
   },
   {
     title: "A Head Full of Dreams 2xLP Black",
     artist: "Coldplay",
     cover: "https://i.scdn.co/image/ab67616d0000b2738ff7c3580d429c8212b9a3b6",
-    link: "https://open.spotify.com/album/3cfAM8b8KqJRoIzt3zLKqw?si=494e3052096c4594"
+    link: "https://open.spotify.com/album/3cfAM8b8KqJRoIzt3zLKqw?si=494e3052096c4594",
   },
   {
     title: "Different Class 1xLP",
     artist: "Pulp",
     cover: "https://i.scdn.co/image/ab67616d0000b273fd952bece8f049dbcd7df93f",
-    link: "https://open.spotify.com/album/3ly9T2L4pqTZijFgQssd3x?si=D-OEbo_eQQegg3loECpEcg"
+    link: "https://open.spotify.com/album/3ly9T2L4pqTZijFgQssd3x?si=D-OEbo_eQQegg3loECpEcg",
   },
   {
     title: "(What's The Story) Morning Glory? 2xLP",
     artist: "Oasis",
     cover: "https://i.scdn.co/image/ab67616d0000b2737a4c8c59851c88f6794c3cbf",
-    link: "https://open.spotify.com/album/1VW1MFNstaJuygaoTPkdCk?si=IsrKBGb9QrCohwV8Irn45A"
+    link: "https://open.spotify.com/album/1VW1MFNstaJuygaoTPkdCk?si=IsrKBGb9QrCohwV8Irn45A",
   },
   {
     title: "Happier Than Ever 2xLP, Black",
     artist: "Billie Eilish",
     cover: "https://i.scdn.co/image/ab67616d0000b2732a038d3bf875d23e4aeaa84e",
-    link: "https://open.spotify.com/album/0JGOiO34nwfUdDrD612dOp?si=UGHhEai3QAatUqFEobVm9Q"
+    link: "https://open.spotify.com/album/0JGOiO34nwfUdDrD612dOp?si=UGHhEai3QAatUqFEobVm9Q",
   },
   {
     title: "Double Fantasy (Original 1980 Geffen Records Mexican Pressing)",
     artist: "John Lennon & Yoko Ono",
     cover: "https://i.scdn.co/image/ab67616d0000b2730488a5c4e21edc24526652ae",
-    link: "https://open.spotify.com/album/1NWA2fPLUAW5df7UGI5thp?si=20d588db7c97488b"
+    link: "https://open.spotify.com/album/1NWA2fPLUAW5df7UGI5thp?si=20d588db7c97488b",
   },
   {
-    title: "Christmas Lights Blue 7\" Single 2020",
+    title: 'Christmas Lights Blue 7" Single 2020',
     artist: "Coldplay",
     cover: "https://i.scdn.co/image/ab67616d0000b2734b3f858e8ace8ca943695ace",
-    link: "https://open.spotify.com/track/4MJmHcZn440Wf7oIeMbhD1"
+    link: "https://open.spotify.com/track/4MJmHcZn440Wf7oIeMbhD1",
   },
   {
     title: "Music of the Spheres 2xLP Recycled Colored Vinyl",
     artist: "Coldplay",
     cover: "https://i.scdn.co/image/ab67616d0000b273ec10f247b100da1ce0d80b6d",
-    link: "https://open.spotify.com/album/06mXfvDsRZNfnsGZvX2zpb?si=DvYDXUIuTdmPL5ZR6Vp7dQ"
+    link: "https://open.spotify.com/album/06mXfvDsRZNfnsGZvX2zpb?si=DvYDXUIuTdmPL5ZR6Vp7dQ",
   },
   {
     title: "Optimist 1xLP Walmart Exclusive",
     artist: "FINNEAS",
     cover: "https://i.scdn.co/image/ab67616d0000b2733bfed0974a996bfd87ea1c9a",
-    link: "https://open.spotify.com/album/3KChz6qdEH9AfHE6VCBshZ"
+    link: "https://open.spotify.com/album/3KChz6qdEH9AfHE6VCBshZ",
   },
   {
-    title: "Sgt Pepper's Lonely Hearts Club Band (Original Capitol Records '67 Pressing)",
+    title:
+      "Sgt Pepper's Lonely Hearts Club Band (Original Capitol Records '67 Pressing)",
     artist: "The Beatles",
     cover: "https://i.scdn.co/image/ab67616d0000b27334ef8f7d06cf2fc2146f420a",
-    link: "https://open.spotify.com/album/6QaVfG1pHYl1z15ZxkvVDW?si=aef5c1e422674634"
+    link: "https://open.spotify.com/album/6QaVfG1pHYl1z15ZxkvVDW?si=aef5c1e422674634",
   },
   {
-    title: "I Want To Hold Your Hand / I Saw Her Standing There (Original 1963 Capitol Records Pressing)",
+    title:
+      "I Want To Hold Your Hand / I Saw Her Standing There (Original 1963 Capitol Records Pressing)",
     artist: "The Beatles",
-    cover: "https://upload.wikimedia.org/wikipedia/en/b/bf/I_saw_her_standing_there_single.png",
-    link: "https://open.spotify.com/playlist/0ccS4zrSTfYKFSBN3PbKzR"
-  }
+    cover:
+      "https://upload.wikimedia.org/wikipedia/en/b/bf/I_saw_her_standing_there_single.png",
+    link: "https://open.spotify.com/playlist/0ccS4zrSTfYKFSBN3PbKzR",
+  },
 ];
 
 const Vinyl = () => {
@@ -121,9 +124,11 @@ const Vinyl = () => {
             My Vinyl Collection
           </Heading>
         </Container>
-          <Container pt={4} maxW={width} px={padding}>
-            <Text fontWeight="bold" textColor="gray.400">{collection.length} Records in total</Text>
-          </Container>
+        <Container pt={4} maxW={width} px={padding}>
+          <Text fontWeight="bold" textColor="gray.400">
+            {collection.length} Records in total
+          </Text>
+        </Container>
         <Container pt={2} maxW={width} px={padding} pb={16}>
           {collection.map((i) => {
             return (
