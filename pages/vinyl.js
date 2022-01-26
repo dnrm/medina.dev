@@ -100,6 +100,12 @@ const collection = [
       "https://upload.wikimedia.org/wikipedia/en/b/bf/I_saw_her_standing_there_single.png",
     link: "https://open.spotify.com/playlist/0ccS4zrSTfYKFSBN3PbKzR",
   },
+  {
+    title: "The Dark Side Of The Moon (2021 Pressing)",
+    artist: "Pink Floyd",
+    cover: "https://i.scdn.co/image/ab67616d0000b273ea7caaff71dea1051d49b2fe",
+    link: "https://open.spotify.com/album/4LH4d3cOWNNsVw41Gqt2kv?si=DOAhHbkfRoaPefNbT0RVCA",
+  },
 ];
 
 const Vinyl = () => {

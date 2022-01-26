@@ -158,6 +158,12 @@ export default function Home() {
               image="/amethyst-medina-dev.png"
             />
             <Project
+              title="🌎 Earth"
+              url="https://earth.medina.dev"
+              description="This website is dedicated to inform yourself about how to take care of the environment."
+              image="/earth-medina-dev.png"
+            />
+            <Project
               title="🌵 Crystal"
               url="https://crystal.medina.dev"
               description="Social media website built with Next.js and Tailwind CSS. The backend uses MongoDB and S3 for file uploads."
