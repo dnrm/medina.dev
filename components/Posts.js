@@ -64,7 +64,6 @@ const Posts = (props) => {
                     gap={4}
                 >
                     {posts.map((i) => {
-                        console.log(i);
                         return (
                             <Link
                                 href={`https://blog.danielmedina.dev/${i.slug}`}
