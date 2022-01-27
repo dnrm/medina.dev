@@ -184,7 +184,7 @@ export default function Home() {
               title="🌿 Something - Official website"
               url="https://prog.dnrm.me/"
               description="Client website built with Next.js to promote a Roblox game. Deployed to Vercel."
-              image="something-dnrm-me.png"
+              image="/something-dnrm-me.png"
             />
           </Grid>
         </Container>
