@@ -165,7 +165,7 @@ const Vinyl = () => {
                 <Flex direction="column">
                   <Heading
                     fontWeight="bold"
-                    fontSize={{ base: "1.4em", md: "1.6em" }}
+                    fontSize={{ base: "1em", md: "1.6em" }}
                     letterSpacing="tighter"
                   >
                     <Link href={i.link} target="_blank" rel="noreferrer">
