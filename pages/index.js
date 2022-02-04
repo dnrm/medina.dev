@@ -85,7 +85,7 @@ export default function Home() {
             fontFamily="Work Sans, sans-serif"
             fontSize={{ base: "2.3em", md: "3em" }}
           >
-            Hi, I&apos;m Daniel Medina 👋
+            Hi, I&apos;m Daniel Medina 💅
           </Heading>
           <Text textColor="gray.500">
             I&apos;m a web developer from Mexico. I love to work with Next.js
