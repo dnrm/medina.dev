@@ -106,6 +106,12 @@ const collection = [
     cover: "https://i.scdn.co/image/ab67616d0000b273ea7caaff71dea1051d49b2fe",
     link: "https://open.spotify.com/album/4LH4d3cOWNNsVw41Gqt2kv?si=DOAhHbkfRoaPefNbT0RVCA",
   },
+  {
+    title: "Rubber Soul (Remastered)",
+    artist: "The Beatles",
+    cover: "https://i.scdn.co/image/ab67616d0000b273ed801e58a9ababdea6ac7ce4",
+    link: "https://open.spotify.com/album/50o7kf2wLwVmOTVYJOTplm?si=k9_Qg-LURyGGDPIRImUUuQ"
+  }
 ];
 
 const Vinyl = () => {
