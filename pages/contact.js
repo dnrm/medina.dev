@@ -39,7 +39,7 @@ const socials = [
   },
   {
     name: "Hashnode 📕",
-    href: "https://hashnode.com/@dnrm",
+    href: "https://blog.medina.dev",
     description:
       "Read every single one of my blog posts as soon as they come out!",
   },
