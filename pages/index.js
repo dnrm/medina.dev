@@ -255,10 +255,10 @@ export default function Home() {
             <Container position="relative" border="2px solid white">
               <Image
                 objectFit="cover"
-                src="/espresso.jpg"
+                src="/breville.jpeg"
                 layout="fill"
                 alt="Espresso cup"
-                blurDataURL="/espresso.min.jpg"
+                blurDataURL="/breville.min.jpeg"
                 placeholder="blur"
               />
             </Container>
