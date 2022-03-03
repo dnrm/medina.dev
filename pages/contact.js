@@ -14,7 +14,7 @@ import Navbar from "../components/Navbar";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { useColorModeValue } from "@chakra-ui/color-mode";
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 
 const socials = [
   {
@@ -140,7 +140,9 @@ const Contact = () => {
           </Grid>
         </Container>
         <Container maxW={width} px={padding} py={8}>
-          <Text textColor="gray.400" fontSize="1.1em">Feel free to contact me through any of these links!</Text>
+          <Text textColor="gray.400" fontSize="1.1em">
+            Feel free to contact me through any of these links!
+          </Text>
         </Container>
         <Container pb={10} maxW={width} px={padding}>
           <Divider />

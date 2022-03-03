@@ -66,8 +66,9 @@ const certificationsObj = [
     href: "/creative-js-course.png",
     src: "/creative-js-course.png",
     title: "The Creative JavaScript Course",
-    description: "This certification proves completion of The Creative JavaScript Course",
-  }
+    description:
+      "This certification proves completion of The Creative JavaScript Course",
+  },
 ];
 
 const Certifications = () => {
