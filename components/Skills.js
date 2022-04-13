@@ -16,7 +16,6 @@ const Skills = ({ padding, width }) => {
                 alignItems="center"
                 direction="row"
                 wrap="wrap"
-                gap={4}
             >
                 <Badge
                     mx={1}
