@@ -17,7 +17,7 @@ import Posts from "../components/Posts";
 import Skills from "../components/Skills";
 import Certification from "../components/Certification";
 import Navbar from "../components/Navbar";
-import { motion } from "framer-motion";
+import { m, motion } from "framer-motion";
 
 const certifications = [
   {
@@ -170,11 +170,6 @@ export default function Home() {
               image="/crystal-medina-dev.png"
             />
             <Project
-              title="🌳  Sapphire"
-              description="A full stack photo gallery app that uses an S3 bucket, user authentication, and resizes uploaded images using a Lambda function."
-              image="/dnrm-sapphire.png"
-            />
-            <Project
               title="🌲 Crypto Charts"
               url="https://crypto-charts.netlify.app/"
               description="Small project where you choose a cryptocurrency and then a graph is shown showing historical prices."
@@ -185,6 +180,12 @@ export default function Home() {
               url="https://prog.dnrm.me/"
               description="Client website built with Next.js to promote a Roblox game. Deployed to Vercel."
               image="/something-dnrm-me.png"
+            />
+            <Project
+              title="🪴 dnrm.me"
+              url="https://dnrm.me/"
+              description="This is a website i use to test different parts of the React.js framework. It has been going on since January 2019."
+              image="/dnrm.me.png"
             />
           </Grid>
         </Container>
@@ -275,10 +276,10 @@ export default function Home() {
             <Container position="relative" border="2px solid white">
               <Image
                 objectFit="cover"
-                src="/toby.jpg"
+                src="/toby.jpeg"
                 layout="fill"
                 alt="Toby"
-                blurDataURL="/toby.min.jpg"
+                blurDataURL="/toby-min.jpeg"
                 placeholder="blur"
               />
             </Container>
@@ -330,8 +331,38 @@ export default function Home() {
               {
                 name: "AWS",
                 description: "AWS is a cloud computing platform.",
-                src: "aws.svg",
+                src: "/aws.svg",
               },
+              {
+                name: "Visual Studio Code",
+                description: 'VSCode is a very powerful and extensible code editor.',
+                src: '/vscode.svg'
+              },
+              {
+                name: 'PopSQL',
+                description: 'PopSQL is a SQL client that supports a wide variety of databases.',
+                src: '/popsql.png'
+              },
+              {
+                name: 'iTerm 2',
+                description: 'iTerm 2 is a terminal emulator.',
+                src: '/iterm2.svg'
+              },
+              {
+                name: 'Notion',
+                description: 'Notion is a collaborative project management tool.',
+                src: '/notion.png'
+              },
+              {
+                name: "Figma",
+                description: "Figma is a design tool.",
+                src: '/figma.png'
+              },
+              {
+                name: 'Xcode',
+                description: 'Xcode is a development environment for iOS and macOS.',
+                src: '/xcode.png'
+              }
             ]}
           />
         </Container>
