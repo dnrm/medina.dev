@@ -25,6 +25,7 @@ const Technology = (props) => {
           p={2}
           src={props.src}
           alt={props.alt}
+          objectFit="contain"
         />
       )}
       <Flex flexDir="column">
