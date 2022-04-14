@@ -38,6 +38,7 @@ const Navbar = ({ width, padding }) => {
             w={4}
             onClick={toggleColorMode}
             outlineColor="transparent"
+            aria-label="Toggle color mode"
           >
             <SunIcon />
           </Button>
