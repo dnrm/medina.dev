@@ -1,4 +1,4 @@
-# medina.dev | Personal Portfolio
+# medina.dev
 
 ![Screenshot of medina.dev](https://raw.githubusercontent.com/dnrm/dnrm/master/img/medina.dev.jpeg)
 
