@@ -78,6 +78,7 @@ export default function Home() {
             h={32}
             w={32}
             src="/me.jpg"
+            name="Daniel Medina"
           ></Avatar>
         </Container>
         <Container pt={4} maxW={width} px={padding}>
@@ -125,7 +126,7 @@ export default function Home() {
             currently have a small collection of them, but have been getting
             more and more lately. Check out my collection{" "}
             <Link href="/vinyl" passHref>
-              <StyledLink _hover={{ color: "blue.500" }} textDecor="underline">
+              <StyledLink _hover={{ color: "blue.500" }} textDecor="underline" aria-label="Link to my vinyl collection">
                 here
               </StyledLink>
             </Link>

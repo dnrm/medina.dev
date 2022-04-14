@@ -24,7 +24,7 @@ const Technology = (props) => {
           h={16}
           p={2}
           src={props.src}
-          alt={props.alt}
+          alt={props.alt || "Technology logo"} 
           objectFit="contain"
         />
       )}
