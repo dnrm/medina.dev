@@ -20,98 +20,104 @@ const padding = 6;
 
 const collection = [
   {
-    title: "Definitely Maybe (Remastered)",
+    title: "Definitely Maybe",
     artist: "Oasis",
     cover: "https://i.scdn.co/image/ab67616d0000b273d86a1e021e7acc7c07c7d668",
     link: "https://open.spotify.com/album/50xG9YujTzMGaLHfJTskBy?si=05PZTYgtRY2npzMCBXKepA",
   },
   {
-    title: "Be Here Now (Remastered)",
+    title: "Be Here Now",
     artist: "Oasis",
     cover: "https://i.scdn.co/image/ab67616d0000b273aeda362a434f01d0eff70b4e",
     link: "https://open.spotify.com/album/5WsCU95SaumguegxnC87TV?si=roj9rrKaTHOy4tgMe_ttgA",
   },
   {
-    title: "A Rush of Blood to the Head 1xLP",
+    title: "A Rush of Blood to the Head ",
     artist: "Coldplay",
     cover: "https://i.scdn.co/image/ab67616d0000b27390afd8e4ec6d787114ed6c40",
     link: "https://open.spotify.com/album/0RHX9XECH8IVI3LNgWDpmQ?si=rNn19WQ7QC-rVcLKLvzLpQ",
   },
   {
-    title: "A Head Full of Dreams 2xLP Black",
+    title: "A Head Full of Dreams",
     artist: "Coldplay",
     cover: "https://i.scdn.co/image/ab67616d0000b2738ff7c3580d429c8212b9a3b6",
     link: "https://open.spotify.com/album/3cfAM8b8KqJRoIzt3zLKqw?si=494e3052096c4594",
   },
   {
-    title: "Different Class 1xLP",
+    title: "Different Class",
     artist: "Pulp",
     cover: "https://i.scdn.co/image/ab67616d0000b273fd952bece8f049dbcd7df93f",
     link: "https://open.spotify.com/album/3ly9T2L4pqTZijFgQssd3x?si=D-OEbo_eQQegg3loECpEcg",
   },
   {
-    title: "(What's The Story) Morning Glory? 2xLP",
+    title: "(What's The Story) Morning Glory?",
     artist: "Oasis",
     cover: "https://i.scdn.co/image/ab67616d0000b2737a4c8c59851c88f6794c3cbf",
     link: "https://open.spotify.com/album/1VW1MFNstaJuygaoTPkdCk?si=IsrKBGb9QrCohwV8Irn45A",
   },
   {
-    title: "Happier Than Ever 2xLP, Black",
+    title: "Happier Than Ever",
     artist: "Billie Eilish",
     cover: "https://i.scdn.co/image/ab67616d0000b2732a038d3bf875d23e4aeaa84e",
     link: "https://open.spotify.com/album/0JGOiO34nwfUdDrD612dOp?si=UGHhEai3QAatUqFEobVm9Q",
   },
   {
-    title: "Double Fantasy (Original 1980 Geffen Records Mexican Pressing)",
+    title: "Double Fantasy",
     artist: "John Lennon & Yoko Ono",
     cover: "https://i.scdn.co/image/ab67616d0000b2730488a5c4e21edc24526652ae",
     link: "https://open.spotify.com/album/1NWA2fPLUAW5df7UGI5thp?si=20d588db7c97488b",
   },
   {
-    title: 'Christmas Lights Blue 7" Single 2020',
+    title: 'Christmas Lights',
     artist: "Coldplay",
     cover: "https://i.scdn.co/image/ab67616d0000b2734b3f858e8ace8ca943695ace",
     link: "https://open.spotify.com/track/4MJmHcZn440Wf7oIeMbhD1",
   },
   {
-    title: "Music of the Spheres 2xLP Recycled Colored Vinyl",
+    title: "Music of the Spheres",
     artist: "Coldplay",
     cover: "https://i.scdn.co/image/ab67616d0000b273ec10f247b100da1ce0d80b6d",
     link: "https://open.spotify.com/album/06mXfvDsRZNfnsGZvX2zpb?si=DvYDXUIuTdmPL5ZR6Vp7dQ",
   },
   {
-    title: "Optimist 1xLP Walmart Exclusive",
+    title: "Optimist",
     artist: "FINNEAS",
     cover: "https://i.scdn.co/image/ab67616d0000b2733bfed0974a996bfd87ea1c9a",
     link: "https://open.spotify.com/album/3KChz6qdEH9AfHE6VCBshZ",
   },
   {
     title:
-      "Sgt Pepper's Lonely Hearts Club Band (Original Capitol Records '67 Pressing)",
+      "Sgt Pepper's Lonely Hearts Club Band",
     artist: "The Beatles",
     cover: "https://i.scdn.co/image/ab67616d0000b27334ef8f7d06cf2fc2146f420a",
     link: "https://open.spotify.com/album/6QaVfG1pHYl1z15ZxkvVDW?si=aef5c1e422674634",
   },
   {
     title:
-      "I Want To Hold Your Hand / I Saw Her Standing There (Original 1963 Capitol Records Pressing)",
+      "I Want To Hold Your Hand / I Saw Her Standing There",
     artist: "The Beatles",
     cover:
       "https://upload.wikimedia.org/wikipedia/en/b/bf/I_saw_her_standing_there_single.png",
     link: "https://open.spotify.com/playlist/0ccS4zrSTfYKFSBN3PbKzR",
   },
   {
-    title: "The Dark Side Of The Moon (2021 Pressing)",
+    title: "The Dark Side Of The Moon",
     artist: "Pink Floyd",
     cover: "https://i.scdn.co/image/ab67616d0000b273ea7caaff71dea1051d49b2fe",
     link: "https://open.spotify.com/album/4LH4d3cOWNNsVw41Gqt2kv?si=DOAhHbkfRoaPefNbT0RVCA",
   },
   {
-    title: "Rubber Soul (Remastered)",
+    title: "Rubber Soul",
     artist: "The Beatles",
     cover: "https://i.scdn.co/image/ab67616d0000b273ed801e58a9ababdea6ac7ce4",
     link: "https://open.spotify.com/album/50o7kf2wLwVmOTVYJOTplm?si=k9_Qg-LURyGGDPIRImUUuQ",
   },
+  {
+    title: "Sling",
+    artist: "Clairo",
+    cover: "https://i.scdn.co/image/ab67616d0000b2732624442cf48e4962d1422da8",
+    link: "https://open.spotify.com/track/0HAqq2GcQKyi3s87GuN7jU"
+  }
 ];
 
 const Vinyl = () => {
