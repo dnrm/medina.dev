@@ -68,7 +68,7 @@ const collection = [
     link: "https://open.spotify.com/album/1NWA2fPLUAW5df7UGI5thp?si=20d588db7c97488b",
   },
   {
-    title: 'Christmas Lights',
+    title: "Christmas Lights",
     artist: "Coldplay",
     cover: "https://i.scdn.co/image/ab67616d0000b2734b3f858e8ace8ca943695ace",
     link: "https://open.spotify.com/track/4MJmHcZn440Wf7oIeMbhD1",
@@ -86,15 +86,13 @@ const collection = [
     link: "https://open.spotify.com/album/3KChz6qdEH9AfHE6VCBshZ",
   },
   {
-    title:
-      "Sgt Pepper's Lonely Hearts Club Band",
+    title: "Sgt Pepper's Lonely Hearts Club Band",
     artist: "The Beatles",
     cover: "https://i.scdn.co/image/ab67616d0000b27334ef8f7d06cf2fc2146f420a",
     link: "https://open.spotify.com/album/6QaVfG1pHYl1z15ZxkvVDW?si=aef5c1e422674634",
   },
   {
-    title:
-      "I Want To Hold Your Hand / I Saw Her Standing There",
+    title: "I Want To Hold Your Hand / I Saw Her Standing There",
     artist: "The Beatles",
     cover:
       "https://upload.wikimedia.org/wikipedia/en/b/bf/I_saw_her_standing_there_single.png",
@@ -116,8 +114,8 @@ const collection = [
     title: "Sling",
     artist: "Clairo",
     cover: "https://i.scdn.co/image/ab67616d0000b2732624442cf48e4962d1422da8",
-    link: "https://open.spotify.com/track/0HAqq2GcQKyi3s87GuN7jU"
-  }
+    link: "https://open.spotify.com/track/0HAqq2GcQKyi3s87GuN7jU",
+  },
 ];
 
 const Vinyl = () => {

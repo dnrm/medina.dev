@@ -188,6 +188,12 @@ export default function Home() {
               description="This is a website i use to test different parts of the React.js framework. It has been going on since January 2019."
               image="/dnrm.me.png"
             />
+            <Project
+              title="💎 verbenajoyeria.com"
+              url="https://verbenajoyeria.com/"
+              description="Online store for Verbena Joyería built with Next.js and Stripe as a payment processor."
+              image="/verbenajoyeria.png"
+            />
           </Grid>
         </Container>
         <Container pt={16} maxW={width} px={padding}>
