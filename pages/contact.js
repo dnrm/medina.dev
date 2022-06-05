@@ -48,6 +48,17 @@ const socials = [
     href: "mailto:daniel@medina.com",
     description: "Send me an email. Wether you're a client or a fan!",
   },
+  {
+    name: "Gumroad 💰",
+    href: "https://shop.medina.dev/",
+    description:
+      "My online shop includes different products, from photography to website templates.",
+  },
+  {
+    name: "LinkedIn 💌",
+    href: "https://www.linkedin.com/in/dnrm/",
+    description: "I dont check my LinkedIn often, but if you want to, you can send a message!",
+  }
 ];
 
 const Contact = () => {
