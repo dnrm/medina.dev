@@ -75,8 +75,8 @@ export default function Home() {
           <Avatar
             borderWidth="6px"
             borderColor="gray.100"
-            h={32}
-            w={32}
+            h={36}
+            w={36}
             src="/me.jpg"
             name="Daniel Medina"
           ></Avatar>
@@ -126,7 +126,11 @@ export default function Home() {
             currently have a small collection of them, but have been getting
             more and more lately. Check out my collection{" "}
             <Link href="/vinyl" passHref>
-              <StyledLink _hover={{ color: "blue.500" }} textDecor="underline" aria-label="Link to my vinyl collection">
+              <StyledLink
+                _hover={{ color: "blue.500" }}
+                textDecor="underline"
+                aria-label="Link to my vinyl collection"
+              >
                 here
               </StyledLink>
             </Link>
@@ -148,8 +152,26 @@ export default function Home() {
             <Project
               title="🍀 codingacademy.mx"
               url="https://codingacademy.mx"
-              description="A website for a client built using React and Tailwind CSS."
+              description="Commissioned website for Coding Academy Monterrey built using React.js and Tailwind CSS."
               image="/codingacademy-mx.png"
+            />
+            <Project
+              title="🌎 Earth"
+              url="https://earth.medina.dev"
+              description="First place winner on Coding Academy Monterrey's annual coding tournament. This website is dedicated to informing the public on how to take care of the environment."
+              image="/earth-medina-dev.png"
+            />
+            <Project
+              title="💎 verbenajoyeria.com"
+              url="https://verbenajoyeria.com/"
+              description="Online store for Verbena Joyería built with Next.js and Stripe as a payment processor."
+              image="/verbenajoyeria.png"
+            />
+            <Project
+              title="🌵 Crystal"
+              url="https://crystal.medina.dev"
+              description="Social media website built with Next.js and Tailwind CSS. The backend uses MongoDB and S3 for file uploads."
+              image="/crystal-medina-dev.png"
             />
             <Project
               title="🌱 Amethyst"
@@ -157,18 +179,6 @@ export default function Home() {
               description="A user friendly way to manage your API Gateway keys. Built with
                   Next.js and the AWS Javascript SDK."
               image="/amethyst-medina-dev.png"
-            />
-            <Project
-              title="🌎 Earth"
-              url="https://earth.medina.dev"
-              description="This website is dedicated to inform yourself about how to take care of the environment."
-              image="/earth-medina-dev.png"
-            />
-            <Project
-              title="🌵 Crystal"
-              url="https://crystal.medina.dev"
-              description="Social media website built with Next.js and Tailwind CSS. The backend uses MongoDB and S3 for file uploads."
-              image="/crystal-medina-dev.png"
             />
             <Project
               title="🌲 Crypto Charts"
@@ -187,12 +197,6 @@ export default function Home() {
               url="https://dnrm.me/"
               description="This is a website i use to test different parts of the React.js framework. It has been going on since January 2019."
               image="/dnrm.me.png"
-            />
-            <Project
-              title="💎 verbenajoyeria.com"
-              url="https://verbenajoyeria.com/"
-              description="Online store for Verbena Joyería built with Next.js and Stripe as a payment processor."
-              image="/verbenajoyeria.png"
             />
           </Grid>
         </Container>
@@ -222,13 +226,22 @@ export default function Home() {
           </Grid>
           <Link href="/certifications" passHref>
             <StyledLink
-              textColor="blue.500"
+              textColor="white"
               textAlign="center"
-              w="100%"
+              backgroundColor="transparent"
+              maxW={'100%'}
+              borderWidth={2}
+              borderColor="gray.600"
+              _hover={{ backgroundColor: "gray.600" }}
+              textDecor="underline"
+              mx={'auto'}
               display="block"
-              pt={4}
+              borderRadius={'lg'}
+              py={3}
+              px={8}
+              mt={5}
             >
-              View All
+              View All →
             </StyledLink>
           </Link>
         </Container>
@@ -342,34 +355,38 @@ export default function Home() {
               },
               {
                 name: "Visual Studio Code",
-                description: 'VSCode is a very powerful and extensible code editor.',
-                src: '/vscode.svg'
+                description:
+                  "VSCode is a very powerful and extensible code editor.",
+                src: "/vscode.svg",
               },
               {
-                name: 'PopSQL',
-                description: 'PopSQL is a SQL client that supports a wide variety of databases.',
-                src: '/popsql.png'
+                name: "PopSQL",
+                description:
+                  "PopSQL is a SQL client that supports a wide variety of databases.",
+                src: "/popsql.png",
               },
               {
-                name: 'iTerm 2',
-                description: 'iTerm 2 is a terminal emulator.',
-                src: '/iterm2.svg'
+                name: "iTerm 2",
+                description: "iTerm 2 is a terminal emulator.",
+                src: "/iterm2.svg",
               },
               {
-                name: 'Notion',
-                description: 'Notion is a collaborative project management tool.',
-                src: '/notion.png'
+                name: "Notion",
+                description:
+                  "Notion is a collaborative project management tool.",
+                src: "/notion.png",
               },
               {
                 name: "Figma",
                 description: "Figma is a design tool.",
-                src: '/figma.png'
+                src: "/figma.png",
               },
               {
-                name: 'Xcode',
-                description: 'Xcode is a development environment for iOS and macOS.',
-                src: '/xcode.png'
-              }
+                name: "Xcode",
+                description:
+                  "Xcode is a development environment for iOS and macOS.",
+                src: "/xcode.png",
+              },
             ]}
           />
         </Container>
