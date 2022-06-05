@@ -229,13 +229,13 @@ export default function Home() {
               textColor="white"
               textAlign="center"
               backgroundColor="transparent"
-              maxW={'100%'}
+              maxW={"100%"}
               borderWidth={2}
               borderColor="gray.600"
               _hover={{ backgroundColor: "gray.600", textDecor: "underline" }}
-              mx={'auto'}
+              mx={"auto"}
               display="block"
-              borderRadius={'lg'}
+              borderRadius={"lg"}
               py={3}
               px={8}
               mt={4}
