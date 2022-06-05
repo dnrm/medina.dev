@@ -232,14 +232,13 @@ export default function Home() {
               maxW={'100%'}
               borderWidth={2}
               borderColor="gray.600"
-              _hover={{ backgroundColor: "gray.600" }}
-              textDecor="underline"
+              _hover={{ backgroundColor: "gray.600", textDecor: "underline" }}
               mx={'auto'}
               display="block"
               borderRadius={'lg'}
               py={3}
               px={8}
-              mt={5}
+              mt={4}
             >
               View All →
             </StyledLink>
@@ -261,7 +260,7 @@ export default function Home() {
                 Cranberries
               </i>
             </b>
-            . . I also like other artists that aren&apos;t rock such as{" "}
+            . I also like other artists that aren&apos;t rock such as{" "}
             <b>
               <i>Billie Eilish, Cavetown, Conan Gray, FINNEAS, Coldplay</i>
             </b>
