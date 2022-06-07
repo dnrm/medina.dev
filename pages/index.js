@@ -174,17 +174,17 @@ export default function Home() {
               image="/crystal-medina-dev.png"
             />
             <Project
+              title="☕️ Andromeda Roasters"
+              url="https://andromeda.medina.dev"
+              description="Sample website for a coffee roaster built with React.js and Tailwind CSS."
+              image="/andromeda-medina-dev.png"
+            />
+            <Project
               title="🌱 Amethyst"
               url="https://amethyst.medina.dev"
               description="A user friendly way to manage your API Gateway keys. Built with
                   Next.js and the AWS Javascript SDK."
               image="/amethyst-medina-dev.png"
-            />
-            <Project
-              title="🌲 Crypto Charts"
-              url="https://crypto-charts.netlify.app/"
-              description="Small project where you choose a cryptocurrency and then a graph is shown showing historical prices."
-              image="/crypto-charts.png"
             />
             <Project
               title="🌿 Something - Official website"
