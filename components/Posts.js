@@ -109,12 +109,11 @@ const Posts = (props) => {
         <Heading>Loading...</Heading>
       )}
       <StyledLink
-        textColor="white"
         textAlign="center"
         backgroundColor="transparent"
         maxW={"100%"}
         borderWidth={2}
-        borderColor="gray.600"
+        borderColor={border}
         _hover={{ backgroundColor: "gray.600", textDecor: "underline" }}
         mx={"auto"}
         display="block"

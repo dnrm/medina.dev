@@ -18,6 +18,7 @@ import Skills from "../components/Skills";
 import Certification from "../components/Certification";
 import Navbar from "../components/Navbar";
 import { m, motion } from "framer-motion";
+import { useColorModeValue } from "@chakra-ui/react";
 
 const certifications = [
   {
@@ -39,6 +40,7 @@ const certifications = [
 export default function Home() {
   const width = "90ch";
   const padding = 6;
+  const border = useColorModeValue("gray.300", "gray.600");
 
   return (
     <div>
@@ -226,12 +228,11 @@ export default function Home() {
           </Grid>
           <Link href="/certifications" passHref>
             <StyledLink
-              textColor="white"
               textAlign="center"
               backgroundColor="transparent"
               maxW={"100%"}
               borderWidth={2}
-              borderColor="gray.600"
+              borderColor={border}
               _hover={{ backgroundColor: "gray.600", textDecor: "underline" }}
               mx={"auto"}
               display="block"
