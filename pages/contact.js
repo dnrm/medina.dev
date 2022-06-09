@@ -57,8 +57,9 @@ const socials = [
   {
     name: "LinkedIn 💌",
     href: "https://www.linkedin.com/in/dnrm/",
-    description: "I dont check my LinkedIn often, but if you want to, you can send a message!",
-  }
+    description:
+      "I dont check my LinkedIn often, but if you want to, you can send a message!",
+  },
 ];
 
 const Contact = () => {
@@ -144,7 +145,13 @@ const Contact = () => {
                       </Icon>
                     </Flex>
                   </Link>
-                  <Text textColor="gray.400">{i.description}</Text>
+                  <Text
+                    textColor="gray.400"
+                    fontFamily={"Work Sans, sans-serif"}
+                    letterSpacing={"-0.5px"}
+                  >
+                    {i.description}
+                  </Text>
                 </Flex>
               );
             })}
