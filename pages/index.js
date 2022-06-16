@@ -182,6 +182,12 @@ export default function Home() {
               image="/andromeda-medina-dev.png"
             />
             <Project
+              title="⚡️ VOLTEC Robotics 6647"
+              url="https://voltec.medina.dev"
+              description="This website was made for the FRC team VOTLEC Robotics 6647 from PrepaTec Eugenio Garza Lagüera."
+              image="/voltec.medina.dev.png"
+            />
+            <Project
               title="🌱 Amethyst"
               url="https://amethyst.medina.dev"
               description="A user friendly way to manage your API Gateway keys. Built with
