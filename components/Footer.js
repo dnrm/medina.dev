@@ -8,6 +8,7 @@ import {
   Link as StyledLink,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { width } from '../lib/width'
 
 const Footer = () => {
   const [playing, setPlaying] = useState();
@@ -23,7 +24,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <Container h={"20vh"} mb={16}>
+    <Container h={"20vh"} mb={16} maxW={width}>
       <Flex justifyContent="start" alignItems="center" textColor="gray.500" borderWidth="1px" borderRadius="md" p={4}>
         <Stack h={5} w={5} mr={2}>
           <svg viewBox="0 0 168 168">

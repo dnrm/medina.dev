@@ -14,8 +14,7 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import Head from "next/head";
 import { motion } from "framer-motion";
-
-const width = "90ch";
+import { width } from "../lib/width";
 const padding = 6;
 
 const collection = [
