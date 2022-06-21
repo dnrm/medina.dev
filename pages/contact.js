@@ -15,6 +15,7 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import Footer from "../components/Footer";
+import { width } from "../lib/width";
 
 const socials = [
   {
@@ -64,7 +65,6 @@ const socials = [
 
 const Contact = () => {
   const bg = useColorModeValue("gray.100", "gray.700");
-  const width = "90ch";
   const padding = 6;
 
   return (
@@ -98,7 +98,7 @@ const Contact = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.25, type: "tween" }}
       >
-        <Container pt={16} maxW={"90ch"} px={6} pb={4}>
+        <Container pt={16} maxW={width} px={6} pb={4}>
           <Heading
             fontFamily="Work Sans, sans-serif"
             fontSize={{ base: "2.3em", md: "3em" }}
@@ -106,7 +106,7 @@ const Contact = () => {
             Contact Me 🌱
           </Heading>
         </Container>
-        <Container maxW={"90ch"} px={6}>
+        <Container maxW={width} px={6}>
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={4}>
             {socials.map((i) => {
               return (
