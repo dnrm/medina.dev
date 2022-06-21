@@ -5,8 +5,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { motion } from "framer-motion";
+import { width } from '../lib/width'
 
-const width = "90ch";
 const padding = 6;
 
 // ! Object with all my certifications

@@ -17,8 +17,9 @@ import Posts from "../components/Posts";
 import Skills from "../components/Skills";
 import Certification from "../components/Certification";
 import Navbar from "../components/Navbar";
-import { m, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useColorModeValue } from "@chakra-ui/react";
+import { width } from "../lib/width";
 
 const certifications = [
   {
@@ -38,7 +39,6 @@ const certifications = [
 ];
 
 export default function Home() {
-  const width = "90ch";
   const padding = 6;
   const border = useColorModeValue("gray.300", "gray.600");
 
@@ -77,8 +77,8 @@ export default function Home() {
           <Avatar
             borderWidth="6px"
             borderColor="gray.100"
-            h={36}
-            w={36}
+            h={48}
+            w={48}
             src="/me.jpg"
             name="Daniel Medina"
           ></Avatar>
@@ -200,12 +200,6 @@ export default function Home() {
               description="Client website built with Next.js to promote a Roblox game. Deployed to Vercel."
               image="/something-dnrm-me.png"
             />
-            <Project
-              title="🪴 dnrm.me"
-              url="https://dnrm.me/"
-              description="This is a website i use to test different parts of the React.js framework. It has been going on since January 2019."
-              image="/dnrm.me.png"
-            />
           </Grid>
         </Container>
         <Container pt={16} maxW={width} px={padding}>
@@ -276,7 +270,7 @@ export default function Home() {
           <Grid
             mt={8}
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
-            h={{ base: "120vh", md: "45vh" }}
+            h={{ base: "120vh", md: "35vh" }}
             gap={4}
           >
             <Container position="relative" border="2px solid white">
