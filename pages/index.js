@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import {
@@ -8,6 +9,10 @@ import {
   Divider,
   Link as StyledLink,
   Avatar,
+  Stack,
+  Input,
+  Textarea,
+  Button,
 } from "@chakra-ui/react";
 import Project from "../components/Project";
 import Image from "next/image";
@@ -41,6 +46,30 @@ const certifications = [
 export default function Home() {
   const padding = 6;
   const border = useColorModeValue("gray.300", "gray.600");
+
+  const [address, setAddress] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleAddressChange = (e) => {
+    setAddress(e.target.value);
+  };
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const response = await fetch("/api/send-email", {
+      method: "POST",
+      body: JSON.stringify({
+        address: address,
+        emailContent: message,
+      }),
+    });
+    const json = await response.json();
+    console.log(json);
+  };
 
   return (
     <div>
@@ -201,6 +230,69 @@ export default function Home() {
               image="/something-dnrm-me.png"
             />
           </Grid>
+        </Container>
+        <Container pt={16} maxW={width}>
+          <Heading fontFamily={"Work Sans, sans serif"}>Hire Me 🏢</Heading>
+          <Text textColor="gray.500" mb={2}>
+            Are you interested in hiring me? Send me a message!
+          </Text>
+          <form onSubmit={handleSubmit}>
+            <Stack
+              borderWidth={2}
+              borderColor={border}
+              pb={5}
+              pt={4}
+              px={5}
+              borderRadius={"lg"}
+            >
+              <Stack className="email">
+                <Text fontSize={{ base: "0.8em", md: "1.2em" }}>
+                  Your Email
+                </Text>
+                <Stack>
+                  <Input
+                    type="email"
+                    variant={"filled"}
+                    placeholder="john@doe.com"
+                    borderColor={border}
+                    value={address}
+                    onChange={handleAddressChange}
+                  />
+                </Stack>
+              </Stack>
+              <Stack className="message">
+                <Text fontSize={{ base: "0.8em", md: "1.2em" }}>Message</Text>
+                <Stack>
+                  <Textarea
+                    placeholder="john@doe.com"
+                    variant={"filled"}
+                    borderColor={border}
+                    value={message}
+                    onChange={handleMessageChange}
+                  />
+                </Stack>
+              </Stack>
+            </Stack>
+            <Button
+              textAlign="center"
+              type="submit"
+              h={"auto"}
+              fontWeight="normal"
+              backgroundColor="transparent"
+              w={"100%"}
+              borderWidth={2}
+              borderColor={border}
+              _hover={{ backgroundColor: "gray.600", textDecor: "underline" }}
+              mx={"auto"}
+              display="block"
+              borderRadius={"lg"}
+              py={3}
+              px={8}
+              mt={4}
+            >
+              Send Email →
+            </Button>
+          </form>
         </Container>
         <Container pt={16} maxW={width} px={padding}>
           <Heading fontFamily="Work Sans, sans-serif" mb={3}>
