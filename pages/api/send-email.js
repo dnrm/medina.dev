@@ -1,9 +1,6 @@
 import mail from "@sendgrid/mail";
 
-export default async function handler(
-  req,
-  res
-) {
+export default async function handler(req, res) {
   const { address, emailContent } = JSON.parse(req.body);
 
   if (req.method != "POST") {
@@ -54,7 +51,7 @@ export default async function handler(
       email: address,
     },
     subject: `medina.dev Inquiry from ${address}`,
-    templateId: "d-ca1cb5ff686b4a5291dac93ff62d64ae",
+    templateId: "d-a31292f98cb3486484c754f99c61fe0d",
     dynamicTemplateData: {
       email: address,
       message_content: emailContent,
