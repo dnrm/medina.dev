@@ -13,9 +13,10 @@ import {
   Input,
   Textarea,
   Button,
+  useToast,
+  Image,
 } from "@chakra-ui/react";
 import Project from "../components/Project";
-import Image from "next/image";
 import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
 import Posts from "../components/Posts";
@@ -46,6 +47,7 @@ const certifications = [
 export default function Home() {
   const padding = 6;
   const border = useColorModeValue("gray.300", "gray.600");
+  const toast = useToast();
 
   const [address, setAddress] = useState("");
   const [message, setMessage] = useState("");
@@ -59,7 +61,7 @@ export default function Home() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const response = await fetch("/api/send-email", {
       method: "POST",
       body: JSON.stringify({
@@ -69,6 +71,24 @@ export default function Home() {
     });
     const json = await response.json();
     console.log(json);
+
+    if (response.ok) {
+      toast({
+        title: "Email sent!",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+      setAddress("");
+      setMessage("");
+    } else {
+      toast({
+        title: "Error sending email.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
   };
 
   return (
@@ -237,39 +257,39 @@ export default function Home() {
             Are you interested in hiring me? Send me a message!
           </Text>
           <form onSubmit={handleSubmit}>
-            <Stack
-              borderWidth={2}
-              borderColor={border}
-              pb={5}
-              pt={4}
-              px={5}
-              borderRadius={"lg"}
-            >
-              <Stack className="email">
-                <Text fontSize={{ base: "0.8em", md: "1.2em" }}>
-                  Your Email
-                </Text>
-                <Stack>
-                  <Input
-                    type="email"
-                    variant={"filled"}
-                    placeholder="john@doe.com"
-                    borderColor={border}
-                    value={address}
-                    onChange={handleAddressChange}
-                  />
+            <Stack borderWidth={2} borderColor={border} borderRadius={"lg"}>
+              <Image
+                alt="a"
+                src="/DSC09430-min.png"
+                height={48}
+                w={"100%"}
+                objectFit="cover"
+              />
+              <Stack pb={6} pt={2} px={5} className="input-elements">
+                <Stack className="email">
+                  <Text fontSize={{ base: "0.8em", md: "1.2em" }}>
+                    Your Email
+                  </Text>
+                  <Stack>
+                    <Input
+                      type="email"
+                      variant={"filled"}
+                      placeholder="john@doe.com"
+                      value={address}
+                      onChange={handleAddressChange}
+                    />
+                  </Stack>
                 </Stack>
-              </Stack>
-              <Stack className="message">
-                <Text fontSize={{ base: "0.8em", md: "1.2em" }}>Message</Text>
-                <Stack>
-                  <Textarea
-                    placeholder="john@doe.com"
-                    variant={"filled"}
-                    borderColor={border}
-                    value={message}
-                    onChange={handleMessageChange}
-                  />
+                <Stack className="message">
+                  <Text fontSize={{ base: "0.8em", md: "1.2em" }}>Message</Text>
+                  <Stack>
+                    <Textarea
+                      placeholder="john@doe.com"
+                      variant={"filled"}
+                      value={message}
+                      onChange={handleMessageChange}
+                    />
+                  </Stack>
                 </Stack>
               </Stack>
             </Stack>
