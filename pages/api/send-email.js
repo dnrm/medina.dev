@@ -2,6 +2,7 @@ import mail from "@sendgrid/mail";
 
 export default async function handler(req, res) {
   const { address, emailContent } = JSON.parse(req.body);
+  console.log(process.env.SENDGRID_KEY)
 
   if (req.method != "POST") {
     res.status(405).send({

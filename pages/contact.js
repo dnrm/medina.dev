@@ -16,6 +16,7 @@ import { motion } from "framer-motion";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import Footer from "../components/Footer";
 import { width } from "../lib/width";
+import ContactForm from "../components/ContactForm";
 
 const socials = [
   {
@@ -65,6 +66,7 @@ const socials = [
 
 const Contact = () => {
   const bg = useColorModeValue("gray.100", "gray.700");
+  const border = useColorModeValue("gray.300", "gray.600");
   const padding = 6;
 
   return (
@@ -157,6 +159,7 @@ const Contact = () => {
             })}
           </Grid>
         </Container>
+        <ContactForm width={width} border={border} />
         <Container maxW={width} px={padding} py={8}>
           <Text textColor="gray.400" fontSize="1.1em">
             Feel free to contact me through any of these links!
