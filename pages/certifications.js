@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { motion } from "framer-motion";
-import { width } from '../lib/width'
+import { width } from "../lib/width";
 
 const padding = 6;
 
@@ -16,7 +16,7 @@ const certificationsObj = [
     title: "Certified Javascript Developer | W3Schools",
     description:
       "This certification was given to me by W3Schools. Upon passing their exam.",
-    href: "https://courses.w3schools.com/certificates/certified-javascript-developer-539.pdf",
+    href: "https://verify.w3schools.com/1MQ7H99JBQ",
     src: "/w3-javascript.png",
   },
   {
@@ -68,6 +68,12 @@ const certificationsObj = [
     title: "The Creative JavaScript Course",
     description:
       "This certification proves completion of The Creative JavaScript Course",
+  },
+  {
+    href: "https://verify.w3schools.com/1MQ7H99A0M",
+    src: "/html-cert.jpeg",
+    title: "Certified HTML Developer",
+    description: "This certification proves my skills on HTML",
   },
 ];
 
