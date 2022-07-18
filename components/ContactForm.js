@@ -4,13 +4,13 @@ import {
   Text,
   Heading,
   Stack,
-  Image,
   Input,
   Textarea,
   Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { useToast } from "@chakra-ui/react";
+import Image from "next/image";
 
 const ContactForm = ({ width, border }) => {
   const toast = useToast();
@@ -64,13 +64,14 @@ const ContactForm = ({ width, border }) => {
       </Text>
       <form onSubmit={handleSubmit}>
         <Stack borderWidth={2} borderColor={border} borderRadius={"lg"}>
-          <Image
-            alt="a"
-            src="/DSC09430-min.png"
-            height={48}
-            w={"100%"}
-            objectFit="cover"
-          />
+          <Stack position={"relative"} height={48}>
+            <Image
+              alt="a"
+              src="/DSC09430-min.png"
+              layout="fill"
+              objectFit="cover"
+            />
+          </Stack>
           <Stack pb={6} pt={2} px={5} className="input-elements">
             <Stack className="email">
               <Text fontSize={{ base: "0.8em", md: "1.2em" }}>Your Email</Text>
