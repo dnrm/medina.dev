@@ -6,9 +6,10 @@ import {
   Grid,
   Stack,
   Text,
-  Image,
+  Box,
   Link as StyledLink,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const Posts = (props) => {
@@ -76,15 +77,19 @@ const Posts = (props) => {
                   borderWidth="2px"
                   borderColor={border}
                   rounded="md"
-                  p={2}
+                  p={2.5}
                 >
-                  <Image
-                    src={i.coverImage}
-                    rounded="md"
-                    h={48}
-                    objectFit="cover"
-                    alt="Cover"
-                  ></Image>
+                  <Stack position={"relative"} h={48} rounded="xl">
+                    <Box rounded="lg">
+                      <Image
+                        src={i.coverImage}
+                        h={48}
+                        layout="fill"
+                        objectFit="cover"
+                        alt="Cover"
+                      />
+                    </Box>
+                  </Stack>
                   <Heading
                     fontWeight="regular"
                     fontSize={{ base: "1em", md: "1.1em" }}
@@ -121,11 +126,11 @@ const Posts = (props) => {
         py={3}
         px={8}
         href="https://blog.medina.dev"
-        target={'_blank'}
+        target={"_blank"}
         rel="noreferrer"
         mt={4}
       >
-          Visit Blog →
+        Visit Blog →
       </StyledLink>
     </Container>
   );
