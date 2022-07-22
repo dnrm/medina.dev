@@ -342,9 +342,9 @@ export default function Home() {
                 src: "/tailwind.svg",
               },
               {
-                name: "Chakra UI",
-                description: "Chakra UI is a React UI library.",
-                src: "/chakra.png",
+                name: "Strapi",
+                description: "Strapi is an open-source content management system.",
+                src: "/strapi.webp",
               },
               {
                 name: "Vercel",
