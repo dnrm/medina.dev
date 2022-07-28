@@ -2,16 +2,26 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import { connectToDatabase } from "../../lib/mongodb";
 import Head from "next/head";
-import { Container, Heading, Text, Box } from "@chakra-ui/react";
+import {
+  Container,
+  Heading,
+  Text,
+  Box,
+  Button,
+  Divider,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Footer from "../../components/Footer";
+import { useColorModeValue } from "@chakra-ui/react";
 
 import { width } from "../../lib/width";
 
 const Project = ({ project }) => {
   console.log(project);
   const padding = 6;
+  const border = useColorModeValue("gray.300", "gray.600");
+  const text = useColorModeValue("gray.600", "gray.300");
 
   return (
     <div>
@@ -41,21 +51,38 @@ const Project = ({ project }) => {
           >
             {project.title} {project.icon}
           </Heading>
-          <Text mb={4} textColor="gray.400">
-            {project.description}
+          <Text mb={4} textColor={text}>
+            {project.excerpt}
           </Text>
         </Container>
-        <Container pt={2} maxW={width} px={padding} pb={16}>
-          <Box position={"relative"} w="full" height="lg">
-            <Image
-              src={"/" + project.image}
-              layout="fill"
-              objectFit="cover"
-              alt="Project"
-            />
+        <Container pt={2} maxW={width} px={padding} pb={2}>
+          <Box borderColor={border} borderWidth={2} borderRadius="lg" p={2}>
+            <Box position={"relative"} w="full" height="xl">
+              <Image
+                src={"/" + project.image}
+                layout="fill"
+                objectFit="cover"
+                alt="Project"
+              />
+            </Box>
           </Box>
         </Container>
-        <Footer />
+        <Container pt={2} maxW={width} px={padding} pb={0}>
+          <Text mb={4}>{project.description}</Text>
+        </Container>
+        <Container pt={2} maxW={width} px={padding - 1} pb={8}>
+          <a href={project.link} target="_blank" rel="noopener noreferrer">
+            <Button variant={"solid"} w={"full"}>
+              Visit Website
+            </Button>
+          </a>
+        </Container>
+        <Container pb={10} maxW={width} px={padding}>
+          <Divider />
+        </Container>
+        <Container maxW={width} px={padding}>
+          <Footer />
+        </Container>
       </motion.div>
     </div>
   );

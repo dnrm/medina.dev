@@ -26,10 +26,10 @@ const Project = (props) => {
           p={2.5}
           rounded="md"
           pb={6}
-          minHeight={28}
+          minHeight={24}
         >
           {props.image && (
-            <Stack position={"relative"} height={"56"} borderRadius={"md"}>
+            <Stack position={"relative"} height={"56"} borderRadius={"md"} p={2}>
               <Image
                 placeholder="blur"
                 blurDataURL="https://via.placeholder.com/52"
@@ -50,7 +50,7 @@ const Project = (props) => {
             <Text textDecor={"underline"}>{props.title}</Text>
           </Heading>
           <Text textColor="gray.400" fontSize={{ base: "0.8em", md: "0.9em" }}>
-            {props.description}
+            {props.excerpt || props.description}
           </Text>
         </Stack>
       </a>
