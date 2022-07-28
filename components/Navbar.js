@@ -17,6 +17,11 @@ const Navbar = ({ padding }) => {
               Home
             </StyledLink>
           </Link>
+          <Link href="/projects" passHref>
+            <StyledLink textColor="gray.600" px={2}>
+              Projects
+            </StyledLink>
+          </Link>
           <Link href="/certifications" passHref>
             <StyledLink textColor="gray.600" px={2}>
               Certifications
