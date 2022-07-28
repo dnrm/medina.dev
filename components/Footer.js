@@ -24,7 +24,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <Container h={"20vh"} mb={16} maxW={width}>
+    <Container h={"22vh"} mb={16} maxW={width}>
       <Flex
         justifyContent="start"
         alignItems="center"
@@ -79,6 +79,9 @@ const Footer = () => {
           </Link>
           <Link href="/contact" passHref>
             <StyledLink>Contact</StyledLink>
+          </Link>
+          <Link href="/projects" passHref>
+            <StyledLink>Projects</StyledLink>
           </Link>
           <Link href="/vinyl" passHref>
             <StyledLink>Vinyl Collection</StyledLink>
