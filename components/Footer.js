@@ -25,7 +25,7 @@ const Footer = () => {
 
   return (
     <Container h={"20vh"} mb={16} maxW={width}>
-      <Flex justifyContent="start" alignItems="center" textColor="gray.500" borderWidth="1px" borderRadius="md" p={4}>
+      <Flex justifyContent="start" alignItems="center" textColor="gray.400" borderWidth="1px" borderRadius="md" p={4}>
         <Stack h={5} w={5} mr={2}>
           <svg viewBox="0 0 168 168">
             <path
@@ -51,7 +51,7 @@ const Footer = () => {
           </Text>
         ) : null}
       </Flex>
-      <Grid pt={8} templateColumns={"repeat(3, 1fr)"} textColor="gray.500">
+      <Grid pt={8} templateColumns={"repeat(3, 1fr)"} textColor="gray.400">
         <Stack>
           <StyledLink href="https://twitter.com/_dnrm">Twitter</StyledLink>
           <StyledLink href="https://github.com/dnrm">Github</StyledLink>

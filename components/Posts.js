@@ -101,7 +101,7 @@ const Posts = (props) => {
                       base: "0.8em",
                       md: "0.9em",
                     }}
-                    textColor="gray.500"
+                    textColor="gray.400"
                   >
                     {i.brief}
                   </Text>

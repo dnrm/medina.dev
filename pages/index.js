@@ -54,21 +54,34 @@ export default function Home() {
     <div>
       <Head>
         <title>Daniel Medina - Web developer</title>
+        <meta name="title" content="Daniel Medina - Web developer" />
         <meta
           name="description"
-          content="My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey..."
+          content="My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey. My areas of expertise include the MERN stack, a very strong understanding of Next.js as well as cloud providers like AWS and Vercel."
         />
-        <meta property="og:url" content="https://danielmedina.dev/" />
+
+        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://medina.dev/" />
         <meta property="og:title" content="Daniel Medina - Web developer" />
         <meta
           property="og:description"
-          content="My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey..."
+          content="My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey. My areas of expertise include the MERN stack, a very strong understanding of Next.js as well as cloud providers like AWS and Vercel."
+        />
+        <meta property="og:image" content="/dm.png" />
+
+        {/* Twitter Meta Tags */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://medina.dev/" />
+        <meta
+          property="twitter:title"
+          content="Daniel Medina - Web developer"
         />
         <meta
-          property="og:image"
-          content="https://source.unsplash.com/collection/94997000/"
-        ></meta>
+          property="twitter:description"
+          content="My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey. My areas of expertise include the MERN stack, a very strong understanding of Next.js as well as cloud providers like AWS and Vercel."
+        />
+        <meta property="twitter:image" content="/dm.png" />
         <link
           rel="shortcut icon"
           href="https://cdn.medina.dev/favicon.png"
@@ -96,16 +109,16 @@ export default function Home() {
             fontFamily="Work Sans, sans-serif"
             fontSize={{ base: "2.3em", md: "3em" }}
           >
-            Hi, I&apos;m Daniel Medina 💅
+            Hi, I&apos;m Daniel Medina 🪴
           </Heading>
-          <Text textColor="gray.500">
+          <Text textColor="gray.400">
             I&apos;m a web developer from Mexico. I love to work with Next.js
             and AWS. Check out my projects below!
           </Text>
         </Container>
         <Container pt={16} maxW={width} px={padding}>
           <Heading fontFamily="Work Sans, sans-serif">About Me 👨‍💻</Heading>
-          <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
+          <Text textColor="gray.400" fontSize={{ base: "0.9em", md: "1em" }}>
             My name is Daniel Medina. I am a high school student at{" "}
             <StyledLink
               _hover={{ color: "blue.500" }}
@@ -114,12 +127,14 @@ export default function Home() {
             >
               Tecnológico de Monterrey
             </StyledLink>
-            . I started my journey as a web developer in January of 2020. During
-            the COVID-19 pandemic I had a lot of free time therefore I was able
-            to really bump up my skills. I started experimenting with all kinds
-            of technologies and projects. As of August 2021 I have made 6 big
-            projects which are listed below. I have also done some small
-            projects which can be found in{" "}
+            . My areas of expertise include the <strong>MERN</strong> stack, a
+            very strong understanding of <strong>Next.js</strong> as well as
+            cloud providers like <strong>AWS</strong> and{" "}
+            <strong>Vercel</strong>. I started my journey as a web developer in
+            January of 2020. During the COVID-19 pandemic I had a lot of free
+            time therefore I was able to really bump up my skills. I started
+            experimenting with all kinds of technologies and projects. You can
+            find all of my projects in{" "}
             <StyledLink
               _hover={{ color: "blue.500" }}
               textDecor="underline"
@@ -127,10 +142,10 @@ export default function Home() {
             >
               my Github
             </StyledLink>{" "}
-            a profile.
+            profile.
           </Text>
           <br />
-          <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
+          <Text textColor="gray.400" fontSize={{ base: "0.9em", md: "1em" }}>
             I spend my free time listening and composing music, taking photos,
             sailing, and coding. I also love collecting vinyl records. I
             currently have a small collection of them, but have been getting
@@ -160,50 +175,58 @@ export default function Home() {
             gap={4}
           >
             <Project
-              title="🍀 codingacademy.mx"
+              title="codingacademy.mx"
+              icon="🍀"
               url="https://codingacademy.mx"
               description="Commissioned website for Coding Academy Monterrey built using React.js and Tailwind CSS."
               image="/codingacademy-mx.png"
             />
             <Project
-              title="🌎 Earth"
+              title="Earth"
+              icon="🌎"
               url="https://earth.medina.dev"
               description="First place winner on Coding Academy Monterrey's annual coding tournament. This website is dedicated to informing the public on how to take care of the environment."
               image="/earth-medina-dev.png"
             />
             <Project
-              title="💎 verbenajoyeria.com"
+              title="Verbena Joyería"
+              icon="💎"
               url="https://verbenajoyeria.com/"
               description="Online store for Verbena Joyería built with Next.js and Stripe as a payment processor."
               image="/verbenajoyeria.png"
             />
             <Project
-              title="🌵 Crystal"
+              title="Crystal"
+              icon="🌵"
               url="https://crystal.medina.dev"
               description="Social media website built with Next.js and Tailwind CSS. The backend uses MongoDB and S3 for file uploads."
               image="/crystal-medina-dev.png"
             />
             <Project
-              title="☕️ Andromeda Roasters"
+              title="Andromeda Coffee"
+              icon="☕️"
               url="https://andromeda.medina.dev"
               description="Sample website for a coffee roaster built with React.js and Tailwind CSS."
               image="/andromeda-medina-dev.png"
             />
             <Project
-              title="⚡️ VOLTEC Robotics 6647"
+              title="VOLTEC Robotics 6647"
+              icon="⚡️"
               url="https://voltec.medina.dev"
               description="This website was made for the FRC team VOTLEC Robotics 6647 from PrepaTec Eugenio Garza Lagüera."
               image="/voltec.medina.dev.png"
             />
             <Project
-              title="🌱 Amethyst"
+              title="Amethyst"
+              icon="🌱"
               url="https://amethyst.medina.dev"
               description="A user friendly way to manage your API Gateway keys. Built with
                   Next.js and the AWS Javascript SDK."
               image="/amethyst-medina-dev.png"
             />
             <Project
-              title="🌿 Something - Official website"
+              title="Something - Official website"
+              icon="🌿"
               url="https://prog.dnrm.me/"
               description="Client website built with Next.js to promote a Roblox game. Deployed to Vercel."
               image="/something-dnrm-me.png"
@@ -259,7 +282,7 @@ export default function Home() {
           <Heading pb={2} fontFamily="Work Sans, sans-serif">
             Hobbies 🎧
           </Heading>
-          <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
+          <Text textColor="gray.400" fontSize={{ base: "0.9em", md: "1em" }}>
             I love to discover and make new types of coffee. My personal
             favourite coffees are cold brew and espresso. Another thing i really
             enjoy doing is collecting vinyl records. My favourite music genre is
@@ -343,7 +366,8 @@ export default function Home() {
               },
               {
                 name: "Strapi",
-                description: "Strapi is an open-source content management system.",
+                description:
+                  "Strapi is an open-source content management system.",
                 src: "/strapi.webp",
               },
               {

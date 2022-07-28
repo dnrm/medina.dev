@@ -118,7 +118,7 @@ const Certifications = () => {
           >
             My Certifications 🥇
           </Heading>
-          <Text mb={4} textColor="gray.500">
+          <Text mb={4} textColor="gray.400">
             These are most of the certifications I&apos;ve gotten since starting
             my career.
           </Text>

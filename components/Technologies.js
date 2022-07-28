@@ -8,7 +8,7 @@ const Technologies = (props) => {
       templateColumns={{ base: "1fr", md: "50% 50%" }}
       gap={2}
       mt={2}
-      textColor="gray.500"
+      textColor="gray.400"
     >
       {props.items.map((i) => {
         return (
