@@ -32,11 +32,6 @@ const Navbar = ({ padding }) => {
               Contact
             </StyledLink>
           </Link>
-          <Link href="/vinyl" passHref>
-            <StyledLink textColor="gray.600" pl={2}>
-              Vinyl
-            </StyledLink>
-          </Link>
         </Flex>
         <Flex>
           <Button
