@@ -27,6 +27,7 @@ import { useColorModeValue } from "@chakra-ui/react";
 import { width } from "../lib/width";
 import ContactForm from "../components/ContactForm";
 import Image from "next/image";
+import { connectToDatabase } from "../lib/mongodb";
 
 const certifications = [
   {
@@ -45,7 +46,7 @@ const certifications = [
   },
 ];
 
-export default function Home() {
+export default function Home({ projects }) {
   const padding = 6;
   const border = useColorModeValue("gray.300", "gray.600");
   const toast = useToast();
@@ -174,63 +175,17 @@ export default function Home() {
             }}
             gap={4}
           >
-            <Project
-              title="codingacademy.mx"
-              icon="🍀"
-              url="https://codingacademy.mx"
-              description="Commissioned website for Coding Academy Monterrey built using React.js and Tailwind CSS."
-              image="/codingacademy-mx.png"
-            />
-            <Project
-              title="Earth"
-              icon="🌎"
-              url="https://earth.medina.dev"
-              description="First place winner on Coding Academy Monterrey's annual coding tournament. This website is dedicated to informing the public on how to take care of the environment."
-              image="/earth-medina-dev.png"
-            />
-            <Project
-              title="Verbena Joyería"
-              icon="💎"
-              url="https://verbenajoyeria.com/"
-              description="Online store for Verbena Joyería built with Next.js and Stripe as a payment processor."
-              image="/verbenajoyeria.png"
-            />
-            <Project
-              title="Crystal"
-              icon="🌵"
-              url="https://crystal.medina.dev"
-              description="Social media website built with Next.js and Tailwind CSS. The backend uses MongoDB and S3 for file uploads."
-              image="/crystal-medina-dev.png"
-            />
-            <Project
-              title="Andromeda Coffee"
-              icon="☕️"
-              url="https://andromeda.medina.dev"
-              description="Sample website for a coffee roaster built with React.js and Tailwind CSS."
-              image="/andromeda-medina-dev.png"
-            />
-            <Project
-              title="VOLTEC Robotics 6647"
-              icon="⚡️"
-              url="https://voltec.medina.dev"
-              description="This website was made for the FRC team VOTLEC Robotics 6647 from PrepaTec Eugenio Garza Lagüera."
-              image="/voltec.medina.dev.png"
-            />
-            <Project
-              title="Amethyst"
-              icon="🌱"
-              url="https://amethyst.medina.dev"
-              description="A user friendly way to manage your API Gateway keys. Built with
-                  Next.js and the AWS Javascript SDK."
-              image="/amethyst-medina-dev.png"
-            />
-            <Project
-              title="Something - Official website"
-              icon="🌿"
-              url="https://prog.dnrm.me/"
-              description="Client website built with Next.js to promote a Roblox game. Deployed to Vercel."
-              image="/something-dnrm-me.png"
-            />
+            {projects.map((project, index) => (
+              <Project
+                key={index}
+                title={project.title}
+                icon={project.icon}
+                slug={project.slug}
+                description={project.description}
+                excerpt={project.excerpt}
+                image={"/" + project.image}
+              />
+            ))}
           </Grid>
         </Container>
         <ContactForm width={width} border={border} />
@@ -432,4 +387,25 @@ export default function Home() {
       </motion.div>
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  try {
+    const { client } = await connectToDatabase();
+
+    const db = client.db("medina-dev");
+    const projects = await db.collection("projects").find({}).toArray();
+
+    return {
+      props: {
+        projects: JSON.parse(JSON.stringify(projects)),
+      },
+    };
+  } catch (e) {
+    return {
+      props: {
+        error: "Unable to get projects",
+      },
+    };
+  }
 }
