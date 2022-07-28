@@ -52,7 +52,7 @@ const Project = ({ project }) => {
             {project.title} {project.icon}
           </Heading>
           <Text mb={4} textColor={text}>
-            {project.excerpt}
+            {project.excerpt || project.description}
           </Text>
         </Container>
         <Container pt={2} maxW={width} px={padding} pb={2}>
