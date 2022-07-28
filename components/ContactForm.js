@@ -59,7 +59,7 @@ const ContactForm = ({ width, border }) => {
   return (
     <Container pt={8} px={6} maxW={width}>
       <Heading fontFamily={"Work Sans, sans serif"}>Hire Me 🏢</Heading>
-      <Text textColor="gray.500" mb={2}>
+      <Text textColor="gray.400" mb={2}>
         Are you interested in hiring me? Send me a message!
       </Text>
       <form onSubmit={handleSubmit}>
