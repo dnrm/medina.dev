@@ -57,7 +57,11 @@ const Project = ({ project }) => {
         </Container>
         <Container pt={2} maxW={width} px={padding} pb={2}>
           <Box borderColor={border} borderWidth={2} borderRadius="lg" p={2}>
-            <Box position={"relative"} w="full" height="xl">
+            <Box
+              position={"relative"}
+              w="full"
+              height={{ base: "64", md: "xl" }}
+            >
               <Image
                 src={"/" + project.image}
                 layout="fill"
