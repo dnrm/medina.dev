@@ -20,9 +20,16 @@ const certificationsObj = [
     src: "/w3-javascript.png",
   },
   {
+    href: "https://courses.w3schools.com/certificates/certified-sql-developer-574.pdf",
+    src: "/sql.jpeg",
+    title: "Certified SQL Developer | W3Schools",
+    description:
+      "This certification proves my knowledge of SQL and is given by W3Schools, upon passing their SQL exam.",
+  },
+  {
     href: "https://www.coursera.org/account/accomplishments/verify/8ZFVH8NHQFLX",
     src: "/coursera_google.jpeg",
-    title: "Technical Support Fundamentals | W3Schools",
+    title: "Technical Support Fundamentals | Coursera",
     description:
       "I got this certification by completing the Technical Support Fundamentals course by Google on Coursera.",
   },
