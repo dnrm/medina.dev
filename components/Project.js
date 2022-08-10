@@ -25,11 +25,15 @@ const Project = (props) => {
           borderColor={border}
           p={2.5}
           rounded="md"
-          pb={6}
           minHeight={24}
         >
           {props.image && (
-            <Stack position={"relative"} height={"56"} borderRadius={"md"} p={2}>
+            <Stack
+              position={"relative"}
+              height={"56"}
+              borderRadius={"md"}
+              p={2}
+            >
               <Image
                 placeholder="blur"
                 blurDataURL="https://via.placeholder.com/52"
