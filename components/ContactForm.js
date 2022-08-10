@@ -67,7 +67,7 @@ const ContactForm = ({ width, border }) => {
           <Stack position={"relative"} height={48}>
             <Image
               alt="a"
-              src="/DSC09430-min.png"
+              src="/banner.png"
               layout="fill"
               objectFit="cover"
             />
