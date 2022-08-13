@@ -2,11 +2,11 @@ import React from "react";
 import {
   Container,
   Heading,
-  Stack,
-  Flex,
   Divider,
   Text,
   Link,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import { useColorModeValue } from "@chakra-ui/color-mode";
@@ -15,6 +15,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { width } from "../lib/width";
+import VinylRecord from "../components/VinylRecord";
 const padding = 6;
 
 const collection = [
@@ -115,11 +116,15 @@ const collection = [
     cover: "https://i.scdn.co/image/ab67616d0000b2732624442cf48e4962d1422da8",
     link: "https://open.spotify.com/track/0HAqq2GcQKyi3s87GuN7jU",
   },
+  {
+    title: "The Masterplan",
+    artist: "Oasis",
+    cover: "https://i.scdn.co/image/ab67616d0000b273b54b7ab11f1779ca09769e7a",
+    link: "https://open.spotify.com/album/1avl9iL9ZRN2O0Z1831cKw?si=3340c35400b649d1",
+  },
 ];
 
 const Vinyl = () => {
-  const bg = useColorModeValue("gray.100", "gray.700");
-
   return (
     <div>
       <Head>
@@ -136,7 +141,7 @@ const Vinyl = () => {
             fontFamily="Work Sans, sans-serif"
             fontSize={{ base: "2.3em", md: "3em" }}
           >
-            My Vinyl Collection
+            My Vinyl Collection 🎧
           </Heading>
         </Container>
         <Container pt={4} maxW={width} px={padding}>
@@ -145,47 +150,19 @@ const Vinyl = () => {
           </Text>
         </Container>
         <Container pt={2} maxW={width} px={padding} pb={16}>
-          {collection.map((i) => {
-            return (
-              <Flex
-                key={i.title}
-                bgColor={bg}
-                h={32}
-                justifyContent="start"
-                alignItems="center"
-                my={2}
-                p={4}
-                rounded="md"
-              >
-                <Stack mr={3} minW="24">
-                  <a target="_blank" rel="noreferrer" href={i.cover}>
-                    <Image
-                      src={i.cover}
-                      alt={`${i.title} by ${i.artist}`}
-                      height="1000"
-                      width="1000"
-                      layout="responsive"
-                      objectFit="cover"
-                      placeholder="blur"
-                      blurDataURL="/album.png"
-                    />
-                  </a>
-                </Stack>
-                <Flex direction="column">
-                  <Heading
-                    fontWeight="bold"
-                    fontSize={{ base: "1em", md: "1.6em" }}
-                    letterSpacing="tighter"
-                  >
-                    <Link href={i.link} target="_blank" rel="noreferrer">
-                      {i.title}
-                    </Link>
-                  </Heading>
-                  <Text>{i.artist}</Text>
-                </Flex>
-              </Flex>
-            );
-          })}
+          <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)'}} gap={4}>
+            {collection.map(({ title, cover, link, artist }) => {
+              return (
+                <VinylRecord
+                  key={title}
+                  title={title}
+                  cover={cover}
+                  link={link}
+                  artist={artist}
+                />
+              );
+            })}
+          </Grid>
         </Container>
         <Container pb={10} maxW={width} px={padding}>
           <Divider />

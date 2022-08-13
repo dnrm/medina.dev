@@ -49,7 +49,6 @@ const certifications = [
 export default function Home({ projects }) {
   const padding = 6;
   const border = useColorModeValue("gray.300", "gray.600");
-  const toast = useToast();
 
   return (
     <div>
@@ -88,6 +87,7 @@ export default function Home({ projects }) {
           href="https://cdn.medina.dev/favicon.png"
           type="image/x-icon"
         />
+        <base target="_blank" />
       </Head>
       <Navbar width={width} padding={padding} />
       <motion.div
