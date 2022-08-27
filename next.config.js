@@ -6,7 +6,7 @@ module.exports = {
       "i.scdn.co",
       "upload.wikimedia.org",
       "cdn.hashnode.com",
-      "localhost",
+      "cms.medina.dev",
     ],
   },
 };
