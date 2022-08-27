@@ -14,11 +14,7 @@ const Project = (props) => {
   const border = useColorModeValue("gray.300", "gray.600");
 
   return (
-    <Link
-      href={"/project/" + convertToSlug(props.title)}
-      target="_blank"
-      rel="noreferrer"
-    >
+    <Link href={"/project/" + props.slug} target="_blank" rel="noreferrer">
       <a>
         <Stack
           borderWidth="2px"
@@ -54,7 +50,7 @@ const Project = (props) => {
             <Text textDecor={"underline"}>{props.title}</Text>
           </Heading>
           <Text textColor="gray.400" fontSize={{ base: "0.8em", md: "0.9em" }}>
-            {props.excerpt || props.description}
+            {props.excerpt.substring(0, 100)}...
           </Text>
         </Stack>
       </a>
