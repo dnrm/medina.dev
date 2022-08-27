@@ -9,8 +9,8 @@ const theme = extendTheme(
         listStylePos: "inide",
       },
       a: {
-        textDecor: 'underline'
-      }
+        textDecor: "underline",
+      },
     },
   })
 );
