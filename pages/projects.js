@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Container, Heading, Grid, Divider, Text } from "@chakra-ui/react";
-import { connectToDatabase } from "../lib/mongodb";
+import { getProjects } from "../lib/ghost";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useColorModeValue } from "@chakra-ui/color-mode";
@@ -70,7 +70,7 @@ const Projects = ({ projects }) => {
                   slug={project.slug}
                   description={project.description}
                   excerpt={project.excerpt}
-                  image={"/" + project.image}
+                  image={project.feature_image}
                 />
               );
             })}
@@ -89,16 +89,13 @@ const Projects = ({ projects }) => {
 
 export default Projects;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   try {
-    const { client } = await connectToDatabase();
-
-    const db = client.db("medina-dev");
-    const projects = await db.collection("projects").find({}).toArray();
+    const projects = await getProjects();
 
     return {
       props: {
-        projects: JSON.parse(JSON.stringify(projects)),
+        projects,
       },
     };
   } catch (e) {
