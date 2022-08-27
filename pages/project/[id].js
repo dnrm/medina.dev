@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
-import { connectToDatabase } from "../../lib/mongodb";
 import Head from "next/head";
 import {
   Container,
@@ -14,11 +13,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Footer from "../../components/Footer";
 import { useColorModeValue } from "@chakra-ui/react";
+import { getProject, getProjects } from "../../lib/ghost";
+import { Prose } from "@nikolovlazar/chakra-ui-prose";
 
 import { width } from "../../lib/width";
 
 const Project = ({ project }) => {
-  console.log(project);
   const padding = 6;
   const border = useColorModeValue("gray.300", "gray.600");
   const text = useColorModeValue("gray.600", "gray.300");
@@ -51,9 +51,6 @@ const Project = ({ project }) => {
           >
             {project.title} {project.icon}
           </Heading>
-          <Text mb={4} textColor={text}>
-            {project.excerpt || project.description}
-          </Text>
         </Container>
         <Container pt={2} maxW={width} px={padding} pb={2}>
           <Box borderColor={border} borderWidth={2} borderRadius="lg" p={2}>
@@ -63,7 +60,7 @@ const Project = ({ project }) => {
               height={{ base: "64", md: "xl" }}
             >
               <Image
-                src={"/" + project.image}
+                src={project.feature_image}
                 layout="fill"
                 objectFit="cover"
                 alt="Project"
@@ -71,16 +68,24 @@ const Project = ({ project }) => {
             </Box>
           </Box>
         </Container>
-        <Container pt={2} maxW={width} px={padding} pb={0}>
-          <Text mb={4}>{project.description}</Text>
+        <Container maxW={width} px={padding} pb={0}>
+          <Prose>
+            <div dangerouslySetInnerHTML={{ __html: project.html }} />
+          </Prose>
         </Container>
-        <Container pt={2} maxW={width} px={padding - 1} pb={8}>
-          <a href={project.link} target="_blank" rel="noopener noreferrer">
-            <Button variant={"solid"} w={"full"}>
-              Visit Website
-            </Button>
-          </a>
-        </Container>
+        {project.primary_tag ? (
+          <Container pt={2} maxW={width} px={padding - 1} pb={8}>
+            <a
+              href={project.primary_tag.name}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant={"solid"} w={"full"}>
+                Visit Website
+              </Button>
+            </a>
+          </Container>
+        ) : null}
         <Container pb={10} maxW={width} px={padding}>
           <Divider />
         </Container>
@@ -95,28 +100,24 @@ const Project = ({ project }) => {
 export default Project;
 
 export async function getStaticPaths() {
-  const { client } = await connectToDatabase();
-
-  const db = client.db("medina-dev");
-
-  let projects = await db.collection("projects").find({}).toArray();
+  const projects = await getProjects();
 
   const paths = projects.map((project) => ({
     params: { id: project.slug },
   }));
 
-  return { paths, fallback: false };
+  return {
+    paths,
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params }) {
-  const { client } = await connectToDatabase();
-
-  const db = client.db("medina-dev");
-  let project = await db.collection("projects").findOne({ slug: params.id });
+  const project = await getProject(params.id);
 
   return {
     props: {
-      project: JSON.parse(JSON.stringify(project)),
+      project,
     },
   };
 }

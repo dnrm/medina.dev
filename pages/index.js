@@ -21,7 +21,7 @@ import { useColorModeValue } from "@chakra-ui/react";
 import { width } from "../lib/width";
 import ContactForm from "../components/ContactForm";
 import Image from "next/image";
-import { connectToDatabase } from "../lib/mongodb";
+import { getProjects } from "../lib/ghost";
 
 const certifications = [
   {
@@ -177,7 +177,7 @@ export default function Home({ projects }) {
                 slug={project.slug}
                 description={project.description}
                 excerpt={project.excerpt}
-                image={"/" + project.image}
+                image={project.feature_image}
               />
             ))}
           </Grid>
@@ -385,14 +385,11 @@ export default function Home({ projects }) {
 
 export async function getServerSideProps({ locale }) {
   try {
-    const { client } = await connectToDatabase();
-
-    const db = client.db("medina-dev");
-    const projects = await db.collection("projects").find({}).toArray();
+    const projects = await getProjects();
 
     return {
       props: {
-        projects: JSON.parse(JSON.stringify(projects)),
+        projects,
       },
     };
   } catch (e) {
