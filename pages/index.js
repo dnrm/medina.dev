@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import {
@@ -9,11 +8,6 @@ import {
   Divider,
   Link as StyledLink,
   Avatar,
-  Stack,
-  Input,
-  Textarea,
-  Button,
-  useToast,
 } from "@chakra-ui/react";
 import Project from "../components/Project";
 import Technologies from "../components/Technologies";
@@ -389,7 +383,7 @@ export default function Home({ projects }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ locale }) {
   try {
     const { client } = await connectToDatabase();
 
