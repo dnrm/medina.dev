@@ -1,15 +1,18 @@
-// theme.js
+import { background, extendTheme } from "@chakra-ui/react";
+import { withProse } from "@nikolovlazar/chakra-ui-prose";
 
-// 1. import `extendTheme` function
-import { extendTheme } from "@chakra-ui/react";
-
-// 2. Add your color mode config
-const config = {
-  initialColorMode: "light",
-  useSystemColorMode: true,
-};
-
-// 3. extend the theme
-const theme = extendTheme({ config });
+const theme = extendTheme(
+  {},
+  withProse({
+    baseStyle: {
+      ul: {
+        listStylePos: "inide",
+      },
+      a: {
+        textDecor: 'underline'
+      }
+    },
+  })
+);
 
 export default theme;
