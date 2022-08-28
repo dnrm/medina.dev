@@ -11,6 +11,16 @@ const theme = extendTheme(
       a: {
         textDecor: "underline",
       },
+      h1: {
+        marginBottom: "0px !important",
+        fontFamily: "Work Sans, sans-serif",
+      },
+      hr: {
+        marginBottom: "1em !important",
+      },
+      p: {
+        textAlign: 'justify'
+      }
     },
   })
 );

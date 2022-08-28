@@ -1,30 +1,23 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
 import Head from "next/head";
-import {
-  Container,
-  Heading,
-  Text,
-  Box,
-  Button,
-  Divider,
-} from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { width } from "../../lib/width";
+import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { useColorModeValue } from "@chakra-ui/react";
-import { getProject, getProjects } from "../../lib/ghost";
+import markdownToHtml from "../../lib/markdownToHtml";
+import Image from "next/image";
+import { getAllProjects, getProjectBySlug } from "../../lib/projects";
+import { Container, Heading, Button, Divider, Box } from "@chakra-ui/react";
 import { Prose } from "@nikolovlazar/chakra-ui-prose";
 
-import { width } from "../../lib/width";
-
-const Project = ({ project }) => {
+const Project = ({ project, content }) => {
+  console.log(project);
   const padding = 6;
   const border = useColorModeValue("gray.300", "gray.600");
-  const text = useColorModeValue("gray.600", "gray.300");
 
   return (
-    <div>
+    <>
       <Head>
         <title>{project.title}</title>
         <meta name="title" content="{project.title}" />
@@ -45,22 +38,14 @@ const Project = ({ project }) => {
         transition={{ duration: 0.25, type: "tween" }}
       >
         <Container pt={16} maxW={width} px={padding} pb={2}>
-          <Heading
-            fontFamily="Work Sans, sans-serif"
-            fontSize={{ base: "2.3em", md: "3em" }}
-          >
-            {project.title} {project.icon}
-          </Heading>
-        </Container>
-        <Container pt={2} maxW={width} px={padding} pb={2}>
           <Box borderColor={border} borderWidth={2} borderRadius="lg" p={2}>
             <Box
               position={"relative"}
               w="full"
-              height={{ base: "64", md: "xl" }}
+              height={{ base: "72", md: "lg" }}
             >
               <Image
-                src={project.feature_image}
+                src={project.image}
                 layout="fill"
                 objectFit="cover"
                 alt="Project"
@@ -68,18 +53,14 @@ const Project = ({ project }) => {
             </Box>
           </Box>
         </Container>
-        <Container maxW={width} px={padding} pb={0}>
+        <Container maxW={width} px={padding} pb={2}>
           <Prose>
-            <div dangerouslySetInnerHTML={{ __html: project.html }} />
+            <div dangerouslySetInnerHTML={{ __html: project.content }} />
           </Prose>
         </Container>
-        {project.primary_tag ? (
+        {project.address ? (
           <Container pt={2} maxW={width} px={padding - 1} pb={8}>
-            <a
-              href={project.primary_tag.name}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={project.address} target="_blank" rel="noopener noreferrer">
               <Button variant={"solid"} w={"full"}>
                 Visit Website
               </Button>
@@ -89,35 +70,47 @@ const Project = ({ project }) => {
         <Container pb={10} maxW={width} px={padding}>
           <Divider />
         </Container>
-        <Container maxW={width} px={padding}>
-          <Footer />
-        </Container>
+        <Footer />
       </motion.div>
-    </div>
+    </>
   );
 };
 
 export default Project;
 
-export async function getStaticPaths() {
-  const projects = await getProjects();
-
-  const paths = projects.map((project) => ({
-    params: { id: project.slug },
-  }));
-
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
 export async function getStaticProps({ params }) {
-  const project = await getProject(params.id);
+  const project = await getProjectBySlug(params.slug, [
+    "title",
+    "date",
+    "slug",
+    "address",
+    "content",
+    "image",
+  ]);
+
+  const content = await markdownToHtml(project.content || "");
 
   return {
     props: {
-      project,
+      project: {
+        ...project,
+        content,
+      },
     },
+  };
+}
+
+export async function getStaticPaths() {
+  const projects = getAllProjects(["slug"]);
+
+  return {
+    paths: projects.map((project) => {
+      return {
+        params: {
+          slug: project.slug,
+        },
+      };
+    }),
+    fallback: false,
   };
 }
