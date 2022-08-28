@@ -1,12 +1,12 @@
 import Head from "next/head";
-import { Container, Heading, Grid, Divider, Text } from "@chakra-ui/react";
-import { getProjects } from "../lib/ghost";
+import { width } from "../lib/width";
+import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useColorModeValue } from "@chakra-ui/color-mode";
-import { motion } from "framer-motion";
-import { width } from "../lib/width";
 import Project from "../components/Project";
+import { getAllProjects } from "../lib/projects";
+import { useColorModeValue } from "@chakra-ui/color-mode";
+import { Container, Heading, Grid, Divider, Text } from "@chakra-ui/react";
 
 const padding = 6;
 
@@ -70,7 +70,7 @@ const Projects = ({ projects }) => {
                   slug={project.slug}
                   description={project.description}
                   excerpt={project.excerpt}
-                  image={project.feature_image}
+                  image={project.image}
                 />
               );
             })}
@@ -90,19 +90,19 @@ const Projects = ({ projects }) => {
 export default Projects;
 
 export async function getStaticProps() {
-  try {
-    const projects = await getProjects();
+  const projects = getAllProjects([
+    "title",
+    "date",
+    "slug",
+    "address",
+    "content",
+    "image",
+    "excerpt",
+  ]);
 
-    return {
-      props: {
-        projects,
-      },
-    };
-  } catch (e) {
-    return {
-      props: {
-        error: "Unable to get projects",
-      },
-    };
-  }
+  return {
+    props: {
+      projects,
+    },
+  };
 }
