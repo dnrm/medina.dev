@@ -22,6 +22,7 @@ const Project = (props) => {
           p={2.5}
           rounded="md"
           minHeight={24}
+          height={'100%'}
         >
           {props.image && (
             <Stack
