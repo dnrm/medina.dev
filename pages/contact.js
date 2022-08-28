@@ -60,7 +60,7 @@ const socials = [
     name: "LinkedIn 💌",
     href: "https://www.linkedin.com/in/dnrm/",
     description:
-      "I dont check my LinkedIn often, but if you want to, you can send a message!",
+      "Check out my whole professional profile, including my resume and work experience.",
   },
 ];
 
@@ -168,9 +168,7 @@ const Contact = () => {
         <Container pb={10} maxW={width} px={padding}>
           <Divider />
         </Container>
-        <Container maxW={width} px={padding}>
-          <Footer />
-        </Container>
+        <Footer />
       </motion.div>
     </div>
   );
