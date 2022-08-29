@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Service from "../components/Service";
 import { width, padding } from "../lib/constants";
-import { Container, Heading, Text, Grid } from "@chakra-ui/react";
+import { Container, Heading, Text, Grid, Divider } from "@chakra-ui/react";
 
 import { Business, Enterprise, StaticWebsite } from "../lib/icons";
 
@@ -122,6 +122,9 @@ const Services = () => {
               price={500}
             />
           </Grid>
+        </Container>
+        <Container pb={10} maxW={width} px={padding}>
+          <Divider />
         </Container>
         <Footer />
       </motion.div>
