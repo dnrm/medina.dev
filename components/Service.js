@@ -40,20 +40,22 @@ const Service = ({
         placeItems={{ base: "left", md: "center" }}
         w="100%"
         py={8}
-        px={4}
+        px={2}
       >
         <Box
-          h={"24"}
-          w={"24"}
+          h={"28"}
+          w={"28"}
           position={"relative"}
           top={"14"}
           textAlign="center"
           backgroundColor={iconColor}
           rounded="full"
           color={text}
-          p={4}
+          p={2}
         >
-          {icon}
+          <Box p={4} rounded="full" backgroundColor={"teal.400"}>
+            {icon}
+          </Box>
         </Box>
       </Box>
       <Stack p={4} pt={8}>
