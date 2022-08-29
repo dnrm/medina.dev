@@ -193,6 +193,22 @@ const Skills = ({ padding, width }) => {
                 >
                     Git
                 </Badge>
+                <Badge
+                    mx={1}
+                    my={1}
+                    fontSize={{ base: "0.9em", md: "1em" }}
+                    colorScheme="purple"
+                >
+                    Figma
+                </Badge>
+                <Badge
+                    mx={1}
+                    my={1}
+                    fontSize={{ base: "0.9em", md: "1em" }}
+                    colorScheme="blue"
+                >
+                    Wordpress
+                </Badge>
             </Flex>
         </Container>
     );
