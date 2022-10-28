@@ -21,7 +21,7 @@ const Projects = ({ projects }) => {
           name="description"
           content="My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey..."
         />
-        <meta property="og:url" content="https://danielmedina.dev/" />
+        <meta property="og:url" content="https://medina.dev/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Daniel Medina - Web developer" />
         <meta
