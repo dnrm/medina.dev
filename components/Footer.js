@@ -74,16 +74,16 @@ const Footer = () => {
           </StyledLink>
         </Stack>
         <Stack>
-          <Link href="/certifications" passHref>
+          <Link href="/certifications" passHref legacyBehavior>
             <StyledLink>Certifications</StyledLink>
           </Link>
-          <Link href="/contact" passHref>
+          <Link href="/contact" passHref legacyBehavior>
             <StyledLink>Contact</StyledLink>
           </Link>
-          <Link href="/projects" passHref>
+          <Link href="/projects" passHref legacyBehavior>
             <StyledLink>Projects</StyledLink>
           </Link>
-          <Link href="/vinyl" passHref>
+          <Link href="/vinyl" passHref legacyBehavior>
             <StyledLink>Vinyl Collection</StyledLink>
           </Link>
         </Stack>

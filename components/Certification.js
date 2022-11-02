@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack, Heading, Text, Link } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const Certification = ({ title, src, children, href }) => {
   const border = useColorModeValue("gray.300", "gray.600");
@@ -12,10 +12,14 @@ const Certification = ({ title, src, children, href }) => {
         src={src}
         height={40}
         width={80}
-        objectFit={"cover"}
         alt="Certification Image"
         loading="lazy"
-        layout="responsive"
+        style={{
+          objectFit: "cover",
+          width: "100%",
+          height: "25vh",
+          borderRadius: "5px 5px 0 0",
+        }}
         blurDataURL="/cert_placeholder.jpeg"
         placeholder="blur"
       />

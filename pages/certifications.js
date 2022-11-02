@@ -44,7 +44,7 @@ const Certifications = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.25, type: "tween" }}
       >
-        <Container pt={16} maxW={width} px={padding} pb={16}>
+        <Container pt={16} maxW={width} px={padding} pb={12}>
           <Heading
             fontFamily="Work Sans, sans-serif"
             fontSize={{ base: "2.3em", md: "3em" }}

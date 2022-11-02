@@ -12,22 +12,22 @@ const Navbar = ({ padding }) => {
     <Container pt={{ base: "12", md: "28" }} maxW={width} px={padding || 6}>
       <Flex justifyContent="space-between" alignItems="center">
         <Flex>
-          <Link href="/" passHref>
+          <Link href="/" passHref legacyBehavior>
             <StyledLink fontSize={{ base: '0.8em', md: '1em'}} textColor="gray.500" pr={2}>
               Home
             </StyledLink>
           </Link>
-          <Link href="/services" passHref>
+          <Link href="/services" passHref legacyBehavior>
             <StyledLink fontSize={{ base: '0.8em', md: '1em'}} textColor="gray.500" px={2}>
               Services
             </StyledLink>
           </Link>
-          <Link href="/projects" passHref>
+          <Link href="/projects" passHref legacyBehavior>
             <StyledLink fontSize={{ base: '0.8em', md: '1em'}} textColor="gray.500" px={2}>
               Projects
             </StyledLink>
           </Link>
-          <Link href="/contact" passHref>
+          <Link href="/contact" passHref legacyBehavior>
             <StyledLink fontSize={{ base: '0.8em', md: '1em'}} textColor="gray.500" px={2}>
               Contact
             </StyledLink>

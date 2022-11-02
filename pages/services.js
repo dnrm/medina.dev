@@ -73,7 +73,7 @@ const Services = () => {
           <Text textColor="gray.400">
             Check out the services I offer and their pricing. If you&apos;d like
             a custom package feel free to{" "}
-            <Link passHref href="/contact">
+            <Link passHref href="/contact" legacyBehavior>
               <StyledLink textColor={"teal.500"} fontWeight="bold">
                 contact
               </StyledLink>
@@ -96,7 +96,7 @@ const Services = () => {
             gap={4}
           >
             <Service
-              backgroundImage={"/static-website.jpeg"}
+              backgroundImage={"/service-1.jpg"}
               icon={<StaticWebsite />}
               title={"Static Website ⭐️"}
               description={
@@ -111,7 +111,7 @@ const Services = () => {
               price={250}
             />
             <Service
-              backgroundImage={"/enterprise.jpeg"}
+              backgroundImage={"/service-2.jpg"}
               icon={<Enterprise />}
               title={"Full Stack 💻"}
               description={
@@ -129,7 +129,7 @@ const Services = () => {
               price={1000}
             />
             <Service
-              backgroundImage={"/small-business.jpeg"}
+              backgroundImage={"/service-3.jpg"}
               icon={<Business />}
               title={"Dynamic Website ✍️"}
               description={
@@ -161,7 +161,7 @@ const Services = () => {
             gap={4}
           >
             <Service
-              backgroundImage={"/static-website.jpeg"}
+              backgroundImage={"/tickets.jpg"}
               icon={<Ticket />}
               price={25}
               title={"5 Extra Revision Tickets"}
@@ -171,7 +171,7 @@ const Services = () => {
               features={["5 Revision tickets"]}
             />
             <Service
-              backgroundImage={"/static-website.jpeg"}
+              backgroundImage={"/tickets.jpg"}
               icon={<Ticket />}
               price={50}
               title={"10 Extra Revision Tickets"}
@@ -181,7 +181,7 @@ const Services = () => {
               features={["10 Revision tickets"]}
             />
             <Service
-              backgroundImage={"/static-website.jpeg"}
+              backgroundImage={"/tickets.jpg"}
               icon={<Ticket />}
               price={75}
               title={"15 Extra Revision Tickets"}
