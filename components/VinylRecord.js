@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack, Flex, Heading, Link, Text, GridItem } from "@chakra-ui/react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useColorModeValue } from "@chakra-ui/react";
 
 const VinylRecord = ({ title, artist, cover, link }) => {

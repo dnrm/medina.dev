@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack, Heading, Text, Link } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
-import Image from 'next/image'
+import Image from "next/legacy/image";
 
 const Certification = ({ title, src, children, href }) => {
   const border = useColorModeValue("gray.300", "gray.600");

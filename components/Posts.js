@@ -9,7 +9,7 @@ import {
   Box,
   Link as StyledLink,
 } from "@chakra-ui/react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const Posts = (props) => {

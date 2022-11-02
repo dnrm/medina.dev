@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { width, padding } from "../lib/constants";
 import { useColorModeValue } from "@chakra-ui/react";
 import { Container, Heading, Text, Grid } from "@chakra-ui/react";
