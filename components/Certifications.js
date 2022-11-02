@@ -33,7 +33,7 @@ const Certifications = () => {
           );
         })}
       </Grid>
-      <Link href="/certifications" passHref>
+      <Link href="/certifications" passHref legacyBehavior>
         <StyledLink
           textAlign="center"
           backgroundColor="transparent"

@@ -8,7 +8,6 @@ import {
   ListItem,
   Stack,
   Button,
-  Image,
 } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
 
@@ -53,7 +52,7 @@ const Service = ({
           color={text}
           p={2}
         >
-          <Box p={4} rounded="full" backgroundColor={"teal.400"}>
+          <Box p={4} rounded="full" backgroundColor={"teal.500"}>
             {icon}
           </Box>
         </Box>
@@ -67,9 +66,19 @@ const Service = ({
             fontSize={{ base: "4xl", md: "6xl" }}
           >
             ${price}
+            <Text
+              display={"inline"}
+              fontSize={"xl"}
+              fontFamily="Work Sans"
+              pl={1}
+              color={"gray.400"}
+            >
+              USD
+            </Text>
           </Heading>
           <Heading
             fontFamily="Work Sans, sans-serif"
+            pt={2}
             textAlign={"left"}
             w="100%"
             fontSize={{ base: "lg", md: "2xl" }}
@@ -77,7 +86,7 @@ const Service = ({
             {title}
           </Heading>
         </Box>
-        <Box className="text" display={"flex"} flexDirection={"column"} gap={2}>
+        <Box className="text" display={"flex"} flexDirection={"column"} gap={2} pb={2}>
           <Text color={text} textAlign={"justify"}>
             {description}
           </Text>
