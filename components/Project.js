@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack, Heading, Text, Link as StyledLink } from "@chakra-ui/react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 
