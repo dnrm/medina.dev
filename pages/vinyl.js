@@ -4,14 +4,10 @@ import {
   Heading,
   Divider,
   Text,
-  Link,
   Grid,
-  GridItem,
 } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
-import { useColorModeValue } from "@chakra-ui/color-mode";
 import Footer from "../components/Footer";
-import Image from "next/image";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { width } from "../lib/width";

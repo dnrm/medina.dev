@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { useToast } from "@chakra-ui/react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const ContactForm = ({ width, border }) => {
   const toast = useToast();
