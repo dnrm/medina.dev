@@ -24,10 +24,14 @@ const Certification = ({ title, src, children, href }) => {
         placeholder="blur"
       />
       <Stack px={4} pb={4} pt={2}>
-        <Heading fontWeight="regular" fontSize={{ base: "0.9em", md: "1em" }}>
+        <Heading
+          fontWeight="bold"
+          letterSpacing={"tighter"}
+          fontSize={{ base: "0.9em", md: "1.3em" }}
+        >
           <Link href={href}>{title}</Link>
         </Heading>
-        <Text fontWeight="regular" fontSize={{ base: "0.8em", md: "0.9em" }}>
+        <Text fontWeight="regular" textColor={'gray.300'} fontSize={{ base: "0.8em", md: "0.9em" }}>
           {children}
         </Text>
       </Stack>
