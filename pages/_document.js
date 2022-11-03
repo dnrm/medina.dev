@@ -33,6 +33,7 @@ class MyDocument extends Document {
             src="https://www.googletagmanager.com/gtag/js?id=G-QTFWKHLPEV"
           ></script>
           <Script
+          id="uwu"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `window.dataLayer = window.dataLayer || [];
