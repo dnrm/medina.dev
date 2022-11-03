@@ -12,7 +12,6 @@ import { Container, Heading, Button, Divider, Box } from "@chakra-ui/react";
 import { Prose } from "@nikolovlazar/chakra-ui-prose";
 
 const Project = ({ project, content }) => {
-  console.log(project);
   const padding = 6;
   const border = useColorModeValue("gray.300", "gray.600");
 

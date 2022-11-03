@@ -29,7 +29,7 @@ const Technology = (props) => {
         />
       )}
       <Flex flexDir="column">
-        <Heading fontSize="xl" textColor={text} fontWeight="bold">
+        <Heading fontSize="xl" letterSpacing={'tighter'} textColor={text} fontWeight="bold">
           {props.title}
         </Heading>
         <Text fontSize="md">{props.description}</Text>

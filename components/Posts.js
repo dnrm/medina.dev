@@ -9,7 +9,7 @@ import {
   Box,
   Link as StyledLink,
 } from "@chakra-ui/react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const Posts = (props) => {
@@ -77,31 +77,37 @@ const Posts = (props) => {
                   borderWidth="2px"
                   borderColor={border}
                   rounded="md"
-                  p={2.5}
+                  h="full"
                 >
-                  <Stack position={"relative"} h={48} rounded="xl">
-                    <Box rounded="lg">
-                      <Image
-                        src={i.coverImage}
-                        h={48}
-                        layout="fill"
-                        objectFit="cover"
-                        alt="Cover"
-                      />
-                    </Box>
-                  </Stack>
+                  <Image
+                    src={i.coverImage}
+                    width={100}
+                    height={100}
+                    style={{
+                      objectFit: "cover",
+                      width: "100%",
+                      height: "22vh",
+                      borderRadius: "4px 4px 0 0",
+                    }}
+                    alt="Cover"
+                  />
                   <Heading
-                    fontWeight="regular"
-                    fontSize={{ base: "1em", md: "1.1em" }}
+                    fontWeight="bold"
+                    fontSize={{ base: "1em", md: "1.4em" }}
+                    letterSpacing={"tighter"}
+                    pt={2.5}
+                    px={4}
                   >
                     {i.title}
                   </Heading>
                   <Text
+                    px={4}
+                    pb={5}
                     fontSize={{
                       base: "0.8em",
                       md: "0.9em",
                     }}
-                    textColor="gray.400"
+                    textColor="gray.300"
                   >
                     {i.brief}
                   </Text>
