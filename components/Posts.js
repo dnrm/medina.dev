@@ -44,7 +44,7 @@ const Posts = (props) => {
         }),
       });
       const json = await response.json();
-      setPosts(json.data.user.publication.posts);
+      setPosts(json.data.user.publication.posts.slice(0, 4));
     };
 
     get(GET_USER_ARTICLES, { page: 0 });
@@ -81,8 +81,8 @@ const Posts = (props) => {
                 >
                   <Image
                     src={i.coverImage}
-                    width={100}
-                    height={100}
+                    width={500}
+                    height={500}
                     style={{
                       objectFit: "cover",
                       width: "100%",
@@ -109,7 +109,7 @@ const Posts = (props) => {
                     }}
                     textColor="gray.300"
                   >
-                    {i.brief}
+                    {i.brief.substring(0, 150)}...
                   </Text>
                 </Stack>
               </StyledLink>
