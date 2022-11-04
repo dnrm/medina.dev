@@ -93,7 +93,7 @@ const Posts = (props) => {
                   />
                   <Heading
                     fontWeight="bold"
-                    fontSize={{ base: "1em", md: "1.4em" }}
+                    fontSize={{ base: "1.3em", md: "1.4em" }}
                     letterSpacing={"tighter"}
                     pt={2.5}
                     px={4}

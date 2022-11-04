@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Container,
-  Heading,
-  Divider,
-  Text,
-  Grid,
-} from "@chakra-ui/react";
+import { Container, Heading, Divider, Text, Grid } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Head from "next/head";
@@ -118,6 +112,18 @@ const collection = [
     cover: "https://i.scdn.co/image/ab67616d0000b273b54b7ab11f1779ca09769e7a",
     link: "https://open.spotify.com/album/1avl9iL9ZRN2O0Z1831cKw?si=3340c35400b649d1",
   },
+  {
+    title: "Cigarettes After Sex",
+    artist: "Cigarettes After Sex",
+    cover: "https://i.scdn.co/image/ab67616d0000b2736b701428ed4c6e053902174a",
+    link: "https://open.spotify.com/album/5bP82ZIls6rzhpf5Qu6AzC?si=2CSB0_BJQcKFLCvsNBgQAQ",
+  },
+  {
+    title: "Christmas (Deluxe Special Edition)",
+    artist: "Michael Bublé",
+    cover: "https://i.scdn.co/image/ab67616d0000b273119e4094f07a8123b471ac1d",
+    link: "https://open.spotify.com/album/7uVimUILdzSZG4KKKWToq0?si=G9xAbibxQcOvl1D9jhI5Jg",
+  },
 ];
 
 const Vinyl = () => {
@@ -146,7 +152,14 @@ const Vinyl = () => {
           </Text>
         </Container>
         <Container pt={2} maxW={width} px={padding} pb={16}>
-          <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)'}} gap={4}>
+          <Grid
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              md: "repeat(2, 1fr)",
+              lg: "repeat(3, 1fr)",
+            }}
+            gap={4}
+          >
             {collection.map(({ title, cover, link, artist }) => {
               return (
                 <VinylRecord

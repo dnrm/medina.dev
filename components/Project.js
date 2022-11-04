@@ -44,7 +44,7 @@ const Project = (props) => {
           <Text
             letterSpacing="tighter"
             fontWeight={"bold"}
-            fontSize={{ base: "0.9em", md: "1.5em" }}
+            fontSize={{ base: "1.3em", md: "1.5em" }}
           >
             {props.title}
           </Text>
