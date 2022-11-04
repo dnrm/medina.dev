@@ -7,7 +7,7 @@ const VinylRecord = ({ title, artist, cover, link }) => {
   const bg = useColorModeValue("gray.100", "gray.700");
 
   return (
-    <GridItem w="full" backgroundColor={bg} p={4} rounded="lg">
+    <GridItem w="full" backgroundColor={bg} rounded="lg">
       <Stack minW="24">
         <a target="_blank" w="full" h='full' rel="noreferrer" href={cover}>
           <Image
@@ -22,7 +22,7 @@ const VinylRecord = ({ title, artist, cover, link }) => {
           />
         </a>
       </Stack>
-      <Flex direction="column" w='full' pt={3}>
+      <Flex direction="column" w='full' p={4}>
         <Heading
           fontWeight="bold"
           fontSize={{ base: "1em", md: "1.5em" }}

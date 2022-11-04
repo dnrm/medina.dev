@@ -27,7 +27,7 @@ const Certification = ({ title, src, children, href }) => {
         <Heading
           fontWeight="bold"
           letterSpacing={"tighter"}
-          fontSize={{ base: "0.9em", md: "1.3em" }}
+          fontSize={{ base: "1.3em", md: "1.3em" }}
         >
           <Link href={href}>{title}</Link>
         </Heading>
