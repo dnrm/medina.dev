@@ -15,6 +15,7 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 const Posts = (props) => {
   const { width, padding } = props;
   const [posts, setPosts] = useState();
+  const textColor = useColorModeValue("gray.600", "gray.400");
 
   const GET_USER_ARTICLES = `
     query GetUserArticles($page: Int!) {
@@ -107,7 +108,7 @@ const Posts = (props) => {
                       base: "0.8em",
                       md: "0.9em",
                     }}
-                    textColor="gray.300"
+                    textColor={textColor}
                   >
                     {i.brief.substring(0, 150)}...
                   </Text>
