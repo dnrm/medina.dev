@@ -12,9 +12,15 @@ function convertToSlug(Text) {
 
 const Project = (props) => {
   const border = useColorModeValue("gray.300", "gray.600");
+  const textColor = useColorModeValue("gray.600", "gray.400");
 
   return (
-    <Link href={"/project/" + props.slug} target="_blank" rel="noreferrer">
+    <Link
+      href={"/project/" + props.slug}
+      target="_blank"
+      rel="noreferrer"
+      legacyBehavior
+    >
       <Stack
         borderWidth="2px"
         borderColor={border}
@@ -45,12 +51,14 @@ const Project = (props) => {
             letterSpacing="tighter"
             fontWeight={"bold"}
             fontSize={{ base: "1.3em", md: "1.5em" }}
+            cursor="pointer"
+            _hover={{ textDecor: "underline" }}
           >
             {props.title}
           </Text>
         </Heading>
         <Text
-          textColor="gray.400"
+          textColor={textColor}
           fontSize={{ base: "0.8em", md: "0.9em" }}
           px={4}
           pb={4}

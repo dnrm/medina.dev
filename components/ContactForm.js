@@ -9,13 +9,15 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { useToast } from "@chakra-ui/react";
 import Image from "next/legacy/image";
+import { useToast } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/react";
 
 const ContactForm = ({ width, border }) => {
   const toast = useToast();
   const [address, setAddress] = useState("");
   const [message, setMessage] = useState("");
+  const textColor = useColorModeValue("gray.600", "gray.400");
 
   const handleAddressChange = (e) => {
     setAddress(e.target.value);
@@ -59,18 +61,13 @@ const ContactForm = ({ width, border }) => {
   return (
     <Container pt={8} px={6} maxW={width}>
       <Heading fontFamily={"Work Sans, sans serif"}>Hire Me 🏢</Heading>
-      <Text textColor="gray.400" mb={2}>
+      <Text textColor={textColor} mb={2}>
         Are you interested in hiring me? Send me a message!
       </Text>
       <form onSubmit={handleSubmit}>
         <Stack borderWidth={2} borderColor={border} borderRadius={"lg"}>
           <Stack position={"relative"} height={48}>
-            <Image
-              alt="a"
-              src="/banner.png"
-              layout="fill"
-              objectFit="cover"
-            />
+            <Image alt="a" src="/banner.png" layout="fill" objectFit="cover" />
           </Stack>
           <Stack pb={6} pt={2} px={5} className="input-elements">
             <Stack className="email">
