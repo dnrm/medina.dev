@@ -9,9 +9,12 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { width } from "../lib/width";
+import { useColorModeValue } from "@chakra-ui/react";
 
 const Footer = () => {
   const [playing, setPlaying] = useState();
+  const textColor = useColorModeValue("gray.600", "gray.400");
+  const footerTextColor = useColorModeValue("gray.500", "gray.400");
 
   useEffect(() => {
     const get = async () => {
@@ -28,7 +31,7 @@ const Footer = () => {
       <Flex
         justifyContent="start"
         alignItems="center"
-        textColor="gray.400"
+        textColor={textColor}
         borderWidth="1px"
         borderRadius="md"
         p={4}
@@ -58,7 +61,7 @@ const Footer = () => {
           </Text>
         ) : null}
       </Flex>
-      <Grid pt={8} templateColumns={"repeat(3, 1fr)"} textColor="gray.400">
+      <Grid pt={8} templateColumns={"repeat(3, 1fr)"} textColor={footerTextColor}>
         <Stack>
           <StyledLink href="https://twitter.com/_dnrm">Twitter</StyledLink>
           <StyledLink href="https://github.com/dnrm">Github</StyledLink>

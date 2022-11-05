@@ -4,8 +4,8 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const Technology = (props) => {
   const bg = useColorModeValue("gray.100", "gray.700");
-  const text = useColorModeValue("gray.700", "gray.400");
   const imagebg = useColorModeValue("gray.200", "gray.600");
+  const textColor = useColorModeValue("gray.600", "gray.400");
 
   return (
     <Grid
@@ -29,10 +29,10 @@ const Technology = (props) => {
         />
       )}
       <Flex flexDir="column">
-        <Heading fontSize="xl" letterSpacing={'tighter'} textColor={text} fontWeight="bold">
+        <Heading fontSize="xl" letterSpacing={'tighter'} textColor={textColor} fontWeight="bold">
           {props.title}
         </Heading>
-        <Text fontSize="md">{props.description}</Text>
+        <Text fontSize="md" textColor={textColor}>{props.description}</Text>
       </Flex>
     </Grid>
   );

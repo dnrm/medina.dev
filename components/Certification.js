@@ -5,6 +5,7 @@ import Image from "next/image";
 
 const Certification = ({ title, src, children, href }) => {
   const border = useColorModeValue("gray.300", "gray.600");
+  const textColor = useColorModeValue("gray.600", "gray.400");
 
   return (
     <Stack rounded="md" borderWidth="2px" borderColor={border}>
@@ -31,7 +32,11 @@ const Certification = ({ title, src, children, href }) => {
         >
           <Link href={href}>{title}</Link>
         </Heading>
-        <Text fontWeight="regular" textColor={'gray.300'} fontSize={{ base: "0.8em", md: "0.9em" }}>
+        <Text
+          fontWeight="regular"
+          textColor={textColor}
+          fontSize={{ base: "0.8em", md: "0.9em" }}
+        >
           {children}
         </Text>
       </Stack>

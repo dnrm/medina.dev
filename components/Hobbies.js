@@ -6,6 +6,7 @@ import { Container, Heading, Text, Grid } from "@chakra-ui/react";
 
 const Hobbies = () => {
   const border = useColorModeValue("gray.300", "gray.600");
+  const textColor = useColorModeValue("gray.600", "gray.400");
 
   return (
     <Container pt={16} maxW={width} px={padding}>
@@ -13,7 +14,7 @@ const Hobbies = () => {
         Hobbies 🎧
       </Heading>
       <Text
-        textColor="gray.400"
+        textColor={textColor}
         fontSize={{ base: "0.9em", md: "1em" }}
         textAlign={"justify"}
       >

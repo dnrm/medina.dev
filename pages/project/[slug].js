@@ -6,7 +6,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { useColorModeValue } from "@chakra-ui/react";
 import markdownToHtml from "../../lib/markdownToHtml";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { getAllProjects, getProjectBySlug } from "../../lib/projects";
 import { Container, Heading, Button, Divider, Box } from "@chakra-ui/react";
 import { Prose } from "@nikolovlazar/chakra-ui-prose";
@@ -41,12 +41,12 @@ const Project = ({ project, content }) => {
             <Box
               position={"relative"}
               w="full"
-              height={{ base: "72", md: "lg" }}
             >
               <Image
                 src={project.image}
-                layout="fill"
-                objectFit="cover"
+                width={1500}
+                height={1000}
+                style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 alt="Project"
               />
             </Box>
