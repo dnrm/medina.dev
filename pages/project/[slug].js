@@ -18,9 +18,9 @@ const Project = ({ project, content }) => {
   return (
     <>
       <Head>
-        <title>{project.title}</title>
-        <meta name="title" content="{project.title}" />
-        <meta name="description" content="{project.description}" />
+        <title>{project.title} | Projects</title>
+        <meta name="title" content={project.title + " | Projects"} />
+        <meta name="description" content={project.excerpt} />
         <meta
           name="keywords"
           content="Project, Technology, Medina, Daniel Medina, Programming, Web Developer"

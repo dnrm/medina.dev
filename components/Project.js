@@ -22,6 +22,7 @@ const Project = (props) => {
       legacyBehavior
     >
       <Stack
+      spacing="0"
         borderWidth="2px"
         borderColor={border}
         rounded="md"
@@ -40,28 +41,24 @@ const Project = (props) => {
           />
         )}
         <Heading
-          fontWeight="regular"
-          fontSize={{ base: "0.9em", md: "1em" }}
-          display="flex"
           px={4}
-          pt={2.5}
+          pt={4}
+          letterSpacing="tighter"
+          fontWeight={"bold"}
+          fontFamily="Work Sans, sans-serif"
+          fontSize={{ base: "1.3em", md: "1.5em" }}
+          cursor="pointer"
+          _hover={{ textDecor: "underline" }}
         >
-          <Text>{props.icon}</Text>
-          <Text
-            letterSpacing="tighter"
-            fontWeight={"bold"}
-            fontSize={{ base: "1.3em", md: "1.5em" }}
-            cursor="pointer"
-            _hover={{ textDecor: "underline" }}
-          >
-            {props.title}
-          </Text>
+          {props.title}
         </Heading>
         <Text
           textColor={textColor}
           fontSize={{ base: "0.8em", md: "0.9em" }}
           px={4}
           pb={4}
+          pt={1}
+          lineHeight="normal"
         >
           {props.excerpt.substring(0, 100)}...
         </Text>

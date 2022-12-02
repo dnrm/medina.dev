@@ -19,11 +19,14 @@ const Hobbies = () => {
         textAlign={"justify"}
       >
         I love coffee. I like to try different brewing methods and recipes. My
-        personal favourite drinks are cappuccinos and espresso. Another thing I
-        really enjoy doing is collecting vinyl records. My favourite music
-        genres are rock and indie music. I enjoy music from{" "}
+        favourite drinks are lattes and pour over coffee. Another thing I really
+        enjoy doing is collecting vinyl records. My favourite music genres are
+        rock and pop. I enjoy music from{" "}
         <b>
-          <i>Clairo, Coldplay, Oasis, Pixies, Conan Gray, KISS</i>
+          <i>
+            Clairo, Taylor Swift, Coldplay, Oasis, Pixies, Conan Gray, FINNEAS,
+            Phoebe Bridgers
+          </i>
         </b>
         , and more. I have a pet dog called Toby, he&apos;s a Golden Doodle.
       </Text>
@@ -43,7 +46,7 @@ const Hobbies = () => {
           <Container pos="relative" w="full" h="full">
             <Image
               objectFit="cover"
-              src="/breville.jpeg"
+              src="/coffee-cup.jpg"
               layout="fill"
               alt="Espresso cup"
               blurDataURL="/breville.min.jpeg"
@@ -60,7 +63,7 @@ const Hobbies = () => {
           <Container pos="relative" w="full" h="full">
             <Image
               objectFit="cover"
-              src="/cold-brew.jpg"
+              src="/capitol.jpg"
               layout="fill"
               alt="Cold brew glass"
               blurDataURL="/cold-brew.min.jpg"
