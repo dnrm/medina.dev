@@ -18,6 +18,7 @@ const Service = ({
   price,
   backgroundImage,
   icon,
+  badge
 }) => {
   const bg = useColorModeValue("gray.100", "gray.700");
   const text = useColorModeValue("gray.600", "gray.300");
@@ -41,6 +42,7 @@ const Service = ({
         py={8}
         px={2}
       >
+        <Box position={'absolute'}>hi</Box>
         <Box
           h={"28"}
           w={"28"}
@@ -71,7 +73,6 @@ const Service = ({
               fontSize={"xl"}
               fontFamily="Work Sans"
               pl={1}
-              color={"gray.400"}
             >
               USD
             </Text>
@@ -86,11 +87,18 @@ const Service = ({
             {title}
           </Heading>
         </Box>
-        <Box className="text" display={"flex"} flexDirection={"column"} gap={2} pb={2}>
-          <Text color={text} textAlign={"justify"}>
+        {/* Description box */}
+        <Box
+          className="text"
+          display={"flex"}
+          flexDirection={"column"}
+          gap={2}
+          pb={2}
+        >
+          <Text color={text} textAlign={"left"} pb={4}>
             {description}
           </Text>
-          <Text color={text} textAlign={"justify"}>
+          <Text color={text} textAlign={"left"}>
             Features:
           </Text>
           <List
