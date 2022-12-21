@@ -14,6 +14,7 @@ const Navbar = ({ padding }) => {
         <Flex>
           <Link href="/" passHref legacyBehavior>
             <StyledLink
+              target={"_self"}
               fontSize={{ base: "0.8em", md: "1em" }}
               textColor="gray.500"
               pr={2}
@@ -23,6 +24,7 @@ const Navbar = ({ padding }) => {
           </Link>
           <Link href="/services" passHref legacyBehavior>
             <StyledLink
+              target={"_self"}
               fontSize={{ base: "0.8em", md: "1em" }}
               textColor="gray.500"
               px={2}
@@ -32,6 +34,7 @@ const Navbar = ({ padding }) => {
           </Link>
           <Link href="/projects" passHref legacyBehavior>
             <StyledLink
+              target={"_self"}
               fontSize={{ base: "0.8em", md: "1em" }}
               textColor="gray.500"
               px={2}
@@ -41,6 +44,7 @@ const Navbar = ({ padding }) => {
           </Link>
           <Link href="/contact" passHref legacyBehavior>
             <StyledLink
+              target={"_self"}
               fontSize={{ base: "0.8em", md: "1em" }}
               textColor="gray.500"
               px={2}

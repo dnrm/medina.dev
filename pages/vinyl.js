@@ -123,7 +123,12 @@ const collection = [
     artist: "Michael Bublé",
     cover: "https://i.scdn.co/image/ab67616d0000b273119e4094f07a8123b471ac1d",
     link: "https://open.spotify.com/album/7uVimUILdzSZG4KKKWToq0?si=G9xAbibxQcOvl1D9jhI5Jg",
-  },
+  },{
+    title: "Midnights",
+    artist: "Taylor Swift",
+    cover: "https://i.scdn.co/image/ab67616d0000b273bb54dde68cd23e2a268ae0f5",
+    link: "https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3?si=b7ya_PwbTo6kpbfoIHkD7A"
+  }
 ];
 
 const Vinyl = () => {
