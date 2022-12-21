@@ -38,15 +38,17 @@ const Project = ({ project, content }) => {
       >
         <Container pt={16} maxW={width} px={padding} pb={2}>
           <Box borderColor={border} borderWidth={2} borderRadius="lg" p={2}>
-            <Box
-              position={"relative"}
-              w="full"
-            >
+            <Box position={"relative"} w="full" h={"50vh"}>
               <Image
                 src={project.image}
                 width={1500}
                 height={1000}
-                style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                style={{
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "100%",
+                  aspectRatio: "16/9",
+                }}
                 alt="Project"
               />
             </Box>

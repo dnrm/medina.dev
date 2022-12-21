@@ -22,7 +22,8 @@ const theme = extendTheme(
         marginBottom: "1em !important",
       },
       p: {
-        textAlign: 'justify'
+        textAlign: 'justify',
+        lineHeight: "1.5"
       }
     },
   })
