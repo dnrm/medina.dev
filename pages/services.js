@@ -15,7 +15,13 @@ import {
   Link as StyledLink,
 } from "@chakra-ui/react";
 
-import { Business, Enterprise, StaticWebsite, Ticket } from "../lib/icons";
+import {
+  Business,
+  Enterprise,
+  StaticWebsite,
+  Ticket,
+  Shop,
+} from "../lib/icons";
 
 const Services = () => {
   return (
@@ -108,25 +114,25 @@ const Services = () => {
                 "Web hosting",
                 "10 Revision tickets",
               ]}
-              price={250}
+              price={200}
             />
             <Service
               backgroundImage={"/service-2.jpg"}
-              icon={<Enterprise />}
-              title={"Full Stack 💻"}
+              icon={<Shop />}
+              title={"Online Store 🏬"}
               description={
-                "My most advanced package. It consists of a full-stack website with a custom CMS. This package is perfect for e-commerce websites and web-apps that require big control over the data. This is perfect for startups and growing businesses."
+                "Do you want to start earning money with your work? This package includes an online store built with Shopify. It suits small and big businesses alike. It includes a custom domain and hosting."
               }
               features={[
-                "Fully dynamic website",
+                "High quality design",
                 "Custom domain",
                 "Web hosting",
-                "25 Revision tickets",
-                "Custom CMS",
-                "Custom API",
-                "Dedicated database",
+                "Shopify store",
+                "15 Revision tickets",
+                "Product administration panel",
+                "Payment gateway integration",
               ]}
-              price={1000}
+              price={250}
             />
             <Service
               backgroundImage={"/service-3.jpg"}
@@ -145,6 +151,32 @@ const Services = () => {
               price={500}
             />
           </Grid>
+        </Container>
+        <Container pt={8} maxW={width} px={padding}>
+          <Heading pb={2} fontFamily={"Work Sans, sans-serif"}>
+            Enterprise Plans
+          </Heading>
+          <Divider />
+        </Container>
+        <Container pt={4} maxW={width} px={padding} pb={10}>
+          <Service
+            backgroundImage={"/service-2.jpg"}
+            icon={<Enterprise />}
+            title={"Full Stack 💻"}
+            description={
+              "My most advanced package. It consists of a full-stack website with a custom CMS. This package is perfect for e-commerce websites and web-apps that require big control over the data. This is perfect for startups and growing businesses."
+            }
+            features={[
+              "Fully dynamic website",
+              "Custom domain",
+              "Web hosting",
+              "25 Revision tickets",
+              "Custom CMS",
+              "Custom API",
+              "Dedicated database",
+            ]}
+            price={1000}
+          />
         </Container>
         <Container pt={8} maxW={width} px={padding}>
           <Heading pb={2} fontFamily={"Work Sans, sans-serif"}>
