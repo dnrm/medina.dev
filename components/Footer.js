@@ -61,33 +61,51 @@ const Footer = () => {
           </Text>
         ) : null}
       </Flex>
-      <Grid pt={8} templateColumns={"repeat(3, 1fr)"} textColor={footerTextColor}>
+      <Grid
+        pt={8}
+        templateColumns={"repeat(3, 1fr)"}
+        textColor={footerTextColor}
+      >
         <Stack>
-          <StyledLink href="https://twitter.com/_dnrm">Twitter</StyledLink>
-          <StyledLink href="https://github.com/dnrm">Github</StyledLink>
-          <StyledLink href="https://www.youtube.com/channel/UC7nYyV6-jETyDNzvrFkYR_g">
+          <StyledLink target={"_self"} href="https://twitter.com/_dnrm">
+            Twitter
+          </StyledLink>
+          <StyledLink target={"_self"} href="https://github.com/dnrm">
+            Github
+          </StyledLink>
+          <StyledLink
+            target={"_self"}
+            href="https://www.youtube.com/channel/UC7nYyV6-jETyDNzvrFkYR_g"
+          >
             Youtube
           </StyledLink>
         </Stack>
         <Stack>
-          <StyledLink href="https://dev.to/dnrm">Dev.to</StyledLink>
-          <StyledLink href="https://hashnode.com/@dnrm">Hashnode</StyledLink>
-          <StyledLink href="https://open.spotify.com/user/dany.mm">
+          <StyledLink target={"_self"} href="https://dev.to/dnrm">
+            Dev.to
+          </StyledLink>
+          <StyledLink target={"_self"} href="https://hashnode.com/@dnrm">
+            Hashnode
+          </StyledLink>
+          <StyledLink
+            target={"_self"}
+            href="https://open.spotify.com/user/dany.mm"
+          >
             Spotify
           </StyledLink>
         </Stack>
         <Stack>
           <Link href="/certifications" passHref legacyBehavior>
-            <StyledLink>Certifications</StyledLink>
+            <StyledLink target={"_self"}>Certifications</StyledLink>
           </Link>
           <Link href="/contact" passHref legacyBehavior>
-            <StyledLink>Contact</StyledLink>
+            <StyledLink target={"_self"}>Contact</StyledLink>
           </Link>
           <Link href="/projects" passHref legacyBehavior>
-            <StyledLink>Projects</StyledLink>
+            <StyledLink target={"_self"}>Projects</StyledLink>
           </Link>
           <Link href="/vinyl" passHref legacyBehavior>
-            <StyledLink>Vinyl Collection</StyledLink>
+            <StyledLink target={"_self"}>Vinyl Collection</StyledLink>
           </Link>
         </Stack>
       </Grid>
