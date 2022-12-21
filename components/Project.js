@@ -26,7 +26,8 @@ const Project = (props) => {
         borderWidth="2px"
         borderColor={border}
         rounded="md"
-        minHeight={24}
+        minHeight={48}
+        maxHeight={80}
         height={"100%"}
       >
         {props.image && (

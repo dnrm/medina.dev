@@ -4,7 +4,7 @@ date: "25-07-2022"
 address: "https://earth.medina.dev/"
 slug: "earth"
 icon: "🌎"
-image: "/earth-medina-dev.png"
+image: "/learning-to-earth.jpg"
 excerpt: "Earth is a website dedicated to teaching the public more eco-friendly ways of living."
 ---
 
