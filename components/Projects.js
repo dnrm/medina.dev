@@ -7,7 +7,7 @@ const Projects = ({ projects }) => {
   return (
     <Container pt={16} maxW={width} px={padding}>
       <Heading fontFamily="Work Sans, sans-serif" mb={3}>
-        Projects 🔨
+        My Work 🔨
       </Heading>
       <Grid
         templateColumns={{

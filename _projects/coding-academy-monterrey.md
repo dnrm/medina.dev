@@ -4,7 +4,7 @@ date: "28-08-2022"
 address: "https://codingacademy.mx/"
 slug: "coding-academy-monterrey"
 icon: "🌙"
-image: "/codingacademy-mx.png"
+image: "/coding-academy.jpg"
 excerpt: "This website consists of a landing page for a computer science school located in Monterrey México."
 ---
 
