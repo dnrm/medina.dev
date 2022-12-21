@@ -4,7 +4,7 @@ date: "28-08-2022"
 address: "https://crystal.medina.dev/"
 slug: "crystal"
 icon: "⚡️"
-image: "/crystal-medina-dev.png"
+image: "/crystal.jpg"
 excerpt: "My first website built with Next.js and Tailwind CSS. It supports MongoDB and S3 for file uploads."
 ---
 

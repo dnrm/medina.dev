@@ -49,7 +49,7 @@ const Projects = ({ projects }) => {
             fontFamily="Work Sans, sans-serif"
             fontSize={{ base: "2.3em", md: "3em" }}
           >
-            My Projects 🔧
+            My Work 🔧
           </Heading>
           <Text mb={4} textColor="gray.400">
             These are the projects that have defined my career.
