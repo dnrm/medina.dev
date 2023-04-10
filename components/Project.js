@@ -35,8 +35,8 @@ const Project = (props) => {
             placeholder="blur"
             blurDataURL="https://via.placeholder.com/52"
             width={500}
-            height={500}
-            style={{ objectFit: "cover", width: "100%", height: "100%" }}
+            height={400}
+            style={{ objectFit: "cover", width: "100%", height: "100%", overflow: "hidden" }}
             src={props.image}
             alt={props.title}
           />

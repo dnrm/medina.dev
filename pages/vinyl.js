@@ -123,12 +123,25 @@ const collection = [
     artist: "Michael Bublé",
     cover: "https://i.scdn.co/image/ab67616d0000b273119e4094f07a8123b471ac1d",
     link: "https://open.spotify.com/album/7uVimUILdzSZG4KKKWToq0?si=G9xAbibxQcOvl1D9jhI5Jg",
-  },{
+  },
+  {
     title: "Midnights",
     artist: "Taylor Swift",
     cover: "https://i.scdn.co/image/ab67616d0000b273bb54dde68cd23e2a268ae0f5",
-    link: "https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3?si=b7ya_PwbTo6kpbfoIHkD7A"
-  }
+    link: "https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3?si=b7ya_PwbTo6kpbfoIHkD7A",
+  },
+  {
+    title: "Evermore",
+    artist: "Taylor Swift",
+    cover: "https://i.scdn.co/image/ab67616d0000b27390fd9741e1838115cd90b3b6",
+    link: "https://open.spotify.com/album/6AORtDjduMM3bupSWzbTSG?si=NUQhbVv1TLOUWxNMAllVyg",
+  },
+  {
+    title: "When We All Fall Asleep, Where Do We Go?",
+    artist: "Billie Eilish",
+    cover: "https://i.scdn.co/image/ab67616d0000b27350a3147b4edd7701a876c6ce",
+    link: "https://open.spotify.com/album/0S0KGZnfBGSIssfF54WSJh?si=Mt3i4OhsQqG9bY6tJgrg3A",
+  },
 ];
 
 const Vinyl = () => {
