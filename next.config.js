@@ -7,6 +7,7 @@ module.exports = {
       "upload.wikimedia.org",
       "cdn.hashnode.com",
       "cms.medina.dev",
+      "volteclink.medina.dev"
     ],
   },
   webpack(config) {
