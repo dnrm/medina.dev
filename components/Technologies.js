@@ -26,11 +26,6 @@ const technologies = [
     src: "/tailwind.svg",
   },
   {
-    name: "Strapi",
-    description: "Strapi is an open-source content management system.",
-    src: "/strapi.webp",
-  },
-  {
     name: "Vercel",
     description:
       "Vercel is a hosting platform for static and dynamic websites.",
@@ -55,11 +50,6 @@ const technologies = [
     name: "iTerm 2",
     description: "iTerm 2 is a terminal emulator.",
     src: "/iterm2.svg",
-  },
-  {
-    name: "Notion",
-    description: "Notion is a collaborative project management tool.",
-    src: "/notion.png",
   },
   {
     name: "Figma",
