@@ -24,8 +24,8 @@ const Hobbies = () => {
         rock and pop. I enjoy music from{" "}
         <b>
           <i>
-            Clairo, Taylor Swift, Coldplay, Oasis, Pixies, Conan Gray, FINNEAS,
-            Phoebe Bridgers
+            Clairo, The Midnight, Natalia Lafourcade, Ladyhawke, Coldplay,
+            Sabrina Carpenter
           </i>
         </b>
         , and more. I have a pet dog called Toby, he&apos;s a Golden Doodle.
@@ -46,7 +46,7 @@ const Hobbies = () => {
           <Container pos="relative" w="full" h="full">
             <Image
               objectFit="cover"
-              src="/coffee-cup.jpg"
+              src="/coffee.jpeg"
               layout="fill"
               alt="Espresso cup"
               blurDataURL="/breville.min.jpeg"
@@ -63,7 +63,7 @@ const Hobbies = () => {
           <Container pos="relative" w="full" h="full">
             <Image
               objectFit="cover"
-              src="/capitol.jpg"
+              src="/IMG_6059.JPG"
               layout="fill"
               alt="Cold brew glass"
               blurDataURL="/cold-brew.min.jpg"
