@@ -20,13 +20,20 @@ const Posts = (props) => {
   const GET_USER_ARTICLES = `
     query GetUserArticles($page: Int!) {
         user(username: "dnrm") {
-            publication {
-                posts(page: $page) {
-                    title
-                    brief
-                    slug
-                    coverImage
+            posts(pageSize: 8, page: $page) {
+              nodes {
+                id
+                slug
+                title
+                subtitle
+                brief
+                coverImage {
+                  url
                 }
+                content {
+                  markdown
+                }
+              }
             }
         }
     }
@@ -34,7 +41,7 @@ const Posts = (props) => {
 
   useEffect(() => {
     const get = async (query, variables) => {
-      const response = await fetch("https://api.hashnode.com/", {
+      const response = await fetch("https://gql.hashnode.com/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -45,10 +52,11 @@ const Posts = (props) => {
         }),
       });
       const json = await response.json();
-      setPosts(json.data.user.publication.posts.slice(0, 4));
+      console.log(json)
+      setPosts(json.data.user.posts.nodes.slice(0, 4));
     };
 
-    get(GET_USER_ARTICLES, { page: 0 });
+    get(GET_USER_ARTICLES, { page: 1 });
   }, [GET_USER_ARTICLES]);
 
   const border = useColorModeValue("gray.300", "gray.600");
@@ -81,7 +89,7 @@ const Posts = (props) => {
                   h="full"
                 >
                   <Image
-                    src={i.coverImage}
+                    src={i.coverImage.url}
                     width={500}
                     height={500}
                     style={{
