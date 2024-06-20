@@ -56,7 +56,7 @@ export default function Home({ projects }) {
         <meta property="twitter:image" content="/dm.png" />
         <link
           rel="shortcut icon"
-          href="https://cdn.medina.dev/favicon.png"
+          href="/favicon.png"
           type="image/x-icon"
         />
         <base target="_blank" />
