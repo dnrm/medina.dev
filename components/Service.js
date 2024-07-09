@@ -42,7 +42,6 @@ const Service = ({
         py={8}
         px={2}
       >
-        <Box position={'absolute'}>hi</Box>
         <Box
           h={"28"}
           w={"28"}
