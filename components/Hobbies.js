@@ -28,7 +28,7 @@ const Hobbies = () => {
             Sabrina Carpenter
           </i>
         </b>
-        , and more. I have a pet dog called Toby, he&apos;s a Golden Doodle.
+        , and more. I have two pet dogs called Toby and Milo, they&apos;re both Golden Doodles.
       </Text>
       <Grid
         mt={8}
