@@ -44,10 +44,10 @@ const AboutMe = () => {
           fontSize={{ base: "0.9em", md: "1em" }}
           textAlign={"justify"}
         >
-          I'm a software developer who bridges technical expertise with business understanding. I specialize in delivering robust websites and systems that meet all business needs while delighting end-users.
+          I&apos;m a software developer who bridges technical expertise with business understanding. I specialize in delivering robust websites and systems that meet all business needs while delighting end-users.
 
-          I've successfully delivered projects for startups, law firms, and the healthcare industry. Each project has strengthened my ability to communicate effectively across technical and non-technical people. <br /><br />
-          My portfolio showcases projects where I've helped clients sell new products, increase brand visibility, and reduce costs through process automation. Whether you're looking for a developer to bring your business vision to life or a technical collaborator for your team, I'd love to discuss how we might work together.
+          I&apos;ve successfully delivered projects for startups, law firms, and the healthcare industry. Each project has strengthened my ability to communicate effectively across technical and non-technical people. <br /><br />
+          My portfolio showcases projects where I&apos;ve helped clients sell new products, increase brand visibility, and reduce costs through process automation. Whether you&apos;re looking for a developer to bring your business vision to life or a technical collaborator for your team, I&apos;d love to discuss how we might work together.
         </Text>
         <br />
       </Container>
