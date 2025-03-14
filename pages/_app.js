@@ -1,13 +1,16 @@
 import "../styles/globals.css";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import { appWithTranslation } from "next-i18next";
 import theme from "../theme";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme }>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </>
   );
 }
 

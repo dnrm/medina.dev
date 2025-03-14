@@ -1,12 +1,12 @@
 import React from "react";
 import { Button, Flex, Container, Link as StyledLink } from "@chakra-ui/react";
 import Link from "next/link";
-import { SunIcon } from "@chakra-ui/icons";
-import { useColorMode, useColorModeValue } from "@chakra-ui/color-mode";
+import { SunIcon, MoonIcon } from "@chakra-ui/icons";
+import { useColorMode } from "@chakra-ui/react";
 import { width } from "../lib/width";
 
 const Navbar = ({ padding }) => {
-  const { toggleColorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Container pt={{ base: "12", md: "28" }} maxW={width} px={padding || 6}>
@@ -61,7 +61,7 @@ const Navbar = ({ padding }) => {
             outlineColor="transparent"
             aria-label="Toggle color mode"
           >
-            <SunIcon />
+            {colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
           </Button>
         </Flex>
       </Flex>
