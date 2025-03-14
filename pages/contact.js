@@ -35,11 +35,6 @@ const socials = [
     description: "Read some of my blog posts.",
   },
   {
-    name: "Youtube 🎥",
-    href: "https://www.youtube.com/channel/UC38r0XbtKBC98yW42c3cQZA",
-    description: "Watch old videos i've done.",
-  },
-  {
     name: "Hashnode 📕",
     href: "https://blog.medina.dev",
     description:
@@ -49,12 +44,6 @@ const socials = [
     name: "Email ✉️",
     href: "mailto:daniel@medina.com",
     description: "Send me an email. Wether you're a client or a fan!",
-  },
-  {
-    name: "Gumroad 💰",
-    href: "https://shop.medina.dev/",
-    description:
-      "My online shop includes different products, from photography to website templates.",
   },
   {
     name: "LinkedIn 💌",
