@@ -1,10 +1,24 @@
-import { background, extendTheme } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 import { withProse } from "@nikolovlazar/chakra-ui-prose";
-import { useColorModeValue } from "@chakra-ui/react";
 
+// Add color mode config
+const config = {
+  initialColorMode: "system",
+  useSystemColorMode: true,
+};
 
 const theme = extendTheme(
-  {},
+  {
+    config,
+    styles: {
+      global: (props) => ({
+        body: {
+          bg: props.colorMode === "dark" ? "gray.800" : "white",
+          color: props.colorMode === "dark" ? "white" : "gray.800",
+        },
+      }),
+    },
+  },
   withProse({
     baseStyle: {
       ul: {

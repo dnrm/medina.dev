@@ -5,13 +5,14 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Project from "../components/Project";
 import { getAllProjects } from "../lib/projects";
-import { useColorModeValue } from "@chakra-ui/color-mode";
+import { useColorMode } from "@chakra-ui/react";
 import { Container, Heading, Grid, Divider, Text } from "@chakra-ui/react";
 
 const padding = 6;
 
 const Projects = ({ projects }) => {
-  const border = useColorModeValue("gray.300", "gray.600");
+  const { colorMode } = useColorMode();
+  const border = colorMode === "dark" ? "gray.600" : "gray.300";
 
   return (
     <div>
@@ -98,7 +99,12 @@ export async function getStaticProps() {
     "content",
     "image",
     "excerpt",
-  ]);
+    "order",
+  ]).sort((a, b) => {
+    const orderA = a.order !== undefined ? a.order : Number.MAX_SAFE_INTEGER;
+    const orderB = b.order !== undefined ? b.order : Number.MAX_SAFE_INTEGER;
+    return orderA - orderB;
+  });
 
   return {
     props: {
