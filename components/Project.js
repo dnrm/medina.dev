@@ -1,8 +1,7 @@
 import React from "react";
-import { Stack, Heading, Text, Link as StyledLink } from "@chakra-ui/react";
+import { Stack, Heading, Text, Link as StyledLink, useColorMode } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useColorModeValue } from "@chakra-ui/color-mode";
 
 function convertToSlug(Text) {
   return Text.toLowerCase()
@@ -11,8 +10,9 @@ function convertToSlug(Text) {
 }
 
 const Project = (props) => {
-  const border = useColorModeValue("gray.300", "gray.600");
-  const textColor = useColorModeValue("gray.600", "gray.400");
+  const { colorMode } = useColorMode();
+  const border = colorMode === "dark" ? "gray.600" : "gray.300";
+  const textColor = colorMode === "dark" ? "gray.400" : "gray.600";
 
   return (
     <Link
@@ -27,7 +27,6 @@ const Project = (props) => {
         borderColor={border}
         rounded="md"
         minHeight={48}
-        maxHeight={80}
         height={"100%"}
       >
         {props.image && (

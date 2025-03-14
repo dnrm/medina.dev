@@ -4,8 +4,9 @@ date: "20-11-2023"
 address: "https://mc2.legal/"
 slug: "mc2-legal"
 icon: "💼"
-image: "/mc2legal.jpeg"
+image: "/mc2-legal.jpeg"
 excerpt: "MC2.Legal is a law firm based in Monterrey México that specialises in criminal law and crime prevention."
+order: 3
 ---
 
 # MC2.Legal

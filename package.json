@@ -11,8 +11,10 @@
     "build-docker": "docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t dnrm/medina.dev:latest --push ."
   },
   "dependencies": {
+    "@chakra-ui/color-mode": "^2.2.0",
     "@chakra-ui/icons": "^1.0.15",
     "@chakra-ui/react": "^2.3.7",
+    "@chakra-ui/system": "^2.6.2",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@nikolovlazar/chakra-ui-prose": "^1.2.1",

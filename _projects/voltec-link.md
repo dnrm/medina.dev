@@ -4,8 +4,9 @@ date: "11-04-2023"
 address: "https://volteclink.medina.dev/"
 slug: "voltec-link"
 icon: "⚡️"
-image: "/volteclink.medina.dev.png"
+image: "/volteclink.jpeg"
 excerpt: "This URL shortener is built with NextJS, MongoDB, ReactJS..."
+order: 6
 ---
 
 # voltec.link
