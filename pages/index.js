@@ -93,6 +93,7 @@ export async function getStaticProps() {
     "content",
     "image",
     "excerpt",
+    "order",
   ]);
 
   return {
