@@ -1,6 +1,6 @@
 ---
 title: "Coding Academy Monterrey"
-date: "28-08-2022"
+date: "01-03-2025"
 address: "https://codingacademy.mx/"
 slug: "coding-academy-monterrey"
 icon: "🌙"
