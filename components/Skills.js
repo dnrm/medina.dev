@@ -29,7 +29,7 @@ const Skills = ({ padding, width }) => {
                     mx={1}
                     my={1}
                     fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="messenger"
+                    colorScheme="red"
                 >
                     Typescript
                 </Badge>
@@ -101,14 +101,6 @@ const Skills = ({ padding, width }) => {
                     mx={1}
                     my={1}
                     fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme={color}
-                >
-                    GitHub Actions
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
                     colorScheme="pink"
                 >
                     Sass
@@ -125,7 +117,7 @@ const Skills = ({ padding, width }) => {
                     mx={1}
                     my={1}
                     fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="facebook"
+                    colorScheme="green"
                 >
                     Chakra UI
                 </Badge>
@@ -133,7 +125,7 @@ const Skills = ({ padding, width }) => {
                     mx={1}
                     my={1}
                     fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme={color}
+                    colorScheme={"orange"}
                 >
                     Vercel
                 </Badge>
