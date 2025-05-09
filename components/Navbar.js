@@ -32,7 +32,7 @@ const Navbar = ({ padding }) => {
               My Work
             </StyledLink>
           </Link>
-          <Link href="/services" passHref legacyBehavior>
+          {/* <Link href="/services" passHref legacyBehavior>
             <StyledLink
               target={"_self"}
               fontSize={{ base: "0.8em", md: "1em" }}
@@ -41,7 +41,7 @@ const Navbar = ({ padding }) => {
             >
               Services
             </StyledLink>
-          </Link>
+          </Link> */}
           <Link href="/contact" passHref legacyBehavior>
             <StyledLink
               target={"_self"}
