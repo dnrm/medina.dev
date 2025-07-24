@@ -22,7 +22,7 @@ const AboutMe = () => {
           borderColor={border}
           h={48}
           w={48}
-          src="/me.png"
+          src="/me.jpg"
           name="Daniel Medina"
         ></Avatar>
       </Container>
