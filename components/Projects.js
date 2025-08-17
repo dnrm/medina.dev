@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import Project from "./Project";
 import { width, padding } from "../lib/constants";
 import { Container, Heading, Grid } from "@chakra-ui/react";
@@ -6,7 +7,7 @@ import { Container, Heading, Grid } from "@chakra-ui/react";
 const Projects = ({ projects }) => {
   return (
     <Container pt={16} maxW={width} px={padding}>
-      <Heading fontFamily="Work Sans, sans-serif" mb={3}>
+      <Heading mb={3}>
         My Work 🔨
       </Heading>
       <Grid

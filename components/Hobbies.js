@@ -1,20 +1,17 @@
-import React from "react";
+"use client";
+
 import Image from "next/legacy/image";
 import { width, padding } from "../lib/constants";
-import { useColorModeValue } from "@chakra-ui/react";
 import { Container, Heading, Text, Grid } from "@chakra-ui/react";
 
 const Hobbies = () => {
-  const border = useColorModeValue("gray.300", "gray.600");
-  const textColor = useColorModeValue("gray.600", "gray.400");
-
   return (
     <Container pt={16} maxW={width} px={padding}>
-      <Heading pb={2} fontFamily="Work Sans, sans-serif">
+      <Heading pb={2}>
         Hobbies 🎧
       </Heading>
       <Text
-        textColor={textColor}
+        textColor={{ base: "gray.700", _dark: "gray.500" }}
         fontSize={{ base: "0.9em", md: "1em" }}
         textAlign={"justify"}
       >
@@ -24,21 +21,21 @@ const Hobbies = () => {
         rock and pop. I enjoy music from{" "}
         <b>
           <i>
-            Clairo, The Midnight, Natalia Lafourcade, Ladyhawke, Coldplay,
+            Clairo, The Midnight, Oasis, Fleetwood Mac, Coldplay,
             Sabrina Carpenter
           </i>
         </b>
-        , and more. I have two pet dogs called Toby and Milo, they&apos;re both Golden Doodles.
+        , and more. I have two pet dogs called Toby and Milo, they&apos;re both golden doodles.
       </Text>
       <Grid
         mt={8}
         templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
-        h={{ base: "120vh", md: "35vh" }}
+        h={{ base: "120vh", md: "50vh" }}
         gap={4}
       >
         <Container
           position="relative"
-          borderColor={border}
+          borderColor={{ base: "gray.300", _dark: "gray.700" }}
           borderWidth={2}
           padding={2.5}
           rounded="lg"
@@ -46,7 +43,7 @@ const Hobbies = () => {
           <Container pos="relative" w="full" h="full">
             <Image
               objectFit="cover"
-              src="/coffee.jpeg"
+              src="/nn-cup.jpeg"
               layout="fill"
               alt="Espresso cup"
               blurDataURL="/breville.min.jpeg"
@@ -55,7 +52,7 @@ const Hobbies = () => {
           </Container>
         </Container>
         <Container
-          borderColor={border}
+          borderColor={{ base: "gray.300", _dark: "gray.700" }}
           borderWidth={2}
           padding={2.5}
           rounded="lg"
@@ -63,7 +60,7 @@ const Hobbies = () => {
           <Container pos="relative" w="full" h="full">
             <Image
               objectFit="cover"
-              src="/IMG_6059.JPG"
+              src="/sf.jpeg"
               layout="fill"
               alt="Cold brew glass"
               blurDataURL="/cold-brew.min.jpg"
@@ -73,7 +70,7 @@ const Hobbies = () => {
         </Container>
         <Container
           position="relative"
-          borderColor={border}
+          borderColor={{ base: "gray.300", _dark: "gray.700" }}
           borderWidth={2}
           p={2.5}
           rounded="lg"
@@ -81,7 +78,7 @@ const Hobbies = () => {
           <Container pos="relative" w="full" h="full">
             <Image
               objectFit="cover"
-              src="/toby.jpeg"
+              src="/dogs.jpeg"
               layout="fill"
               alt="Toby"
               blurDataURL="/toby-min.jpeg"

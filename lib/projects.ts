@@ -1,22 +1,23 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
+import { Project } from "../types/project";
 
 const projectsDirectory = join(process.cwd(), "_projects");
 
-export function getProjectSlugs() {
+export function getProjectSlugs(): string[] {
   return fs.readdirSync(projectsDirectory);
 }
 
-export function getProjectBySlug(slug, fields = []) {
+export function getProjectBySlug(slug: string, fields: string[] = []): Project {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(projectsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf-8");
   const { data, content } = matter(fileContents);
 
-  const items = {};
+  const items: any = {};
 
-  // *  Gets fields specified in the fields array
+  // Gets fields specified in the fields array
   fields.forEach((field) => {
     if (field === "slug") {
       items[field] = realSlug;
@@ -30,10 +31,10 @@ export function getProjectBySlug(slug, fields = []) {
     }
   });
 
-  return items;
+  return items as Project;
 }
 
-export function getAllProjects(fields = []) {
+export function getAllProjects(fields: string[] = []): Project[] {
   const slugs = getProjectSlugs();
   const projects = slugs
     .map((slug) => getProjectBySlug(slug, fields))
@@ -52,7 +53,10 @@ export function getAllProjects(fields = []) {
         return 1;
       }
       // If neither has order, sort by date (fallback to original sort)
-      return new Date(a.date) < new Date(b.date) ? -1 : 1;
+      if (a.date && b.date) {
+        return new Date(a.date) < new Date(b.date) ? -1 : 1;
+      }
+      return 0;
     });
   return projects;
 }

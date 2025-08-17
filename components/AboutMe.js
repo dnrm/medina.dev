@@ -1,58 +1,52 @@
-import React from "react";
-import Link from "next/link";
+"use client";
+
 import {
   Container,
-  Avatar,
   Text,
   Heading,
-  Link as StyledLink,
+  Image as StyledImage,
 } from "@chakra-ui/react";
 import { width, padding } from "../lib/constants";
-import { useColorModeValue } from "@chakra-ui/react";
+import Image from "next/image";
 
-const AboutMe = () => {
-  const textColor = useColorModeValue("gray.600", "gray.400");
-  const border = useColorModeValue("gray.300", "gray.100");
-
+export default function AboutMe() {
   return (
     <>
       <Container pt={{ base: "12", md: "16" }} maxW={width} px={padding}>
-        <Avatar
-          borderWidth="6px"
-          borderColor={border}
-          h={48}
-          w={48}
-          src="/me.jpg"
-          name="Daniel Medina"
-        ></Avatar>
+        <StyledImage borderColor={{ base: "gray.300", _dark: "gray.600" }} borderWidth={2} mb={4} borderRadius={'full'} height={150} width={150} asChild>
+          <Image src="/me.jpg" alt="Daniel Medina" width={250} height={250} />
+        </StyledImage>
       </Container>
       <Container pt={4} maxW={width} px={padding}>
         <Heading
-          fontFamily="Work Sans, sans-serif"
           fontSize={{ base: "2.3em", md: "3em" }}
+          mb={4}
+          letterSpacing={"-1px"}
+          fontWeight={'semibold'}
         >
           Hi, I&apos;m Daniel Medina
         </Heading>
-        <Text textColor={textColor}>
-          Transforming business visions into elegant digital solutions that deliver measurable results.
+        <Text color={{ base: "gray.600", _dark: "gray.400" }}>
+          Full-stack developer and Computer Science student at Tecnológico de Monterrey, creating technology solutions that make a real impact.
         </Text>
       </Container>
       <Container pt={16} maxW={width} px={padding}>
-        <Heading fontFamily="Work Sans, sans-serif">About Me 👨‍💻</Heading>
+        <Heading>About Me 👨‍💻</Heading>
         <Text
-          textColor={textColor}
+          color={{ base: "gray.600", _dark: "gray.400" }}
           fontSize={{ base: "0.9em", md: "1em" }}
           textAlign={"justify"}
         >
-          I&apos;m a software developer who bridges technical expertise with business understanding. I specialize in delivering robust websites and systems that meet all business needs while delighting end-users.
-
-          I&apos;ve successfully delivered projects for startups, law firms, and the healthcare industry. Each project has strengthened my ability to communicate effectively across technical and non-technical people. <br /><br />
-          My portfolio showcases projects where I&apos;ve helped clients sell new products, increase brand visibility, and reduce costs through process automation. Whether you&apos;re looking for a developer to bring your business vision to life or a technical collaborator for your team, I&apos;d love to discuss how we might work together.
+          I&apos;m a full-stack software developer currently working at SAMLA, MedicFlow, and Blue Bird Consulting, where I bridge technical expertise with business strategy. I specialize in building scalable web applications using React.js, Next.js, and SQL that solve real business challenges through robust backend architecture and intuitive frontend design.
+        </Text>
+        <br />
+        <Text color={{ base: "gray.600", _dark: "gray.400" }}
+          fontSize={{ base: "0.9em", md: "1em" }}
+          textAlign={"justify"}>
+          My portfolio showcases projects across healthcare, legal, and insurance industries where I've delivered measurable impact. From developing HIPAA-compliant AI-powered medical applications to building law firm websites with integrated booking systems, I focus on translating business requirements into production-ready applications that provide genuine value to users and clients.
         </Text>
         <br />
       </Container>
     </>
   );
-};
-
-export default AboutMe;
+}

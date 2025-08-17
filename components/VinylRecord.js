@@ -1,13 +1,11 @@
-import React from "react";
+"use client";
+
 import { Stack, Flex, Heading, Link, Text, GridItem } from "@chakra-ui/react";
 import Image from "next/legacy/image";
-import { useColorModeValue } from "@chakra-ui/react";
 
 const VinylRecord = ({ title, artist, cover, link }) => {
-  const bg = useColorModeValue("gray.100", "gray.700");
-
   return (
-    <GridItem w="full" backgroundColor={bg} rounded="lg">
+    <GridItem w="full" backgroundColor="gray.100" _dark={{ backgroundColor: "gray.700" }} rounded="lg">
       <Stack minW="24">
         <a target="_blank" w="full" h='full' rel="noreferrer" href={cover}>
           <Image

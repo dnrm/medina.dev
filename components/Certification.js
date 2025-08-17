@@ -1,18 +1,15 @@
-import React from "react";
+"use client";
+
 import { Stack, Heading, Text, Link } from "@chakra-ui/react";
-import { useColorModeValue } from "@chakra-ui/color-mode";
 import Image from "next/image";
 
 const Certification = ({ title, src, children, href }) => {
-  const border = useColorModeValue("gray.300", "gray.600");
-  const textColor = useColorModeValue("gray.600", "gray.400");
-
   return (
-    <Stack rounded="md" borderWidth="2px" borderColor={border}>
+    <Stack rounded="md" borderWidth="2px" borderColor={{ base: "gray.300", _dark: "gray.600" }}>
       <Image
         src={src}
-        height={40}
-        width={80}
+        height={400}
+        width={800}
         alt="Certification Image"
         loading="lazy"
         style={{
@@ -34,7 +31,7 @@ const Certification = ({ title, src, children, href }) => {
         </Heading>
         <Text
           fontWeight="regular"
-          textColor={textColor}
+          textColor={{ base: "gray.600", _dark: "gray.400" }}
           fontSize={{ base: "0.8em", md: "0.9em" }}
         >
           {children}
