@@ -43,7 +43,7 @@ export default function AboutMe() {
         <Text color={{ base: "gray.600", _dark: "gray.400" }}
           fontSize={{ base: "0.9em", md: "1em" }}
           textAlign={"justify"}>
-          My portfolio showcases projects across healthcare, legal, and insurance industries where I've delivered measurable impact. From developing HIPAA-compliant AI-powered medical applications to building law firm websites with integrated booking systems, I focus on translating business requirements into production-ready applications that provide genuine value to users and clients.
+          My portfolio showcases projects across healthcare, legal, and insurance industries where I&apos;ve delivered measurable impact. From developing HIPAA-compliant AI-powered medical applications to building law firm websites with integrated booking systems, I focus on translating business requirements into production-ready applications that provide genuine value to users and clients.
         </Text>
         <br />
       </Container>
