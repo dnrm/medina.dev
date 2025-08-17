@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import {
   GridItem,
   Box,
@@ -9,7 +10,6 @@ import {
   Stack,
   Button,
 } from "@chakra-ui/react";
-import { useColorModeValue } from "@chakra-ui/react";
 
 const Service = ({
   title,
@@ -18,16 +18,11 @@ const Service = ({
   price,
   backgroundImage,
   icon,
-  badge
 }) => {
-  const bg = useColorModeValue("gray.100", "gray.700");
-  const text = useColorModeValue("gray.600", "gray.300");
-  const iconColor = useColorModeValue("gray.300", "gray.600");
-
   return (
     <GridItem
       placeItems="start"
-      backgroundColor={bg}
+      backgroundColor={{ base: "gray.100", _dark: "gray.700" }}
       gap={2}
       rounded={"lg"}
       h={"min"}
@@ -48,9 +43,9 @@ const Service = ({
           position={"relative"}
           top={"14"}
           textAlign="center"
-          backgroundColor={iconColor}
+          backgroundColor={{ base: "gray.300", _dark: "gray.600" }}
           rounded="full"
-          color={text}
+          color={{ base: "gray.600", _dark: "gray.300" }}
           p={2}
         >
           <Box p={4} rounded="full" backgroundColor={"teal.500"}>
@@ -61,7 +56,6 @@ const Service = ({
       <Stack p={4} pt={8}>
         <Box w="100%">
           <Heading
-            fontFamily="Work Sans, sans-serif"
             textAlign={"left"}
             w="100%"
             fontSize={{ base: "4xl", md: "6xl" }}
@@ -70,14 +64,12 @@ const Service = ({
             <Text
               display={"inline"}
               fontSize={"xl"}
-              fontFamily="Work Sans"
               pl={1}
             >
               USD
             </Text>
           </Heading>
           <Heading
-            fontFamily="Work Sans, sans-serif"
             pt={2}
             textAlign={"left"}
             w="100%"
@@ -94,14 +86,14 @@ const Service = ({
           gap={2}
           pb={2}
         >
-          <Text color={text} textAlign={"left"} pb={4}>
+          <Text color={{ base: "gray.600", _dark: "gray.300" }} textAlign={"left"} pb={4}>
             {description}
           </Text>
-          <Text color={text} textAlign={"left"}>
+          <Text color={{ base: "gray.600", _dark: "gray.300" }} textAlign={"left"}>
             Features:
           </Text>
           <List
-            color={text}
+            color={{ base: "gray.600", _dark: "gray.300" }}
             textAlign={"justify"}
             listStyleType="initial"
             listStylePos={"inside"}
@@ -111,7 +103,7 @@ const Service = ({
             ))}
           </List>
         </Box>
-        <Button mt={{ base: 6, md: 2 }} w={"100%"} backgroundColor={iconColor}>
+        <Button mt={{ base: 6, md: 2 }} w={"100%"} backgroundColor={{ base: "gray.300", _dark: "gray.600" }}>
           Purchase
         </Button>
       </Stack>
