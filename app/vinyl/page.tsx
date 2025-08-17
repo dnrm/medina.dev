@@ -1,14 +1,29 @@
-import React from "react";
-import { Container, Heading, Divider, Text, Grid } from "@chakra-ui/react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Head from "next/head";
-import { motion } from "framer-motion";
-import { width } from "../lib/width";
-import VinylRecord from "../components/VinylRecord";
-const padding = 6;
+import type { Metadata } from 'next'
+import { Container, Heading, Separator, Text, Grid } from "@chakra-ui/react";
+import Navbar from "@/components/layouts/Navbar";
+import Footer from "@/components/Footer";
+import { width, padding } from "@/lib/constants";
+import VinylRecord from "@/components/VinylRecord";
+import { MotionDiv } from "@/components/ui/MotionDiv";
+
+export const metadata: Metadata = {
+  title: 'Vinyl Collection',
+  description: 'My personal vinyl record collection featuring various artists and genres.',
+}
 
 const collection = [
+  {
+    title: "Charm",
+    artist: "Clairo",
+    cover: "https://i.scdn.co/image/ab67616d0000b273193c2fafdce8f116b5ca0a78",
+    link: "https://open.spotify.com/album/1KNUCVXgIxKUGiuEB8eG0i?si=JMcDLizsQXinLKCLXH4eiw",
+  },
+  {
+    title: "Immunity",
+    artist: "Clairo",
+    cover: "https://i.scdn.co/image/ab67616d0000b27333ccb60f9b2785ef691b2fbc",
+    link: "https://open.spotify.com/album/4kkVGtCqE2NiAKosri9Rnd?si=TLMIbGtrREKH53zzPDMwHg",
+  },
   {
     title: "Definitely Maybe",
     artist: "Oasis",
@@ -144,28 +159,24 @@ const collection = [
   },
 ];
 
-const Vinyl = () => {
+export default function Vinyl() {
   return (
     <div>
-      <Head>
-        <title>Vinyl | Daniel Medina - Web Developer</title>
-      </Head>
-      <Navbar width={width} padding={padding} />
-      <motion.div
+      <Navbar />
+      <MotionDiv
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.25, type: "tween" }}
       >
-        <Container pt={{ base: "12", md: "16" }} maxW={width} px={padding}>
+        <Container pt={{ base: "12", md: "16" }} maxW={width} px={padding} mb={4}>
           <Heading
-            fontFamily="Work Sans, sans-serif"
             fontSize={{ base: "2.3em", md: "3em" }}
           >
             My Vinyl Collection 🎧
           </Heading>
         </Container>
         <Container pt={4} maxW={width} px={padding}>
-          <Text fontWeight="bold" textColor="gray.400">
+          <Text fontWeight="bold" color="gray.400">
             {collection.length} Records in total
           </Text>
         </Container>
@@ -192,14 +203,12 @@ const Vinyl = () => {
           </Grid>
         </Container>
         <Container pb={10} maxW={width} px={padding}>
-          <Divider />
+          <Separator />
         </Container>
         <Container maxW={width} px={padding}>
           <Footer />
         </Container>
-      </motion.div>
+      </MotionDiv>
     </div>
   );
-};
-
-export default Vinyl;
+}

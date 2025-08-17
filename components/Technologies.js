@@ -1,6 +1,7 @@
-import React from "react";
+"use client";
+
 import Technology from "./Technology";
-import { width, padding } from "../lib/width";
+import { width, padding } from "../lib/constants";
 import { Grid, Container, Heading } from "@chakra-ui/react";
 
 const technologies = [
@@ -61,7 +62,7 @@ const technologies = [
 const Technologies = () => {
   return (
     <Container pt={16} pb={10} maxW={width} px={padding}>
-      <Heading pb={2} fontFamily="Work Sans, sans-serif">
+      <Heading pb={2}>
         My Favourite Technologies ⭐️
       </Heading>
       <Grid

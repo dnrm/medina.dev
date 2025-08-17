@@ -1,14 +1,38 @@
-import React from "react";
+"use client";
+
 import { Container, Heading, Flex, Badge } from "@chakra-ui/react";
-import { useColorModeValue } from "@chakra-ui/color-mode";
+
+const skills = [
+    { name: "Next.js", colorPalette: "teal" },
+    { name: "Supabase", colorPalette: "green" },
+    { name: "Typescript", colorPalette: "blue" },
+    { name: "Javascript", colorPalette: "yellow" },
+    { name: "Prisma", colorPalette: "blackAlpha" },
+    { name: "React", colorPalette: "cyan" },
+    { name: "Node.js", colorPalette: "green" },
+    { name: "ShadCN", colorPalette: "blackAlpha" },
+    { name: "CSS", colorPalette: "blue" },
+    { name: "MongoDB", colorPalette: "green" },
+    { name: "HTML", colorPalette: "gray" },
+    { name: "AWS", colorPalette: "orange" },
+    { name: "Docker", colorPalette: "blue" },
+    { name: "Sass", colorPalette: "pink" },
+    { name: "Cursor", colorPalette: "blackAlpha" },
+    { name: "Tailwind CSS", colorPalette: "teal" },
+    { name: "Vercel", colorPalette: "blackAlpha" },
+    { name: "Bootstrap", colorPalette: "purple" },
+    { name: "Chakra UI", colorPalette: "teal" },
+    { name: "MySQL", colorPalette: "blue" },
+    { name: "PostgreSQL", colorPalette: "cyan" },
+    { name: "Angular", colorPalette: "red" },
+    { name: "Git", colorPalette: "orange" },
+    { name: "Figma", colorPalette: "purple" }
+];
 
 const Skills = ({ padding, width }) => {
-
-    const color = useColorModeValue("blackAlpha", "gray")
-
     return (
         <Container pt={16} maxW={width} px={padding}>
-            <Heading fontFamily="Work Sans, sans-serif" mb={1}>
+            <Heading mb={1}>
                 My Skills 💪
             </Heading>
             <Flex
@@ -17,190 +41,17 @@ const Skills = ({ padding, width }) => {
                 direction="row"
                 wrap="wrap"
             >
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="teal"
-                >
-                    Next.js
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="red"
-                >
-                    Typescript
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="yellow"
-                >
-                    Javascript
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="red"
-                >
-                    Angular
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="cyan"
-                >
-                    React
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="green"
-                >
-                    Node.js
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="blue"
-                >
-                    CSS
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="teal"
-                >
-                    HTML
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="orange"
-                >
-                    AWS
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="blue"
-                >
-                    Docker
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="pink"
-                >
-                    Sass
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="teal"
-                >
-                    Tailwind CSS
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="green"
-                >
-                    Chakra UI
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme={"orange"}
-                >
-                    Vercel
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="purple"
-                >
-                    Bootstrap
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="green"
-                >
-                    MongoDB
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="purple"
-                >
-                    FaunaDB
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="yellow"
-                >
-                    MySQL
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="cyan"
-                >
-                    PostgreSQL
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="orange"
-                >
-                    Linux
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="yellow"
-                >
-                    Git
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="purple"
-                >
-                    Figma
-                </Badge>
-                <Badge
-                    mx={1}
-                    my={1}
-                    fontSize={{ base: "0.9em", md: "1em" }}
-                    colorScheme="blue"
-                >
-                    Wordpress
-                </Badge>
+                {skills.map((skill, index) => (
+                    <Badge
+                        key={index}
+                        mx={1}
+                        my={1}
+                        fontSize={{ base: "0.9em", md: "1em" }}
+                        colorPalette={skill.colorPalette}
+                    >
+                        {skill.name}
+                    </Badge>
+                ))}
             </Flex>
         </Container>
     );

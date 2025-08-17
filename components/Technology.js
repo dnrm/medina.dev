@@ -1,15 +1,11 @@
-import React from "react";
+"use client"
+
 import { Flex, Text, Heading, Image, Grid } from "@chakra-ui/react";
-import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const Technology = (props) => {
-  const bg = useColorModeValue("gray.100", "gray.700");
-  const imagebg = useColorModeValue("gray.200", "gray.600");
-  const textColor = useColorModeValue("gray.600", "gray.400");
-
   return (
     <Grid
-      bgColor={bg}
+      bgColor={{ base: "gray.100", _dark: "gray.700" }}
       p={3}
       rounded="md"
       gap={3}
@@ -20,7 +16,7 @@ const Technology = (props) => {
         <Image
           w={16}
           borderRadius="30px"
-          bgColor={imagebg}
+          bgColor={{ base: "gray.200", _dark: "gray.600" }}
           h={16}
           p={2}
           src={props.src}
@@ -29,10 +25,10 @@ const Technology = (props) => {
         />
       )}
       <Flex flexDir="column">
-        <Heading fontSize="xl" letterSpacing={'tighter'} textColor={textColor} fontWeight="bold">
+        <Heading fontSize="xl" letterSpacing={'tighter'} textColor={{ base: "gray.600", _dark: "gray.400" }} fontWeight="bold">
           {props.title}
         </Heading>
-        <Text fontSize="md" textColor={textColor}>{props.description}</Text>
+        <Text fontSize="md" textColor={{ base: "gray.600", _dark: "gray.400" }}>{props.description}</Text>
       </Flex>
     </Grid>
   );

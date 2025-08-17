@@ -1,19 +1,18 @@
-import React from "react";
-import Head from "next/head";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Service from "../components/Service";
-import { width, padding } from "../lib/constants";
+import Navbar from "../../components/layouts/Navbar";
+import Footer from "../../components/Footer";
+import Service from "../../components/Service";
+import { width, padding } from "../../lib/constants";
 import {
   Container,
   Heading,
   Text,
   Grid,
-  Divider,
+  Separator,
   Link as StyledLink,
 } from "@chakra-ui/react";
+import { MotionDiv } from "../../components/ui/MotionDiv";
 
 import {
   Business,
@@ -21,77 +20,37 @@ import {
   StaticWebsite,
   Ticket,
   Shop,
-} from "../lib/icons";
+} from "../../lib/icons";
 
-const Services = () => {
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Web development services and pricing packages for businesses and individuals.",
+};
+
+export default function Services() {
   return (
     <div>
-      <Head>
-        <title>Daniel Medina - Web developer</title>
-        <meta name="title" content="Daniel Medina - Web developer" />
-        <meta
-          name="description"
-          content="My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey. My areas of expertise include the MERN stack, a very strong understanding of Next.js as well as cloud providers like AWS and Vercel."
-        />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://medina.dev/" />
-        <meta property="og:title" content="Daniel Medina - Web developer" />
-        <meta
-          property="og:description"
-          content="My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey. My areas of expertise include the MERN stack, a very strong understanding of Next.js as well as cloud providers like AWS and Vercel."
-        />
-        <meta property="og:image" content="/dm.png" />
-
-        {/* Twitter Meta Tags */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://medina.dev/" />
-        <meta
-          property="twitter:title"
-          content="Daniel Medina - Web developer"
-        />
-        <meta
-          property="twitter:description"
-          content="My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey. My areas of expertise include the MERN stack, a very strong understanding of Next.js as well as cloud providers like AWS and Vercel."
-        />
-        <meta property="twitter:image" content="/dm.png" />
-        <link
-          rel="shortcut icon"
-          href="https://cdn.medina.dev/favicon.png"
-          type="image/x-icon"
-        />
-        <base target="_blank" />
-      </Head>
       <Navbar />
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.25, type: "tween" }}
       >
         <Container pt={{ base: "12", md: "16" }} maxW={width} px={padding}>
-          <Heading
-            fontFamily="Work Sans, sans-serif"
-            fontSize={{ base: "2.3em", md: "3em" }}
-          >
-            Services 🔧
-          </Heading>
-          <Text textColor="gray.400">
+          <Heading fontSize={{ base: "2.3em", md: "3em" }}>Services 🔧</Heading>
+          <Text color="gray.400">
             Check out the services I offer and their pricing. If you&apos;d like
             a custom package feel free to{" "}
-            <Link passHref href="/contact" legacyBehavior>
-              <StyledLink textColor={"teal.500"} fontWeight="bold">
-                contact
-              </StyledLink>
-            </Link>{" "}
-            me at and I&apos;ll be happy to help.
+            <StyledLink color={"teal.500"} fontWeight="bold" asChild>
+              <Link href="/contact">contact</Link>{" "}
+            </StyledLink>
+            me and I&apos;ll be happy to help.
           </Text>
         </Container>
         <Container pt={8} maxW={width} px={padding}>
-          <Heading pb={2} fontFamily={"Work Sans, sans-serif"}>
-            Web Development Plans
-          </Heading>
-          <Divider />
+          <Heading pb={2}>Web Development Plans</Heading>
+          <Separator />
         </Container>
         <Container pt={4} maxW={width} px={padding} pb={4}>
           <Grid
@@ -153,10 +112,8 @@ const Services = () => {
           </Grid>
         </Container>
         <Container pt={8} maxW={width} px={padding}>
-          <Heading pb={2} fontFamily={"Work Sans, sans-serif"}>
-            Enterprise Plans
-          </Heading>
-          <Divider />
+          <Heading pb={2}>Enterprise Plans</Heading>
+          <Separator />
         </Container>
         <Container pt={4} maxW={width} px={padding} pb={10}>
           <Service
@@ -179,10 +136,8 @@ const Services = () => {
           />
         </Container>
         <Container pt={8} maxW={width} px={padding}>
-          <Heading pb={2} fontFamily={"Work Sans, sans-serif"}>
-            Revision Ticket Packages
-          </Heading>
-          <Divider />
+          <Heading pb={2}>Revision Ticket Packages</Heading>
+          <Separator />
         </Container>
         <Container pt={4} maxW={width} px={padding} pb={10}>
           <Grid
@@ -225,12 +180,10 @@ const Services = () => {
           </Grid>
         </Container>
         <Container pb={10} maxW={width} px={padding}>
-          <Divider />
+          <Separator />
         </Container>
         <Footer />
-      </motion.div>
+      </MotionDiv>
     </div>
   );
-};
-
-export default Services;
+}

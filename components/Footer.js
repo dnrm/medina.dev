@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 import {
   Container,
   Text,
@@ -8,13 +10,10 @@ import {
   Link as StyledLink,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { width } from "../lib/width";
-import { useColorModeValue } from "@chakra-ui/react";
+import { width } from "../lib/constants";
 
 const Footer = () => {
   const [playing, setPlaying] = useState();
-  const textColor = useColorModeValue("gray.600", "gray.400");
-  const footerTextColor = useColorModeValue("gray.500", "gray.400");
 
   useEffect(() => {
     const get = async () => {
@@ -27,11 +26,11 @@ const Footer = () => {
   }, []);
 
   return (
-    <Container h={"22vh"} mb={16} maxW={width}>
+    <Container h={"22vh"} mb={16} maxW={width} px={5}>
       <Flex
         justifyContent="start"
         alignItems="center"
-        textColor={textColor}
+        textColor={{ base: "gray.600", _dark: "gray.400" }}
         borderWidth="1px"
         borderRadius="md"
         p={4}
@@ -64,7 +63,7 @@ const Footer = () => {
       <Grid
         pt={8}
         templateColumns={"repeat(3, 1fr)"}
-        textColor={footerTextColor}
+        textColor={{ base: "gray.400", _dark: "gray.500" }}
       >
         <Stack>
           <StyledLink target={"_self"} href="https://twitter.com/_dnrm">
@@ -75,17 +74,27 @@ const Footer = () => {
           </StyledLink>
           <StyledLink
             target={"_self"}
-            href="https://www.youtube.com/channel/UC7nYyV6-jETyDNzvrFkYR_g"
+            href="https://www.linkedin.com/in/dnrm/"
           >
-            Youtube
+            LinkedIn
           </StyledLink>
         </Stack>
         <Stack>
-          <StyledLink target={"_self"} href="https://dev.to/dnrm">
+          {/* <StyledLink target={"_self"} href="https://dev.to/dnrm">
             Dev.to
           </StyledLink>
           <StyledLink target={"_self"} href="https://hashnode.com/@dnrm">
             Hashnode
+          </StyledLink> */}
+          <StyledLink target={"_self"} asChild>
+            <Link href="/certifications">
+              Certifications
+            </Link>
+          </StyledLink>
+          <StyledLink target={"_self"} asChild>
+            <Link href="/vinyl">
+              Vinyl Collection
+            </Link>
           </StyledLink>
           <StyledLink
             target={"_self"}
@@ -95,18 +104,16 @@ const Footer = () => {
           </StyledLink>
         </Stack>
         <Stack>
-          <Link href="/certifications" passHref legacyBehavior>
-            <StyledLink target={"_self"}>Certifications</StyledLink>
-          </Link>
-          <Link href="/contact" passHref legacyBehavior>
-            <StyledLink target={"_self"}>Contact</StyledLink>
-          </Link>
-          <Link href="/projects" passHref legacyBehavior>
-            <StyledLink target={"_self"}>Projects</StyledLink>
-          </Link>
-          <Link href="/vinyl" passHref legacyBehavior>
-            <StyledLink target={"_self"}>Vinyl Collection</StyledLink>
-          </Link>
+          <StyledLink target={"_self"} asChild>
+            <Link href="/contact">
+              Contact
+            </Link>
+          </StyledLink>
+          <StyledLink target={"_self"} asChild>
+            <Link href="/projects">
+              Projects
+            </Link>
+          </StyledLink>
         </Stack>
       </Grid>
     </Container>

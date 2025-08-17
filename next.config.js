@@ -1,5 +1,9 @@
-module.exports = {
-  // reactStrictMode: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    appDir: true,
+    optimizePackageImports: ["@chakra-ui/react"],
+  },
   basePath: process.env.BASE_PATH || "",
   images: {
     domains: [
@@ -19,3 +23,5 @@ module.exports = {
     return config;
   },
 };
+
+module.exports = nextConfig;

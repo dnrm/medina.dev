@@ -1,21 +1,19 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import {
   Container,
   Heading,
   Grid,
   Stack,
   Text,
-  Box,
   Link as StyledLink,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const Posts = (props) => {
   const { width, padding } = props;
   const [posts, setPosts] = useState();
-  const textColor = useColorModeValue("gray.600", "gray.400");
 
   const GET_USER_ARTICLES = `
     query GetUserArticles($page: Int!) {
@@ -52,18 +50,15 @@ const Posts = (props) => {
         }),
       });
       const json = await response.json();
-      console.log(json)
       setPosts(json.data.user.posts.nodes.slice(0, 4));
     };
 
     get(GET_USER_ARTICLES, { page: 1 });
   }, [GET_USER_ARTICLES]);
 
-  const border = useColorModeValue("gray.300", "gray.600");
-
   return (
     <Container pt={16} pb={0} maxW={width} px={padding}>
-      <Heading pb={2} fontFamily="Work Sans, sans-serif">
+      <Heading pb={2}>
         Blog Posts
       </Heading>
       {posts ? (
@@ -84,7 +79,7 @@ const Posts = (props) => {
               >
                 <Stack
                   borderWidth="2px"
-                  borderColor={border}
+                  borderColor={{ base: "gray.300", _dark: "gray.600" }}
                   rounded="md"
                   h="full"
                 >
@@ -116,7 +111,7 @@ const Posts = (props) => {
                       base: "0.8em",
                       md: "0.9em",
                     }}
-                    textColor={textColor}
+                    textColor={{ base: "gray.600", _dark: "gray.400" }}
                   >
                     {i.brief.substring(0, 150)}...
                   </Text>
@@ -133,7 +128,7 @@ const Posts = (props) => {
         backgroundColor="transparent"
         maxW={"100%"}
         borderWidth={2}
-        borderColor={border}
+        borderColor={{ base: "gray.300", _dark: "gray.600" }}
         _hover={{ backgroundColor: "gray.600", textDecor: "underline" }}
         mx={"auto"}
         display="block"
