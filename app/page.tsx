@@ -26,6 +26,7 @@ export default async function Home() {
     "image",
     "excerpt",
     "order",
+    "landingpage",  
   ]);
 
   return (

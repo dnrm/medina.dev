@@ -16,3 +16,11 @@ a {
 * {
     box-sizing: border-box;
 }
+
+.font-lora {
+    font-family: "Lora", serif;
+}
+
+.font-geist {
+    font-family: "Geist", sans-serif;
+}

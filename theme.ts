@@ -11,19 +11,15 @@ export const system = createSystem(
   defaultConfig,
   {
     theme: {
-      tokens: {
-        
-      },
-
+      tokens: {},
     },
-    globalCss :{
+    globalCss: {
       "html, body": {
         bg: "gray.800",
         color: "white",
-        fontFamily: "Geist, sans-serif",
+        // fontFamily: "Geist, sans-serif",
       },
     },
-    
   },
   withProse({
     baseStyle: {
@@ -34,7 +30,7 @@ export const system = createSystem(
         textDecor: "underline",
       },
       h1: {
-        fontFamily: "Geist, sans-serif",
+        // fontFamily: "Geist, sans-serif",
         marginBottom: "0px !important",
         letterSpacing: "-1px",
       },
