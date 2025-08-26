@@ -5,6 +5,8 @@ import { width, padding } from "../lib/constants";
 import { Container, Heading, Grid } from "@chakra-ui/react";
 
 const Projects = ({ projects }) => {
+  const filteredProjects = projects.filter((project) => project.landingpage !== false);
+
   return (
     <Container pt={16} maxW={width} px={padding}>
       <Heading mb={3}>
@@ -17,7 +19,7 @@ const Projects = ({ projects }) => {
         }}
         gap={4}
       >
-        {projects.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <Project
             key={index}
             title={project.title}

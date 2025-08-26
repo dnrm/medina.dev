@@ -7,6 +7,7 @@ icon: "⚡️"
 image: "/volteclink.jpeg"
 excerpt: "This URL shortener is built with NextJS, MongoDB, ReactJS..."
 order: 6
+landingpage: false
 ---
 
 # voltec.link

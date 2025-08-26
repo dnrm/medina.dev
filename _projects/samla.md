@@ -5,7 +5,7 @@ address: "https://mysamla.com/"
 slug: "samla"
 icon: "⚙️"
 image: "/samla.jpeg"
-excerpt: "Business Intelligence, Automated"
+excerpt: "SAMLA is a technology company specializing in artificial intelligence solutions for businesses."
 order: 2
 ---
 
