@@ -21,7 +21,7 @@ export default function AboutMe() {
         <Heading
           fontSize={{ base: "2.3em", md: "3em" }}
           mb={4}
-          letterSpacing={"-1px"}
+          letterSpacing={"-0.05em"}
           fontWeight={'semibold'}
         >
           Hi, I&apos;m Daniel Medina

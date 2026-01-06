@@ -42,7 +42,7 @@ export default async function Home() {
         <Projects projects={projects} />
         <ContactForm width={width} />
         <Certifications />
-        <Posts width={width} padding={padding} />
+        {/* <Posts width={width} padding={padding} /> */}
         <Hobbies />
         <Technologies />
         <Container pb={10} maxW={width} px={padding}>
