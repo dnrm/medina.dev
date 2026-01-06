@@ -17,7 +17,7 @@ export const system = createSystem(
       "html, body": {
         bg: "gray.800",
         color: "white",
-        // fontFamily: "Geist, sans-serif",
+        fontFamily: "Geist, sans-serif",
       },
     },
   },
