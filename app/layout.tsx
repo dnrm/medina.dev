@@ -66,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${geist.className} ${lora.className}`} suppressHydrationWarning>
+    <html lang="en" className={`${lora.className}`} suppressHydrationWarning>
       <head>
         <script
           async
