@@ -27,6 +27,7 @@
   "about": {
     "photoAlt": "Daniel Medina junto a la estatua del Toro de Wall Street",
     "greeting": "Hola, soy Daniel Medina",
+    "asciiAlt": "Arte ASCII del Puente de Brooklyn y el skyline del Bajo Manhattan",
     "intro": "Desarrollador full-stack y estudiante de Ciencias Computacionales en el Tecnológico de Monterrey, creando soluciones tecnológicas que generan un impacto real.",
     "heading": "Sobre Mí 👨‍💻",
     "p1": "Soy desarrollador de software full-stack y actualmente trabajo en SAMLA, MedicFlow y Blue Bird Consulting, donde combino la experiencia técnica con la estrategia de negocio. Me especializo en crear aplicaciones web escalables con React.js, Next.js y SQL que resuelven retos reales de negocio mediante una arquitectura backend sólida y un diseño frontend intuitivo.",

@@ -27,6 +27,7 @@
   "about": {
     "photoAlt": "Daniel Medina standing next to the Charging Bull statue on Wall Street",
     "greeting": "Hi, I'm Daniel Medina",
+    "asciiAlt": "ASCII art of the Brooklyn Bridge and the Lower Manhattan skyline",
     "intro": "Full-stack developer and Computer Science student at Tecnológico de Monterrey, creating technology solutions that make a real impact.",
     "heading": "About Me 👨‍💻",
     "p1": "I'm a full-stack software developer currently working at SAMLA, MedicFlow, and Blue Bird Consulting, where I bridge technical expertise with business strategy. I specialize in building scalable web applications using React.js, Next.js, and SQL that solve real business challenges through robust backend architecture and intuitive frontend design.",

@@ -6,14 +6,19 @@ import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { width, padding } from "../../lib/constants";
 import { ColorModeButton } from "@/components/ui/color-mode";
 
-export default function Navbar() {
+export default function Navbar({ floating = false }: { floating?: boolean }) {
   const t = useTranslations("nav");
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
   const otherLocale = locale === "en" ? "es" : "en";
   return (
-    <Container pt={{ base: "12", md: "28" }} maxW={width} px={padding}>
+    <Container
+      pt={{ base: "12", md: "28" }}
+      maxW={width}
+      px={padding}
+      {...(floating && { position: "absolute", top: 0, insetX: 0, zIndex: 2 })}
+    >
       <Flex justifyContent="space-between" alignItems="center">
         <Flex>
           <StyledLink
