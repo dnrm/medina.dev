@@ -5,15 +5,30 @@ import { Project } from "../types/project";
 
 const projectsDirectory = join(process.cwd(), "_projects");
 
+// English lives in _projects/*.md; translations in _projects/<locale>/*.md
+// override title/excerpt/body and fall back to English for anything missing.
 export function getProjectSlugs(): string[] {
-  return fs.readdirSync(projectsDirectory);
+  return fs.readdirSync(projectsDirectory).filter((f) => f.endsWith(".md"));
 }
 
-export function getProjectBySlug(slug: string, fields: string[] = []): Project {
+export function getProjectBySlug(
+  slug: string,
+  locale: string,
+  fields: string[] = []
+): Project {
   const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(projectsDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf-8");
-  const { data, content } = matter(fileContents);
+  const base = matter(
+    fs.readFileSync(join(projectsDirectory, `${realSlug}.md`), "utf-8")
+  );
+  let data = base.data;
+  let content = base.content;
+
+  const localized = join(projectsDirectory, locale, `${realSlug}.md`);
+  if (locale !== "en" && fs.existsSync(localized)) {
+    const tr = matter(fs.readFileSync(localized, "utf-8"));
+    data = { ...data, ...tr.data };
+    content = tr.content;
+  }
 
   const items: any = {};
 
@@ -34,10 +49,10 @@ export function getProjectBySlug(slug: string, fields: string[] = []): Project {
   return items as Project;
 }
 
-export function getAllProjects(fields: string[] = []): Project[] {
+export function getAllProjects(locale: string, fields: string[] = []): Project[] {
   const slugs = getProjectSlugs();
   const projects = slugs
-    .map((slug) => getProjectBySlug(slug, fields))
+    .map((slug) => getProjectBySlug(slug, locale, fields))
     // First try to sort by order if it exists
     .sort((a, b) => {
       // If both projects have order, sort by order

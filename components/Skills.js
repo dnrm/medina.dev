@@ -1,6 +1,7 @@
 "use client";
 
 import { Container, Heading, Flex, Badge } from "@chakra-ui/react";
+import { useTranslations } from "next-intl";
 
 const skills = [
     { name: "Next.js", colorPalette: "teal" },
@@ -30,10 +31,11 @@ const skills = [
 ];
 
 const Skills = ({ padding, width }) => {
+    const t = useTranslations("skills");
     return (
         <Container pt={16} maxW={width} px={padding}>
             <Heading mb={1}>
-                My Skills 💪
+                {t("heading")}
             </Heading>
             <Flex
                 justifyContent="start"

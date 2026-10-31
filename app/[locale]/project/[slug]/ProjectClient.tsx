@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { width } from "../../../lib/constants";
-import Navbar from "../../../components/layouts/Navbar";
-import Footer from "../../../components/Footer";
+import { width } from "../../../../lib/constants";
+import Navbar from "../../../../components/layouts/Navbar";
+import Footer from "../../../../components/Footer";
 import {
   Container,
   Button,
@@ -12,8 +12,9 @@ import {
   Image as StyledImage,
 } from "@chakra-ui/react";
 import { Prose } from "@/components/ui/prose";
-import { MotionDiv } from "../../../components/ui/MotionDiv";
-import { Project } from "../../../types/project";
+import { MotionDiv } from "../../../../components/ui/MotionDiv";
+import { Project } from "../../../../types/project";
+import { useTranslations } from "next-intl";
 
 interface ProjectClientProps {
   project: Project;
@@ -24,6 +25,7 @@ export default function ProjectClient({
   project,
   content,
 }: ProjectClientProps) {
+  const t = useTranslations("project");
   const padding = 6;
 
   return (
@@ -41,7 +43,7 @@ export default function ProjectClient({
         </Container>
         <Container maxW={width} px={padding} pb={2}>
           <Box
-            borderColor={{ base: "gray.300", _dark: "gray.600" }}
+            borderColor="border.emphasized"
             borderWidth={2}
             borderRadius="lg"
             p={2}
@@ -52,7 +54,7 @@ export default function ProjectClient({
                   src={project.image}
                   width={1500}
                   height={1000}
-                  alt="Project"
+                  alt={project.title}
                 />
               </StyledImage>
             </Box>
@@ -62,7 +64,7 @@ export default function ProjectClient({
           <Container pt={4} maxW={width} px={padding - 1} pb={8}>
             <a href={project.address} target="_blank" rel="noopener noreferrer">
               <Button variant={"solid"} w={"full"}>
-                Visit Website
+                {t("visit")}
               </Button>
             </a>
           </Container>

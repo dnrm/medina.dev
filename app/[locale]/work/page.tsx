@@ -1,21 +1,34 @@
-import type { Metadata } from 'next'
-import { width } from "../../lib/constants";
-import Navbar from "../../components/layouts/Navbar";
-import Footer from "../../components/Footer";
-import Project from "../../components/Project";
-import { getAllProjects } from "../../lib/projects";
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { width } from "../../../lib/constants";
+import Navbar from "../../../components/layouts/Navbar";
+import Footer from "../../../components/Footer";
+import Project from "../../../components/Project";
+import { getAllProjects } from "../../../lib/projects";
 import { Container, Heading, Grid, Separator, Text } from "@chakra-ui/react";
-import { MotionDiv } from "../../components/ui/MotionDiv";
+import { MotionDiv } from "../../../components/ui/MotionDiv";
 
-export const metadata: Metadata = {
-  title: 'My Work',
-  description: 'Projects that have defined my career as a web developer.',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta.work" });
+  return { title: t("title"), description: t("description") };
 }
 
 const padding = 6;
 
-export default async function Projects() {
-  const projects = getAllProjects([
+export default async function Projects({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("work");
+  const projects = getAllProjects(locale, [
     "title",
     "date",
     "slug",
@@ -44,10 +57,10 @@ export default async function Projects() {
             mb={4}
             letterSpacing={"-1px"}
           >
-            My Work 🔧
+            {t("heading")}
           </Heading>
-          <Text mb={4} color="gray.400">
-            These are the projects that have defined my career.
+          <Text mb={4} color="fg.muted">
+            {t("subtitle")}
           </Text>
           <Grid
             templateColumns={{

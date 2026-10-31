@@ -2,7 +2,7 @@
 
 import { Stack, Heading, Text, Image as StyledImage } from "@chakra-ui/react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 function convertToSlug(Text) {
   return Text.toLowerCase()
@@ -18,7 +18,7 @@ const Project = (props) => {
       <Stack
       spacing="0"
         borderWidth="2px"
-        borderColor={{ base: "gray.300", _dark: "gray.600" }}
+        borderColor="border.emphasized"
         rounded="md"
         minHeight={48}
         height={"100%"}
@@ -47,7 +47,7 @@ const Project = (props) => {
           {props.title}
         </Heading>
         <Text
-          textColor={{ base: "gray.600", _dark: "gray.400" }}
+          color={{ base: "gray.600", _dark: "gray.400" }}
           fontSize={{ base: "0.8em", md: "0.9em" }}
           px={4}
           pb={4}

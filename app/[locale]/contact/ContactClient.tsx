@@ -1,8 +1,8 @@
 "use client";
 
-import { width, padding } from "../../lib/constants";
-import Navbar from "../../components/layouts/Navbar";
-import Footer from "../../components/Footer";
+import { width, padding } from "../../../lib/constants";
+import Navbar from "../../../components/layouts/Navbar";
+import Footer from "../../../components/Footer";
 import {
   Container,
   Heading,
@@ -12,20 +12,21 @@ import {
   Link,
   Flex,
 } from "@chakra-ui/react";
-import { MotionDiv } from "../../components/ui/MotionDiv";
-import ContactForm from "../../components/forms/ContactForm";
+import { MotionDiv } from "../../../components/ui/MotionDiv";
+import ContactForm from "../../../components/forms/ContactForm";
 import { ExternalLink } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const socials = [
   {
     name: "Twitter 🐦",
     href: "https://twitter.com/_dnrm",
-    description: "Check out my latest tweets!",
+    key: "twitter",
   },
   {
     name: "GitHub 👨‍💻",
     href: "https://github.com/dnrm",
-    description: "See all of my projects and code.",
+    key: "github",
   },
   // {
   //   name: "Dev.to 📓",
@@ -41,17 +42,17 @@ const socials = [
   {
     name: "Email ✉️",
     href: "mailto:daniel@medina.com",
-    description: "Send me an email. Whether you're a client or a fan!",
+    key: "email",
   },
   {
     name: "LinkedIn 💌",
     href: "https://www.linkedin.com/in/dnrm/",
-    description:
-      "My whole professional profile, including my work experience.",
+    key: "linkedin",
   },
 ];
 
 export default function ContactClient() {
+  const t = useTranslations("contact");
   return (
     <div>
       <Navbar />
@@ -62,7 +63,7 @@ export default function ContactClient() {
       >
         <Container pt={16} maxW={width} px={6} pb={4}>
           <Heading fontSize={{ base: "2.3em", md: "3em" }} mb={4} letterSpacing={"-1px"}>
-            Contact Me 🌱
+            {t("heading")}
           </Heading>
         </Container>
         <Container maxW={width} px={6}>
@@ -90,8 +91,8 @@ export default function ContactClient() {
                       <ExternalLink size={20} />
                     </Flex>
                   </Link>
-                  <Text color="gray.400" letterSpacing={"-0.5px"}>
-                    {social.description}
+                  <Text color="fg.muted" letterSpacing={"-0.5px"}>
+                    {t(social.key)}
                   </Text>
                 </Flex>
               );

@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "title": "Daniel Medina - Web Developer",
+    "titleTemplate": "%s | Daniel Medina",
+    "description": "My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey. My areas of expertise include the MERN stack, a very strong understanding of Next.js as well as cloud providers like AWS and Vercel.",
+    "ogLocale": "en_US",
+    "work": { "title": "My Work", "description": "Projects that have defined my career as a web developer." },
+    "contact": { "title": "Contact Me", "description": "Get in touch with Daniel Medina. Find me on social media or send me a direct message." },
+    "certifications": { "title": "My Certifications", "description": "Professional certifications and credentials I have earned throughout my career." },
+    "vinyl": { "title": "Vinyl Collection", "description": "My personal vinyl record collection featuring various artists and genres." },
+    "projectNotFound": { "title": "Project Not Found", "description": "The requested project could not be found." }
+  },
+  "nav": {
+    "home": "Home",
+    "work": "My Work",
+    "contact": "Contact",
+    "switchLanguage": "Switch to Spanish",
+    "otherLanguage": "ES"
+  },
+  "footer": {
+    "notPlaying": "Not playing",
+    "certifications": "Certifications",
+    "vinyl": "Vinyl Collection",
+    "contact": "Contact",
+    "projects": "Projects"
+  },
+  "about": {
+    "photoAlt": "Daniel Medina standing next to the Charging Bull statue on Wall Street",
+    "greeting": "Hi, I'm Daniel Medina",
+    "intro": "Full-stack developer and Computer Science student at Tecnológico de Monterrey, creating technology solutions that make a real impact.",
+    "heading": "About Me 👨‍💻",
+    "p1": "I'm a full-stack software developer currently working at SAMLA, MedicFlow, and Blue Bird Consulting, where I bridge technical expertise with business strategy. I specialize in building scalable web applications using React.js, Next.js, and SQL that solve real business challenges through robust backend architecture and intuitive frontend design.",
+    "p2": "My portfolio showcases projects across healthcare, legal, and insurance industries where I've delivered measurable impact. From developing HIPAA-compliant AI-powered medical applications to building law firm websites with integrated booking systems, I focus on translating business requirements into production-ready applications that provide genuine value to users and clients."
+  },
+  "skills": { "heading": "My Skills 💪" },
+  "projects": { "heading": "My Work 🔨" },
+  "work": {
+    "heading": "My Work 🔧",
+    "subtitle": "These are the projects that have defined my career."
+  },
+  "project": { "visit": "Visit Website" },
+  "contact": {
+    "heading": "Contact Me 🌱",
+    "twitter": "Check out my latest tweets!",
+    "github": "See all of my projects and code.",
+    "email": "Send me an email. Whether you're a client or a fan!",
+    "linkedin": "My whole professional profile, including my work experience."
+  },
+  "contactForm": {
+    "heading": "Hire Me 🏢",
+    "subtitle": "Are you interested in hiring me? Send me a message!",
+    "bannerAlt": "Contact banner",
+    "email": "Your Email",
+    "emailPlaceholder": "john@doe.com",
+    "message": "Message",
+    "messagePlaceholder": "Your message here...",
+    "send": "Send Email →",
+    "successTitle": "Email sent!",
+    "successDescription": "Email sent successfully",
+    "errorTitle": "Error sending email.",
+    "errorDescription": "Error sending email"
+  },
+  "certifications": {
+    "heading": "My Certifications 🥇",
+    "subtitle": "These are most of the certifications I've gotten since starting my career.",
+    "viewAll": "View All →",
+    "imageAlt": "Certification Image",
+    "items": {
+      "w3-js": "This certification was given to me by W3Schools. Upon passing their exam.",
+      "w3-sql": "This certification proves my knowledge of SQL and is given by W3Schools, upon passing their SQL exam.",
+      "coursera-support": "I got this certification by completing the Technical Support Fundamentals course by Google on Coursera.",
+      "udemy-js-master": "This certifies the completion of the Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS course by Victor Robles.",
+      "fcc-responsive": "I got this certification by completing the Responsive Web Design course.",
+      "fcc-js": "This certifies completion of the Javascript Algorithms and Data Structures course.",
+      "fcc-frontend": "I was awarded this certification upon completion of the Front End Libraries course offered by freeCodeCamp",
+      "fcc-apis": "I got this certification for successfully submitting all 5 projects required in the APIs and Microservices course by freeCodeCamp.",
+      "creative-js": "This certification proves completion of The Creative JavaScript Course",
+      "w3-html": "This certification proves my skills on HTML"
+    }
+  },
+  "hobbies": {
+    "heading": "Hobbies 🎧",
+    "text": "I love coffee. I like to try different brewing methods and recipes. My favourite drinks are lattes and pour over coffee. Another thing I really enjoy doing is collecting vinyl records. My favourite music genres are rock and pop. I enjoy music from <artists>Clairo, The Midnight, Oasis, Fleetwood Mac, Coldplay, Sabrina Carpenter</artists>, and more. I have two pet dogs called Toby and Milo, they're both golden doodles.",
+    "espressoAlt": "Espresso cup",
+    "coldBrewAlt": "Cold brew glass",
+    "dogAlt": "Toby"
+  },
+  "technologies": {
+    "heading": "My Favourite Technologies ⭐️",
+    "logoAlt": "Technology logo",
+    "items": {
+      "nextjs": "Next.js is a framework for building server-rendered applications.",
+      "mongodb": "MongoDB is a document-oriented database.",
+      "react": "React is a library for building user interfaces.",
+      "tailwind": "Tailwind CSS is a utility-first CSS framework.",
+      "vercel": "Vercel is a hosting platform for static and dynamic websites.",
+      "github": "GitHub is a web-based version control system.",
+      "aws": "AWS is a cloud computing platform.",
+      "vscode": "VSCode is a very powerful and extensible code editor.",
+      "iterm": "iTerm 2 is a terminal emulator.",
+      "figma": "Figma is a design tool."
+    }
+  },
+  "vinyl": {
+    "heading": "My Vinyl Collection 🎧",
+    "total": "{count, plural, one {# Record in total} other {# Records in total}}",
+    "coverAlt": "{title} by {artist}"
+  },
+  "colorMode": { "toggle": "Toggle color mode" }
+}
