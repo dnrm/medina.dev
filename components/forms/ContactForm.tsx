@@ -12,12 +12,14 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/legacy/image";
 import { Toaster, toaster } from "@/components/ui/toaster";
+import { useTranslations } from "next-intl";
 
 interface ContactFormProps {
   width: string;
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({ width }) => {
+  const t = useTranslations("contactForm");
   const [address, setAddress] = useState("");
   const [message, setMessage] = useState("");
 
@@ -49,23 +51,23 @@ const ContactForm: React.FC<ContactFormProps> = ({ width }) => {
 
       if (response.ok) {
         toaster.create({
-          title: "Email sent!",
-          description: "Email sent successfully",
+          title: t("successTitle"),
+          description: t("successDescription"),
           type: "success",
         });
         setAddress("");
         setMessage("");
       } else {
         toaster.create({
-          title: "Error sending email.",
-          description: "Error sending email",
+          title: t("errorTitle"),
+          description: t("errorDescription"),
           type: "error",
         });
       }
     } catch (error) {
       toaster.create({
-        title: "Error sending email.",
-        description: "Error sending email",
+        title: t("errorTitle"),
+        description: t("errorDescription"),
         type: "error",
       });
     }
@@ -73,15 +75,15 @@ const ContactForm: React.FC<ContactFormProps> = ({ width }) => {
 
   return (
     <Container pt={8} px={6} maxW={width}>
-      <Heading>Hire Me 🏢</Heading>
+      <Heading>{t("heading")}</Heading>
       <Text color={{ base: "gray.600", _dark: "gray.400" }} mb={2}>
-        Are you interested in hiring me? Send me a message!
+        {t("subtitle")}
       </Text>
       <form onSubmit={handleSubmit}>
-        <Stack borderWidth={2} borderColor={{ base: "gray.300", _dark: "gray.600" }} borderRadius={"lg"}>
+        <Stack borderWidth={2} borderColor="border.emphasized" borderRadius={"lg"}>
           <Stack position={"relative"} height={48}>
             <Image
-              alt="Contact banner"
+              alt={t("bannerAlt")}
               src="/banner.png"
               layout="fill"
               objectFit="cover"
@@ -89,11 +91,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ width }) => {
           </Stack>
           <Stack pb={6} pt={2} px={5} className="input-elements">
             <Stack className="email">
-              <Text fontSize={{ base: "0.8em", md: "1.2em" }}>Your Email</Text>
+              <Text fontSize={{ base: "0.8em", md: "1.2em" }}>{t("email")}</Text>
               <Stack>
                 <Input
                   type="email"
-                  placeholder="john@doe.com"
+                  placeholder={t("emailPlaceholder")}
                   value={address}
                   onChange={handleAddressChange}
                   required
@@ -101,10 +103,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ width }) => {
               </Stack>
             </Stack>
             <Stack className="message">
-              <Text fontSize={{ base: "0.8em", md: "1.2em" }}>Message</Text>
+              <Text fontSize={{ base: "0.8em", md: "1.2em" }}>{t("message")}</Text>
               <Stack>
                 <Textarea
-                  placeholder="Your message here..."
+                  placeholder={t("messagePlaceholder")}
                   value={message}
                   onChange={handleMessageChange}
                   required
@@ -122,7 +124,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ width }) => {
           w={"100%"}
           borderWidth={2}
           color={{ base: "gray.600", _dark: "gray.200" }}
-          borderColor={{ base: "gray.300", _dark: "gray.600" }}
+          borderColor="border.emphasized"
           _hover={{ backgroundColor: "gray.100", textDecor: "underline", _dark: { backgroundColor: "gray.800", textDecor: "underline" } }}
           mx={"auto"}
           display="block"
@@ -131,7 +133,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ width }) => {
           px={8}
           mt={4}
         >
-          Send Email →
+          {t("send")}
         </Button>
       </form>
     </Container>
