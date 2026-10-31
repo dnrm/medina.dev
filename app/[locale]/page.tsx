@@ -38,7 +38,7 @@ export default async function Home({
 
   return (
     <div>
-      <Navbar />
+      <Navbar floating />
       <MotionDiv
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
