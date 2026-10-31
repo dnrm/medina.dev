@@ -16,7 +16,9 @@ const Technology = (props) => {
         <Image
           w={16}
           borderRadius="30px"
-          bgColor={{ base: "gray.200", _dark: "gray.600" }}
+          bgColor="white"
+          borderWidth="1px"
+          borderColor="border.emphasized"
           h={16}
           p={2}
           src={props.src}
@@ -25,10 +27,10 @@ const Technology = (props) => {
         />
       )}
       <Flex flexDir="column">
-        <Heading fontSize="xl" letterSpacing={'tighter'} textColor={{ base: "gray.600", _dark: "gray.400" }} fontWeight="bold">
+        <Heading fontSize="xl" letterSpacing={'tighter'} color={{ base: "gray.600", _dark: "gray.400" }} fontWeight="bold">
           {props.title}
         </Heading>
-        <Text fontSize="md" textColor={{ base: "gray.600", _dark: "gray.400" }}>{props.description}</Text>
+        <Text fontSize="md" color={{ base: "gray.600", _dark: "gray.400" }}>{props.description}</Text>
       </Flex>
     </Grid>
   );

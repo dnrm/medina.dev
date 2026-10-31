@@ -1,16 +1,18 @@
 "use client";
 
 import Project from "./Project";
+import { useTranslations } from "next-intl";
 import { width, padding } from "../lib/constants";
 import { Container, Heading, Grid } from "@chakra-ui/react";
 
 const Projects = ({ projects }) => {
+  const t = useTranslations("projects");
   const filteredProjects = projects.filter((project) => project.landingpage !== false);
 
   return (
     <Container pt={16} maxW={width} px={padding}>
       <Heading mb={3}>
-        My Work 🔨
+        {t("heading")}
       </Heading>
       <Grid
         templateColumns={{

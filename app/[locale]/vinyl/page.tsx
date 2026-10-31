@@ -1,4 +1,5 @@
-import type { Metadata } from 'next'
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container, Heading, Separator, Text, Grid } from "@chakra-ui/react";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/Footer";
@@ -6,9 +7,12 @@ import { width, padding } from "@/lib/constants";
 import VinylRecord from "@/components/VinylRecord";
 import { MotionDiv } from "@/components/ui/MotionDiv";
 
-export const metadata: Metadata = {
-  title: 'Vinyl Collection',
-  description: 'My personal vinyl record collection featuring various artists and genres.',
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta.vinyl" });
+  return { title: t("title"), description: t("description") };
 }
 
 const collection = [
@@ -159,7 +163,10 @@ const collection = [
   },
 ];
 
-export default function Vinyl() {
+export default async function Vinyl({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("vinyl");
   return (
     <div>
       <Navbar />
@@ -172,12 +179,12 @@ export default function Vinyl() {
           <Heading
             fontSize={{ base: "2.3em", md: "3em" }}
           >
-            My Vinyl Collection 🎧
+            {t("heading")}
           </Heading>
         </Container>
         <Container pt={4} maxW={width} px={padding}>
-          <Text fontWeight="bold" color="gray.400">
-            {collection.length} Records in total
+          <Text fontWeight="bold" color="fg.muted">
+            {t("total", { count: collection.length })}
           </Text>
         </Container>
         <Container pt={2} maxW={width} px={padding} pb={16}>

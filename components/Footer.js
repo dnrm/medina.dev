@@ -9,10 +9,12 @@ import {
   Flex,
   Link as StyledLink,
 } from "@chakra-ui/react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { width } from "../lib/constants";
 
 const Footer = () => {
+  const t = useTranslations("footer");
   const [playing, setPlaying] = useState();
 
   useEffect(() => {
@@ -30,8 +32,9 @@ const Footer = () => {
       <Flex
         justifyContent="start"
         alignItems="center"
-        textColor={{ base: "gray.600", _dark: "gray.400" }}
+        color={{ base: "gray.600", _dark: "gray.400" }}
         borderWidth="1px"
+        borderColor="border.emphasized"
         borderRadius="md"
         p={4}
       >
@@ -54,7 +57,7 @@ const Footer = () => {
                 {playing.title}
               </StyledLink>
             ) : (
-              "Not playing"
+              t("notPlaying")
             )}{" "}
             - {playing?.isPlaying == true ? playing.artist : "Spotify"}
           </Text>
@@ -63,7 +66,7 @@ const Footer = () => {
       <Grid
         pt={8}
         templateColumns={"repeat(3, 1fr)"}
-        textColor={{ base: "gray.400", _dark: "gray.500" }}
+        color={{ base: "gray.600", _dark: "gray.400" }}
       >
         <Stack>
           <StyledLink target={"_self"} href="https://twitter.com/_dnrm">
@@ -88,12 +91,12 @@ const Footer = () => {
           </StyledLink> */}
           <StyledLink target={"_self"} asChild>
             <Link href="/certifications">
-              Certifications
+              {t("certifications")}
             </Link>
           </StyledLink>
           <StyledLink target={"_self"} asChild>
             <Link href="/vinyl">
-              Vinyl Collection
+              {t("vinyl")}
             </Link>
           </StyledLink>
           <StyledLink
@@ -106,12 +109,12 @@ const Footer = () => {
         <Stack>
           <StyledLink target={"_self"} asChild>
             <Link href="/contact">
-              Contact
+              {t("contact")}
             </Link>
           </StyledLink>
           <StyledLink target={"_self"} asChild>
             <Link href="/projects">
-              Projects
+              {t("projects")}
             </Link>
           </StyledLink>
         </Stack>

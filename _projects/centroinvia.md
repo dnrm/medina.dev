@@ -11,4 +11,4 @@ order: 8
 
 # Centro Invia
 
-Centro Invia es un centro especializado en micropigmentación estética y paramédica en Monterrey que ofrece tratamientos como microblading, micropuntura, micropigmentación de labios y remoción láser. Su enfoque está en realzar la belleza natural, fortalecer la autoestima y brindar resultados personalizados, naturales y duraderos mediante técnicas avanzadas, altos estándares de bioseguridad y la experiencia certificada de su especialista.
+Centro Invia is a center specialized in aesthetic and paramedical micropigmentation in Monterrey, offering treatments such as microblading, micro-needling, lip micropigmentation and laser removal. Its focus is on enhancing natural beauty, strengthening self-esteem and delivering personalized, natural and long-lasting results through advanced techniques, high biosafety standards and the certified expertise of its specialist.

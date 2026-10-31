@@ -3,29 +3,27 @@
 import Image from "next/legacy/image";
 import { width, padding } from "../lib/constants";
 import { Container, Heading, Text, Grid } from "@chakra-ui/react";
+import { useTranslations } from "next-intl";
 
 const Hobbies = () => {
+  const t = useTranslations("hobbies");
   return (
     <Container pt={16} maxW={width} px={padding}>
       <Heading pb={2}>
-        Hobbies 🎧
+        {t("heading")}
       </Heading>
       <Text
-        textColor={{ base: "gray.700", _dark: "gray.500" }}
+        color={{ base: "gray.700", _dark: "gray.500" }}
         fontSize={{ base: "0.9em", md: "1em" }}
         textAlign={"justify"}
       >
-        I love coffee. I like to try different brewing methods and recipes. My
-        favourite drinks are lattes and pour over coffee. Another thing I really
-        enjoy doing is collecting vinyl records. My favourite music genres are
-        rock and pop. I enjoy music from{" "}
-        <b>
-          <i>
-            Clairo, The Midnight, Oasis, Fleetwood Mac, Coldplay,
-            Sabrina Carpenter
-          </i>
-        </b>
-        , and more. I have two pet dogs called Toby and Milo, they&apos;re both golden doodles.
+        {t.rich("text", {
+          artists: (chunks) => (
+            <b>
+              <i>{chunks}</i>
+            </b>
+          ),
+        })}
       </Text>
       <Grid
         mt={8}
@@ -35,7 +33,7 @@ const Hobbies = () => {
       >
         <Container
           position="relative"
-          borderColor={{ base: "gray.300", _dark: "gray.700" }}
+          borderColor="border.emphasized"
           borderWidth={2}
           padding={2.5}
           rounded="lg"
@@ -45,14 +43,14 @@ const Hobbies = () => {
               objectFit="cover"
               src="/nn-cup.jpeg"
               layout="fill"
-              alt="Espresso cup"
+              alt={t("espressoAlt")}
               blurDataURL="/breville.min.jpeg"
               placeholder="blur"
             />
           </Container>
         </Container>
         <Container
-          borderColor={{ base: "gray.300", _dark: "gray.700" }}
+          borderColor="border.emphasized"
           borderWidth={2}
           padding={2.5}
           rounded="lg"
@@ -62,7 +60,7 @@ const Hobbies = () => {
               objectFit="cover"
               src="/sf.jpeg"
               layout="fill"
-              alt="Cold brew glass"
+              alt={t("coldBrewAlt")}
               blurDataURL="/cold-brew.min.jpg"
               placeholder="blur"
             />
@@ -70,7 +68,7 @@ const Hobbies = () => {
         </Container>
         <Container
           position="relative"
-          borderColor={{ base: "gray.300", _dark: "gray.700" }}
+          borderColor="border.emphasized"
           borderWidth={2}
           p={2.5}
           rounded="lg"
@@ -80,7 +78,7 @@ const Hobbies = () => {
               objectFit="cover"
               src="/dogs.jpeg"
               layout="fill"
-              alt="Toby"
+              alt={t("dogAlt")}
               blurDataURL="/toby-min.jpeg"
               placeholder="blur"
             />

@@ -2,15 +2,17 @@
 
 import { Stack, Flex, Heading, Link, Text, GridItem } from "@chakra-ui/react";
 import Image from "next/legacy/image";
+import { useTranslations } from "next-intl";
 
 const VinylRecord = ({ title, artist, cover, link }) => {
+  const t = useTranslations("vinyl");
   return (
     <GridItem w="full" backgroundColor="gray.100" _dark={{ backgroundColor: "gray.700" }} rounded="lg">
       <Stack minW="24">
         <a target="_blank" w="full" h='full' rel="noreferrer" href={cover}>
           <Image
             src={cover}
-            alt={`${title} by ${artist}`}
+            alt={t("coverAlt", { title, artist })}
             height="1000"
             width="1000"
             layout="responsive"
