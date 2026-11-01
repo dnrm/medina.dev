@@ -1,13 +1,5 @@
 "use client";
 
-import {
-  Box,
-  Container,
-  Text,
-  Heading,
-  Image as StyledImage,
-} from "@chakra-ui/react";
-import { width, padding } from "../lib/constants";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import AsciiHero from "./AsciiHero";
@@ -17,72 +9,33 @@ export default function AboutMe() {
   const t = useTranslations("about");
   return (
     <>
-      <Box
-        position="relative"
-        w="100%"
-        h="100svh"
-        overflow="hidden"
-        cursor="crosshair"
-      >
+      <div className="relative h-svh w-full cursor-crosshair overflow-hidden">
         <AsciiHero alt={t("asciiAlt")} />
         {/* scrim so the text stays readable over the ASCII */}
-        <Box
-          position="absolute"
-          inset={0}
-          pointerEvents="none"
-          bgGradient="to-r"
-          gradientFrom="bg"
-          gradientVia="bg/70"
-          gradientTo="transparent"
-        />
-        <Container
-          position="absolute"
-          inset={0}
-          maxW={width}
-          px={padding}
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="flex-start"
-          textAlign="left"
-          pointerEvents="none"
-        >
-          <StyledImage borderColor="border.emphasized" borderWidth={2} mb={6} borderRadius="full" height={{ base: 120, md: 150 }} width={{ base: 120, md: 150 }} objectFit="cover" objectPosition="50% 45%" asChild>
-            <Image src="/me.jpg" alt={t("photoAlt")} width={600} height={800} priority />
-          </StyledImage>
-          <Heading
-            as="h1"
-            fontSize={{ base: "2.3em", md: "3em" }}
-            mb={4}
-            letterSpacing={"-0.05em"}
-            fontWeight={'semibold'}
-            pointerEvents="auto"
-            cursor="default"
-          >
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
+        <div className="page pointer-events-none absolute inset-0 flex flex-col items-start justify-center text-left">
+          <Image
+            src="/me.jpg"
+            alt={t("photoAlt")}
+            width={600}
+            height={800}
+            priority
+            className="mb-6 size-[120px] rounded-full border-2 border-border object-cover object-[50%_45%] md:size-[150px]"
+          />
+          <h1 className="pointer-events-auto mb-2 cursor-default text-[2.3em] font-semibold tracking-[-0.05em] md:text-[3em]">
             <ScrambleText text={t("greeting")} />
-          </Heading>
-          <Text color={{ base: "gray.600", _dark: "gray.400" }} maxW="52ch">
-            {t("intro")}
-          </Text>
-        </Container>
-      </Box>
-      <Container pt={16} maxW={width} px={padding}>
-        <Heading>{t("heading")}</Heading>
-        <Text
-          color={{ base: "gray.600", _dark: "gray.400" }}
-          fontSize={{ base: "0.9em", md: "1em" }}
-          textAlign={"justify"}
-        >
-          {t("p1")}
-        </Text>
-        <br />
-        <Text color={{ base: "gray.600", _dark: "gray.400" }}
-          fontSize={{ base: "0.9em", md: "1em" }}
-          textAlign={"justify"}>
-          {t("p2")}
-        </Text>
-        <br />
-      </Container>
+          </h1>
+          <p className="mb-4 text-sm font-medium text-foreground/80 md:text-base">{t("position")}</p>
+          <p className="max-w-[52ch] text-muted-foreground">{t("intro")}</p>
+        </div>
+      </div>
+      <section className="section grid gap-6 md:grid-cols-[1fr_2fr] md:gap-12">
+        <h2 className="section-title">{t("heading")}</h2>
+        <div className="space-y-5 text-pretty leading-relaxed text-muted-foreground md:text-lg">
+          <p>{t("p1")}</p>
+          <p>{t("p2")}</p>
+        </div>
+      </section>
     </>
   );
 }

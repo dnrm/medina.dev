@@ -1,15 +1,14 @@
 "use client";
 
-import { Stack, Flex, Heading, Link, Text, GridItem } from "@chakra-ui/react";
 import Image from "next/legacy/image";
 import { useTranslations } from "next-intl";
 
 const VinylRecord = ({ title, artist, cover, link }) => {
   const t = useTranslations("vinyl");
   return (
-    <GridItem w="full" backgroundColor="gray.100" _dark={{ backgroundColor: "gray.700" }} rounded="lg">
-      <Stack minW="24">
-        <a target="_blank" w="full" h='full' rel="noreferrer" href={cover}>
+    <div className="w-full rounded-lg bg-muted">
+      <div className="min-w-24">
+        <a target="_blank" rel="noreferrer" href={cover}>
           <Image
             src={cover}
             alt={t("coverAlt", { title, artist })}
@@ -21,21 +20,16 @@ const VinylRecord = ({ title, artist, cover, link }) => {
             blurDataURL="/album.png"
           />
         </a>
-      </Stack>
-      <Flex direction="column" w='full' p={4}>
-        <Heading
-          fontWeight="bold"
-          fontSize={{ base: "1em", md: "1.5em" }}
-          letterSpacing="tighter"
-          display={'block'}
-        >
-          <Link href={link} display="block" target="_blank" rel="noreferrer">
+      </div>
+      <div className="flex w-full flex-col p-4">
+        <h3 className="block text-[1em] font-bold tracking-tighter md:text-[1.5em]">
+          <a className="block" href={link} target="_blank" rel="noreferrer">
             {title}
-          </Link>
-        </Heading>
-        <Text>{artist}</Text>
-      </Flex>
-    </GridItem>
+          </a>
+        </h3>
+        <p>{artist}</p>
+      </div>
+    </div>
   );
 };
 

@@ -1,18 +1,15 @@
-import { Container, Separator } from "@chakra-ui/react";
-import { width, padding } from "../../lib/constants";
+import { Separator } from "@/components/ui/separator";
 
 import { getAllProjects } from "../../lib/projects";
 import { setRequestLocale } from "next-intl/server";
 
 // Page sections
-import Posts from "../../components/Posts";
 import Footer from "../../components/Footer";
 import Skills from "../../components/Skills";
 import Navbar from "../../components/layouts/Navbar";
 import Hobbies from "../../components/Hobbies";
 import AboutMe from "../../components/AboutMe";
 import Projects from "../../components/Projects";
-import ContactForm from "../../components/forms/ContactForm";
 import Technologies from "../../components/Technologies";
 import Certifications from "../../components/Certifications";
 import { MotionDiv } from "../../components/ui/MotionDiv";
@@ -45,16 +42,14 @@ export default async function Home({
         transition={{ duration: 0.25, type: "tween" }}
       >
         <AboutMe />
-        <Skills width={width} padding={padding} />
+        <Skills />
         <Projects projects={projects} />
-        <ContactForm width={width} />
         <Certifications />
-        {/* <Posts width={width} padding={padding} /> */}
         <Hobbies />
         <Technologies />
-        <Container pb={10} maxW={width} px={padding}>
+        <div className="page pb-16">
           <Separator />
-        </Container>
+        </div>
         <Footer />
       </MotionDiv>
     </div>

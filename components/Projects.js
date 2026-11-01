@@ -1,39 +1,32 @@
 "use client";
 
 import Project from "./Project";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { width, padding } from "../lib/constants";
-import { Container, Heading, Grid } from "@chakra-ui/react";
 
 const Projects = ({ projects }) => {
   const t = useTranslations("projects");
-  const filteredProjects = projects.filter((project) => project.landingpage !== false);
+  const filteredProjects = projects.filter((project) => project.landingpage !== false).slice(0, 4); // 2x2 grid
 
   return (
-    <Container pt={16} maxW={width} px={padding}>
-      <Heading mb={3}>
-        {t("heading")}
-      </Heading>
-      <Grid
-        templateColumns={{
-          base: "repeat(1, 1fr)",
-          md: "repeat(2, 1fr)",
-        }}
-        gap={4}
-      >
-        {filteredProjects.map((project, index) => (
+    <section className="section">
+      <h2 className="section-title mb-8">{t("heading")}</h2>
+      <div className="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2">
+        {filteredProjects.map((project) => (
           <Project
-            key={index}
+            key={project.slug}
             title={project.title}
-            icon={project.icon}
             slug={project.slug}
-            description={project.description}
             excerpt={project.excerpt}
             image={project.image}
           />
         ))}
-      </Grid>
-    </Container>
+      </div>
+      <Link href="/work" className="group mt-12 inline-flex items-center gap-2 text-lg font-medium">
+        {t("seeAll")}
+        <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+      </Link>
+    </section>
   );
 };
 

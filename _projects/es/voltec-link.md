@@ -1,7 +1,7 @@
 ---
-excerpt: "Este acortador de URLs está hecho con NextJS, MongoDB, ReactJS..."
+excerpt: "Un acortador de URLs hecho con Next.js, MongoDB y Vercel."
 ---
 
 # voltec.link
 
-Este acortador de URLs está hecho con NextJS, MongoDB, ReactJS y Vercel. Es una aplicación que permite al equipo acortar URLs para usarlas en publicaciones de redes sociales, presentaciones y otros lugares donde se necesite un enlace. La aplicación está alojada en Vercel y la base de datos en MongoDB Atlas.
+Un acortador de URLs interno para compartir enlaces limpios en redes sociales, presentaciones y cualquier lugar donde una URL larga estorbe. Construido con Next.js, React y MongoDB Atlas, y alojado en Vercel.

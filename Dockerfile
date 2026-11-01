@@ -1,14 +1,13 @@
 FROM node
 WORKDIR /app
 
-COPY ./package.json .
-COPY ./yarn.lock .
-
-RUN yarn install
+RUN npm i -g pnpm
+COPY ./package.json ./pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 COPY . .
 
 EXPOSE 3000
 
-RUN yarn build
+RUN pnpm build
 
-CMD ["yarn", "start"]
+CMD ["pnpm", "start"]

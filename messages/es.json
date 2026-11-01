@@ -2,17 +2,32 @@
   "meta": {
     "title": "Daniel Medina - Desarrollador Web",
     "titleTemplate": "%s | Daniel Medina",
-    "description": "Me llamo Daniel Medina. Soy estudiante de preparatoria en el Tecnológico de Monterrey. Mis áreas de especialidad incluyen el stack MERN, un conocimiento muy sólido de Next.js y proveedores de nube como AWS y Vercel.",
+    "description": "Daniel Medina, desarrollador full-stack y estudiante de Ciencias Computacionales en el Tecnológico de Monterrey. Creo productos web con React y Next.js, desplegados en AWS y Vercel.",
     "ogLocale": "es_MX",
-    "work": { "title": "Mi Trabajo", "description": "Proyectos que han definido mi carrera como desarrollador web." },
-    "contact": { "title": "Contáctame", "description": "Ponte en contacto con Daniel Medina. Encuéntrame en redes sociales o envíame un mensaje directo." },
-    "certifications": { "title": "Mis Certificaciones", "description": "Certificaciones y credenciales profesionales que he obtenido a lo largo de mi carrera." },
-    "vinyl": { "title": "Colección de Vinilos", "description": "Mi colección personal de discos de vinilo con diversos artistas y géneros." },
-    "projectNotFound": { "title": "Proyecto no encontrado", "description": "No se encontró el proyecto solicitado." }
+    "work": {
+      "title": "Proyectos",
+      "description": "Una selección de los productos y sitios web que he creado en los sectores de salud, legal y seguros."
+    },
+    "contact": {
+      "title": "Contáctame",
+      "description": "Ponte en contacto con Daniel Medina. Encuéntrame en redes sociales o envíame un mensaje."
+    },
+    "certifications": {
+      "title": "Mis Certificaciones",
+      "description": "Certificaciones y credenciales que he obtenido en el camino."
+    },
+    "vinyl": {
+      "title": "Colección de Vinilos",
+      "description": "Mi colección personal de vinilos, con artistas y géneros de todo tipo."
+    },
+    "projectNotFound": {
+      "title": "Proyecto no encontrado",
+      "description": "No pudimos encontrar ese proyecto."
+    }
   },
   "nav": {
     "home": "Inicio",
-    "work": "Mi Trabajo",
+    "work": "Proyectos",
     "contact": "Contacto",
     "switchLanguage": "Cambiar a inglés",
     "otherLanguage": "EN"
@@ -22,90 +37,112 @@
     "certifications": "Certificaciones",
     "vinyl": "Colección de Vinilos",
     "contact": "Contacto",
-    "projects": "Proyectos"
+    "projects": "Proyectos",
+    "explore": "Explorar",
+    "connect": "Conectar",
+    "rights": "Hecho por Daniel Medina. Todos los derechos reservados.",
+    "tagline": "Software, música y vinilos."
   },
   "about": {
     "photoAlt": "Daniel Medina junto a la estatua del Toro de Wall Street",
     "greeting": "Hola, soy Daniel Medina",
+    "position": "Founder @ Studio Kastanien, FDE @ Blue Light Project, & CTO @ Ilex Terra",
     "asciiAlt": "Arte ASCII del Puente de Brooklyn y el skyline del Bajo Manhattan",
     "intro": "Desarrollador full-stack y estudiante de Ciencias Computacionales en el Tecnológico de Monterrey, creando soluciones tecnológicas que generan un impacto real.",
-    "heading": "Sobre Mí 👨‍💻",
+    "heading": "Sobre Mí",
     "p1": "Soy desarrollador de software full-stack y actualmente trabajo en SAMLA, MedicFlow y Blue Bird Consulting, donde combino la experiencia técnica con la estrategia de negocio. Me especializo en crear aplicaciones web escalables con React.js, Next.js y SQL que resuelven retos reales de negocio mediante una arquitectura backend sólida y un diseño frontend intuitivo.",
     "p2": "Mi portafolio presenta proyectos en los sectores de salud, legal y seguros, donde he logrado un impacto medible. Desde desarrollar aplicaciones médicas con IA que cumplen con HIPAA hasta crear sitios web para despachos de abogados con sistemas de reservación integrados, me enfoco en traducir los requerimientos del negocio en aplicaciones listas para producción que aportan valor genuino a usuarios y clientes."
   },
-  "skills": { "heading": "Mis Habilidades 💪" },
-  "projects": { "heading": "Mi Trabajo 🔨" },
-  "work": {
-    "heading": "Mi Trabajo 🔧",
-    "subtitle": "Estos son los proyectos que han definido mi carrera."
+  "skills": {
+    "heading": "Habilidades"
   },
-  "project": { "visit": "Visitar sitio web" },
+  "projects": {
+    "heading": "Trabajo Seleccionado",
+    "seeAll": "Ver todos los proyectos"
+  },
+  "work": {
+    "sortYear": "Año",
+    "newest": "Más reciente primero",
+    "oldest": "Más antiguo primero",
+    "heading": "Lo que he construido",
+    "subtitle": "Desde sitios para clientes hasta productos con IA. Pasa el cursor para ver un adelanto, haz clic para entrar."
+  },
+  "project": {
+    "visit": "Visitar sitio web",
+    "back": "Todos los proyectos",
+    "year": "Año",
+    "site": "Sitio"
+  },
   "contact": {
-    "heading": "Contáctame 🌱",
-    "twitter": "¡Mira mis tuits más recientes!",
-    "github": "Mira todos mis proyectos y mi código.",
-    "email": "Envíame un correo. ¡Ya seas cliente o fan!",
-    "linkedin": "Todo mi perfil profesional, incluyendo mi experiencia laboral."
+    "heading": "Hablemos",
+    "twitter": "Ideas rápidas y en qué ando trabajando.",
+    "github": "Código y proyectos personales.",
+    "email": "Lo mejor para proyectos y colaboraciones.",
+    "linkedin": "Mi trayectoria y experiencia profesional."
   },
   "contactForm": {
-    "heading": "Contrátame 🏢",
-    "subtitle": "¿Te interesa contratarme? ¡Envíame un mensaje!",
+    "heading": "Envía un mensaje",
+    "subtitle": "¿Tienes un proyecto o una idea? Hablemos.",
     "bannerAlt": "Banner de contacto",
-    "email": "Tu correo",
-    "emailPlaceholder": "juan@ejemplo.com",
+    "email": "Correo",
+    "emailPlaceholder": "tu@empresa.com",
     "message": "Mensaje",
-    "messagePlaceholder": "Escribe tu mensaje aquí...",
-    "send": "Enviar correo →",
-    "successTitle": "¡Correo enviado!",
-    "successDescription": "El correo se envió correctamente",
-    "errorTitle": "Error al enviar el correo.",
-    "errorDescription": "Error al enviar el correo"
+    "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+    "send": "Enviar mensaje →",
+    "successTitle": "Mensaje enviado",
+    "successDescription": "Gracias por escribirme. Te responderé pronto.",
+    "errorTitle": "Algo salió mal",
+    "errorDescription": "No se pudo enviar tu mensaje. Inténtalo de nuevo."
   },
   "certifications": {
-    "heading": "Mis Certificaciones 🥇",
-    "subtitle": "Estas son la mayoría de las certificaciones que he obtenido desde que comencé mi carrera.",
+    "heading": "Mis Certificaciones",
+    "subtitle": "Una selección de las certificaciones que he obtenido desde que comencé mi carrera.",
     "viewAll": "Ver todas →",
     "imageAlt": "Imagen de la certificación",
     "items": {
-      "w3-js": "Esta certificación me la otorgó W3Schools al aprobar su examen.",
-      "w3-sql": "Esta certificación demuestra mis conocimientos de SQL y la otorga W3Schools al aprobar su examen de SQL.",
-      "coursera-support": "Obtuve esta certificación al completar el curso Technical Support Fundamentals de Google en Coursera.",
-      "udemy-js-master": "Certifica la finalización del curso Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS de Victor Robles.",
-      "fcc-responsive": "Obtuve esta certificación al completar el curso de Responsive Web Design.",
-      "fcc-js": "Certifica la finalización del curso de Algoritmos y Estructuras de Datos en JavaScript.",
-      "fcc-frontend": "Recibí esta certificación al completar el curso de Front End Libraries de freeCodeCamp.",
-      "fcc-apis": "Obtuve esta certificación por entregar con éxito los 5 proyectos requeridos en el curso de APIs y Microservicios de freeCodeCamp.",
-      "creative-js": "Esta certificación demuestra la finalización de The Creative JavaScript Course.",
-      "w3-html": "Esta certificación demuestra mis habilidades en HTML."
+      "w3-js": "Certificación de JavaScript de W3Schools, obtenida al aprobar su examen.",
+      "w3-sql": "Certificación de SQL de W3Schools, obtenida al aprobar su examen.",
+      "coursera-support": "Curso Technical Support Fundamentals de Google en Coursera.",
+      "udemy-js-master": "Curso Master en JavaScript de Victor Robles: JS, jQuery, Angular y Node.js.",
+      "fcc-responsive": "Programa de Responsive Web Design de freeCodeCamp.",
+      "fcc-js": "Programa de Algoritmos y Estructuras de Datos en JavaScript de freeCodeCamp.",
+      "fcc-frontend": "Programa de Front End Libraries de freeCodeCamp.",
+      "fcc-apis": "Programa de APIs y Microservicios de freeCodeCamp, completado con los 5 proyectos requeridos.",
+      "creative-js": "Finalización de The Creative JavaScript Course.",
+      "w3-html": "Certificación de HTML de W3Schools."
     }
   },
   "hobbies": {
-    "heading": "Pasatiempos 🎧",
-    "text": "Me encanta el café. Me gusta probar distintos métodos de preparación y recetas. Mis bebidas favoritas son los lattes y el café de filtro. Otra cosa que disfruto mucho es coleccionar discos de vinilo. Mis géneros musicales favoritos son el rock y el pop. Disfruto la música de <artists>Clairo, The Midnight, Oasis, Fleetwood Mac, Coldplay, Sabrina Carpenter</artists> y más. Tengo dos perros llamados Toby y Milo, ambos golden doodles.",
-    "espressoAlt": "Taza de espresso",
-    "coldBrewAlt": "Vaso de cold brew",
+    "heading": "Pasatiempos",
+    "text": "Lejos del teclado, casi siempre estoy preparando café: me gusta experimentar con métodos y recetas, y soy fan de los lattes y el café de filtro. También colecciono vinilos, sobre todo de rock y pop, con <artists>Clairo, The Midnight, Oasis, Fleetwood Mac, Coldplay y Sabrina Carpenter</artists> en constante rotación. En casa comparto el sillón con Toby y Milo, mis dos golden doodles.",
+    "espressoAlt": "Latte helado",
+    "cityAlt": "Nueva York desde la ventana de un avión",
     "dogAlt": "Toby"
   },
   "technologies": {
-    "heading": "Mis Tecnologías Favoritas ⭐️",
+    "heading": "Tecnologías Favoritas",
     "logoAlt": "Logotipo de la tecnología",
     "items": {
-      "nextjs": "Next.js es un framework para crear aplicaciones renderizadas en el servidor.",
-      "mongodb": "MongoDB es una base de datos orientada a documentos.",
-      "react": "React es una biblioteca para crear interfaces de usuario.",
-      "tailwind": "Tailwind CSS es un framework de CSS basado en clases de utilidad.",
-      "vercel": "Vercel es una plataforma de hosting para sitios web estáticos y dinámicos.",
-      "github": "GitHub es un sistema de control de versiones basado en la web.",
-      "aws": "AWS es una plataforma de computación en la nube.",
-      "vscode": "VSCode es un editor de código muy potente y extensible.",
-      "iterm": "iTerm 2 es un emulador de terminal.",
-      "figma": "Figma es una herramienta de diseño."
+      "nextjs": "El framework de React para apps rápidas y renderizadas en el servidor.",
+      "mongodb": "Una base de datos de documentos flexible.",
+      "react": "La biblioteca con la que construyo interfaces de usuario.",
+      "tailwind": "Un framework de CSS basado en utilidades para construir rápido.",
+      "vercel": "Hosting y despliegue para apps web modernas.",
+      "github": "Control de versiones y colaboración.",
+      "aws": "Infraestructura en la nube a escala.",
+      "vscode": "Un editor de código rápido y extensible.",
+      "iterm": "Mi terminal de cabecera.",
+      "figma": "Donde los diseños toman forma.",
+      "claudecode": "Mi programador en pareja con IA, en la terminal.",
+      "postgresql": "Una base de datos relacional potente y confiable."
     }
   },
   "vinyl": {
-    "heading": "Mi Colección de Vinilos 🎧",
-    "total": "{count, plural, one {# disco en total} other {# discos en total}}",
+    "heading": "Mi Colección de Vinilos",
+    "total": "{count, plural, one {# disco} other {# discos}}",
     "coverAlt": "{title} de {artist}"
   },
-  "colorMode": { "toggle": "Cambiar modo de color" }
+  "colorMode": {
+    "toggle": "Cambiar modo de color"
+  }
 }

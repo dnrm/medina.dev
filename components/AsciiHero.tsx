@@ -5,13 +5,13 @@ import { useEffect, useRef } from "react";
 const SRC = "/brooklyn.jpg";
 const RAMP = " .:-=+*#%@";
 export const GLYPHS = "!<>-_\\/[]{}=+*^?#01";
-const HOVER_RGB = "59,130,246"; // blue.500
+const HOVER_RGB = "96,175,255"; // blue.400+, brighter
 export const rand = (s: string) => s[(Math.random() * s.length) | 0];
 const FONT_PX = 12; // ponytail: ~15k glyphs/frame at 1440×900; raise if full-screen frames drop
 const HOVER_R = 80; // px
 const INTRO_MS = 1200;
-const SKY_CUT = 0.25; // brightest 25% (sky, haze) becomes empty space
-const GAMMA = 1.6; // >1 thins out midtones so only dark structures go dense
+const SKY_CUT = 0.4; // brightest 40% (sky, haze) becomes empty space
+const GAMMA = 1; // >1 thins out midtones so only dark structures go dense (1 = linear)
 const EDGE_GAIN = 1.0; // how strongly outlines (Sobel) override tone
 
 export default function AsciiHero({ alt }: { alt: string }) {
@@ -120,7 +120,7 @@ export default function AsciiHero({ alt }: { alt: string }) {
       ctx.fillStyle = `rgb(${HOVER_RGB})`;
       for (const i of hot) {
         const x = i % cols, y = (i / cols) | 0;
-        ctx.globalAlpha = 0.4 + 0.6 * heat[i];
+        ctx.globalAlpha = 0.65 + 0.35 * heat[i];
         const ch = Math.random() < heat[i] * 0.35 ? rand(GLYPHS) : RAMP[Math.max(3, Math.round(lum[i] * (RAMP.length - 1)))];
         ctx.fillText(ch, x * cw, y * FONT_PX);
       }
@@ -154,7 +154,7 @@ export default function AsciiHero({ alt }: { alt: string }) {
 
   return (
     <>
-      <canvas ref={ref} aria-hidden style={{ position: "absolute", inset: 0, width: "100%", height: "100%", display: "block", color: "var(--chakra-colors-fg-muted)" }} />
+      <canvas ref={ref} aria-hidden style={{ position: "absolute", inset: 0, width: "100%", height: "100%", display: "block", color: "var(--foreground)", opacity: 0.8 }} />
       <span style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0 0 0 0)" }}>{alt}</span>
     </>
   );

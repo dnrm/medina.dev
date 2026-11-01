@@ -5,7 +5,9 @@ export async function GET() {
   try {
     const response = await getNowPlaying();
 
-    if (response.status === 204 || response.status > 400) {
+    if (response.status === 204) return NextResponse.json({ isPlaying: false });
+    if (response.status >= 400) {
+      console.error("Spotify now-playing", response.status, await response.text());
       return NextResponse.json({ isPlaying: false });
     }
 

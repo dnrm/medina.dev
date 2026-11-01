@@ -6,7 +6,6 @@ const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 const nextConfig = {
   experimental: {
     appDir: true,
-    optimizePackageImports: ["@chakra-ui/react"],
   },
   basePath: process.env.BASE_PATH || "",
   images: {
