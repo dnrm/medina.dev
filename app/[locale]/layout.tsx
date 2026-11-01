@@ -7,6 +7,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Analytics } from "@vercel/analytics/next";
+import { pageSeo, SITE_URL } from "@/lib/seo";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -30,29 +31,21 @@ export async function generateMetadata({
     metadataBase: new URL("https://medina.dev"),
     title: { default: t("title"), template: t("titleTemplate") },
     description: t("description"),
-    keywords: [
-      "Daniel Medina",
-      "Web Developer",
-      "React",
-      "Next.js",
-      "MERN Stack",
-      "AWS",
-      "Vercel",
-    ],
+    keywords: t("keywords").split(", "),
     authors: [{ name: "Daniel Medina" }],
     creator: "Daniel Medina",
-    alternates: {
-      canonical: locale === routing.defaultLocale ? "/" : `/${locale}`,
-      languages: { en: "/", es: "/es" },
-    },
+    ...pageSeo(locale),
     openGraph: {
+      ...pageSeo(locale).openGraph,
       type: "website",
+      siteName: "Daniel Medina",
       locale: t("ogLocale"),
-      url: "https://medina.dev/",
+      alternateLocale: t("ogLocale") === "en_US" ? "es_MX" : "en_US",
       title: t("title"),
       description: t("description"),
-      images: [{ url: "/dm.png", width: 1200, height: 630, alt: t("title") }],
+      images: [{ url: "/dm.png", width: 870, height: 435, alt: t("title") }],
     },
+    robots: { index: true, follow: true, googleBot: { "max-image-preview": "large", "max-snippet": -1 } },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
@@ -73,10 +66,39 @@ export default async function RootLayout({
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "meta" });
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": `${SITE_URL}/#person`,
+        name: "Daniel Medina",
+        url: SITE_URL,
+        image: `${SITE_URL}/me.jpg`,
+        jobTitle: t("jobTitle"),
+        alumniOf: "Tecnológico de Monterrey",
+        knowsAbout: t("keywords").split(", "),
+        sameAs: ["https://github.com/dnrm", "https://www.linkedin.com/in/dnrm/", "https://twitter.com/_dnrm"],
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: "Daniel Medina",
+        inLanguage: locale,
+        publisher: { "@id": `${SITE_URL}/#person` },
+      },
+    ],
+  };
 
   return (
     <html lang={locale} className={geist.variable} suppressHydrationWarning>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-QTFWKHLPEV"
