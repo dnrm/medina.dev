@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { Analytics } from "@vercel/analytics/next";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -95,6 +96,7 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <Provider>{children}</Provider>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
