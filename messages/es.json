@@ -1,8 +1,10 @@
 {
   "meta": {
-    "title": "Daniel Medina - Desarrollador Web",
+    "title": "Daniel Medina - Desarrollador Web Full-Stack (React, Next.js)",
     "titleTemplate": "%s | Daniel Medina",
-    "description": "Daniel Medina, desarrollador full-stack y estudiante de Ciencias Computacionales en el Tecnológico de Monterrey. Creo productos web con React y Next.js, desplegados en AWS y Vercel.",
+    "description": "Daniel Medina es desarrollador web full-stack y estudiante de Ciencias Computacionales en el Tecnológico de Monterrey. Creo productos rápidos con React y Next.js en AWS y Vercel.",
+    "keywords": "Daniel Medina, Desarrollador Web, Desarrollador Full-Stack, Desarrollador React, Desarrollador Next.js, TypeScript, MERN Stack, AWS, Vercel, Tecnológico de Monterrey, Monterrey, México, Portafolio",
+    "jobTitle": "Desarrollador Web Full-Stack",
     "ogLocale": "es_MX",
     "work": {
       "title": "Proyectos",

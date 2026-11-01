@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { pageSeo } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
 import { notFound } from 'next/navigation'
 import { getAllProjects, getProjectBySlug } from "../../../../lib/projects";
@@ -33,18 +34,20 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     return {
       title: project.title,
       description: project.excerpt,
+      ...pageSeo(locale, `/project/${slug}`),
       openGraph: {
+        ...pageSeo(locale, `/project/${slug}`).openGraph,
+        type: "article",
         title: project.title,
         description: project.excerpt,
         images: project.image ? [
           {
             url: project.image,
-            width: 1200,
-            height: 630,
             alt: project.title,
           },
         ] : undefined,
       },
+      twitter: { card: "summary_large_image", title: project.title, description: project.excerpt, images: project.image ? [project.image] : undefined },
     };
   } catch (error) {
     const { locale } = await params;
