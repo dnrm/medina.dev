@@ -3,7 +3,7 @@ import { routing } from "@/i18n/routing";
 import { getAllProjects } from "@/lib/projects";
 import { SITE_URL } from "@/lib/seo";
 
-const pages = ["", "/work", "/certifications", "/contact", "/vinyl"];
+const pages = ["", "/work", "/certifications", "/contact", "/vinyl", "/links"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [

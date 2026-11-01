@@ -10,6 +10,10 @@
       "title": "Proyectos",
       "description": "Una selección de los productos y sitios web que he creado en los sectores de salud, legal y seguros."
     },
+    "links": {
+      "title": "Enlaces",
+      "description": "Encuentra a Daniel Medina en GitHub, LinkedIn y X, además de algunos proyectos recientes."
+    },
     "contact": {
       "title": "Contáctame",
       "description": "Ponte en contacto con Daniel Medina. Encuéntrame en redes sociales o envíame un mensaje."
@@ -143,6 +147,10 @@
     "heading": "Mi Colección de Vinilos",
     "total": "{count, plural, one {# disco} other {# discos}}",
     "coverAlt": "{title} de {artist}"
+  },
+  "links": {
+    "mainSite": "Visita mi sitio web",
+    "recentProjects": "Proyectos recientes"
   },
   "colorMode": {
     "toggle": "Cambiar modo de color"
