@@ -10,6 +10,10 @@
       "title": "Projects",
       "description": "A selection of the products and websites I've built across healthcare, legal and insurance."
     },
+    "links": {
+      "title": "Links",
+      "description": "Find Daniel Medina on GitHub, LinkedIn and X, plus a few recent projects."
+    },
     "contact": {
       "title": "Contact Me",
       "description": "Get in touch with Daniel Medina. Find me on social media or send me a message."
@@ -143,6 +147,10 @@
     "heading": "My Vinyl Collection",
     "total": "{count, plural, one {# record} other {# records}}",
     "coverAlt": "{title} by {artist}"
+  },
+  "links": {
+    "mainSite": "Visit my website",
+    "recentProjects": "Recent projects"
   },
   "colorMode": {
     "toggle": "Toggle color mode"

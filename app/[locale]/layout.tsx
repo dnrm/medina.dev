@@ -52,7 +52,7 @@ export async function generateMetadata({
       description: t("description"),
       images: ["/dm.png"],
     },
-    icons: { icon: "/favicon.ico", shortcut: "/favicon.ico" },
+    icons: { icon: "/icon.png", shortcut: "/icon.png" },
   };
 }
 
