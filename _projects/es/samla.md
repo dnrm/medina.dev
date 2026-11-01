@@ -1,7 +1,7 @@
 ---
-excerpt: "SAMLA es una empresa de tecnología especializada en soluciones de inteligencia artificial para negocios."
+excerpt: "Agentes de IA que automatizan tareas, llamadas y compras para negocios."
 ---
 
 # SAMLA
 
-SAMLA es una empresa de tecnología especializada en soluciones de inteligencia artificial para negocios. Su plataforma ofrece agentes de IA personalizables diseñados para automatizar tareas diarias, gestionar llamadas de clientes y agilizar los procesos de compra. Con agentes como Samuel (gestión de tareas), Sarah (atención de llamadas y reservaciones) y Julian (adquisiciones), SAMLA ayuda a las organizaciones a mejorar su eficiencia, reducir costos y optimizar el servicio al cliente. El servicio es flexible: permite a las empresas elegir y configurar los agentes que mejor se adapten a sus necesidades, y ofrece disponibilidad 24/7 para apoyar la operación continua.
+SAMLA es una empresa de tecnología que crea soluciones de IA para negocios. Sus agentes personalizables automatizan el trabajo diario: Samuel gestiona tareas, Sarah atiende llamadas y reservaciones, y Julian se encarga de las compras. Cada empresa elige y configura los agentes que necesita, mejorando su eficiencia y su servicio al cliente las 24 horas, mientras reduce costos.

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Container, Heading, Separator, Text, Grid } from "@chakra-ui/react";
+import { Separator } from "@/components/ui/separator";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/Footer";
-import { width, padding } from "@/lib/constants";
 import VinylRecord from "@/components/VinylRecord";
 import { MotionDiv } from "@/components/ui/MotionDiv";
 
@@ -175,27 +174,16 @@ export default async function Vinyl({ params }: Props) {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.25, type: "tween" }}
       >
-        <Container pt={{ base: "12", md: "16" }} maxW={width} px={padding} mb={4}>
-          <Heading
-            fontSize={{ base: "2.3em", md: "3em" }}
-          >
-            {t("heading")}
-          </Heading>
-        </Container>
-        <Container pt={4} maxW={width} px={padding}>
-          <Text fontWeight="bold" color="fg.muted">
+        <div className="page mb-4 pt-12 md:pt-16">
+          <h1 className="text-[2.3em] font-semibold md:text-[3em]">{t("heading")}</h1>
+        </div>
+        <div className="page pt-4">
+          <p className="font-bold text-muted-foreground">
             {t("total", { count: collection.length })}
-          </Text>
-        </Container>
-        <Container pt={2} maxW={width} px={padding} pb={16}>
-          <Grid
-            templateColumns={{
-              base: "repeat(1, 1fr)",
-              md: "repeat(2, 1fr)",
-              lg: "repeat(3, 1fr)",
-            }}
-            gap={4}
-          >
+          </p>
+        </div>
+        <div className="page pb-16 pt-2">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {collection.map(({ title, cover, link, artist }) => {
               return (
                 <VinylRecord
@@ -207,14 +195,14 @@ export default async function Vinyl({ params }: Props) {
                 />
               );
             })}
-          </Grid>
-        </Container>
-        <Container pb={10} maxW={width} px={padding}>
+          </div>
+        </div>
+        <div className="page pb-10">
           <Separator />
-        </Container>
-        <Container maxW={width} px={padding}>
+        </div>
+        <div className="page">
           <Footer />
-        </Container>
+        </div>
       </MotionDiv>
     </div>
   );

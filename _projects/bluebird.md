@@ -5,12 +5,10 @@ address: "https://thebluebird.co/"
 slug: "bluebird"
 icon: "🌙"
 image: "/bluebird.jpeg"
-excerpt: "The Blue Bird is powerful statistics application for insurance brokers."
+excerpt: "Fleet analytics for insurance brokers and fleet managers."
 order: 7
 ---
 
 # The Blue Bird
 
----
-
-The Blue Bird is a powerful statistical analytics tool designed to help insurance brokers, fleet managers, and related professionals optimize their operations. It empowers users to monitor and manage vehicle fleets with precision—melding rich, data-driven insights with practical fleet management capabilities. Whether evaluating vehicle performance, analyzing risk, or forecasting trends, The Blue Bird consolidates complex fleet metrics into clear, actionable intelligence, enabling smarter, faster decision-making and more informed strategic planning.
+The Blue Bird is an analytics platform for insurance brokers, fleet managers and related professionals. It turns complex fleet data into clear insights, so teams can track vehicle performance, assess risk and forecast trends to make faster, better-informed decisions.

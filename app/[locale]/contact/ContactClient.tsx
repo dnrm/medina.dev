@@ -1,54 +1,17 @@
 "use client";
 
-import { width, padding } from "../../../lib/constants";
 import Navbar from "../../../components/layouts/Navbar";
 import Footer from "../../../components/Footer";
-import {
-  Container,
-  Heading,
-  Text,
-  Grid,
-  Separator,
-  Link,
-  Flex,
-} from "@chakra-ui/react";
+import { Separator } from "@/components/ui/separator";
 import { MotionDiv } from "../../../components/ui/MotionDiv";
-import ContactForm from "../../../components/forms/ContactForm";
-import { ExternalLink } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Twitter } from "lucide-react";
 import { useTranslations } from "next-intl";
 
+const EMAIL = "daniel@medina.com";
 const socials = [
-  {
-    name: "Twitter 🐦",
-    href: "https://twitter.com/_dnrm",
-    key: "twitter",
-  },
-  {
-    name: "GitHub 👨‍💻",
-    href: "https://github.com/dnrm",
-    key: "github",
-  },
-  // {
-  //   name: "Dev.to 📓",
-  //   href: "https://dev.to/dnrm",
-  //   description: "Read some of my blog posts.",
-  // },
-  // {
-  //   name: "Hashnode 📕",
-  //   href: "https://blog.medina.dev",
-  //   description:
-  //     "Read every single one of my blog posts as soon as they come out!",
-  // },
-  {
-    name: "Email ✉️",
-    href: "mailto:daniel@medina.com",
-    key: "email",
-  },
-  {
-    name: "LinkedIn 💌",
-    href: "https://www.linkedin.com/in/dnrm/",
-    key: "linkedin",
-  },
+  { name: "GitHub", handle: "@dnrm", href: "https://github.com/dnrm", key: "github", Icon: Github },
+  { name: "LinkedIn", handle: "in/dnrm", href: "https://www.linkedin.com/in/dnrm/", key: "linkedin", Icon: Linkedin },
+  { name: "Twitter", handle: "@_dnrm", href: "https://twitter.com/_dnrm", key: "twitter", Icon: Twitter },
 ];
 
 export default function ContactClient() {
@@ -61,48 +24,33 @@ export default function ContactClient() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.25, type: "tween" }}
       >
-        <Container pt={16} maxW={width} px={6} pb={4}>
-          <Heading fontSize={{ base: "2.3em", md: "3em" }} mb={4} letterSpacing={"-1px"}>
-            {t("heading")}
-          </Heading>
-        </Container>
-        <Container maxW={width} px={6}>
-          <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={4}>
-            {socials.map((social) => {
-              return (
-                <Flex
-                  key={social.name}
-                  justifyContent="start"
-                  alignItems="start"
-                  py={3}
-                  px={4}
-                  bgColor={{ base: "gray.100", _dark: "gray.700" }}
-                  flexDir="column"
-                  borderRadius="md"
-                >
-                  <Link href={social.href} target="_blank" w={"full"}>
-                    <Flex
-                      rounded="md"
-                      justifyContent="space-between"
-                      alignItems="start"
-                      w={"full"}
-                    >
-                      <Heading>{social.name}</Heading>
-                      <ExternalLink size={20} />
-                    </Flex>
-                  </Link>
-                  <Text color="fg.muted" letterSpacing={"-0.5px"}>
-                    {t(social.key)}
-                  </Text>
-                </Flex>
-              );
-            })}
-          </Grid>
-        </Container>
-        <ContactForm width={width} />
-        <Container py={10} maxW={width} px={padding}>
+        <div className="page pb-10 pt-16">
+          <p className="mb-3 text-muted-foreground">{t("heading")}</p>
+          <a
+            href={`mailto:${EMAIL}`}
+            className="break-all text-[2.2em] font-semibold tracking-[-1.5px] underline-offset-8 transition-colors hover:text-blue-500 hover:underline sm:text-[3.5em] md:text-[4.5em]"
+          >
+            {EMAIL}
+          </a>
+        </div>
+        <div className="page">
+          <div className="divide-y border-y">
+            {socials.map(({ name, handle, href, key, Icon }) => (
+              <a key={key} href={href} target="_blank" rel="noreferrer"
+                className="group flex items-center gap-4 py-5 transition-colors hover:text-blue-500">
+                <Icon className="size-6 shrink-0" />
+                <div className="flex-1">
+                  <h2 className="text-xl font-semibold">{name} <span className="font-normal text-muted-foreground">{handle}</span></h2>
+                  <p className="text-muted-foreground">{t(key)}</p>
+                </div>
+                <ArrowUpRight className="size-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </a>
+            ))}
+          </div>
+        </div>
+        <div className="page py-10">
           <Separator />
-        </Container>
+        </div>
         <Footer />
       </MotionDiv>
     </div>

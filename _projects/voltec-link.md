@@ -5,13 +5,11 @@ address: "https://volteclink.medina.dev/"
 slug: "voltec-link"
 icon: "⚡️"
 image: "/volteclink.jpeg"
-excerpt: "This URL shortener is built with NextJS, MongoDB, ReactJS..."
+excerpt: "A URL shortener built with Next.js, MongoDB and Vercel."
 order: 6
 landingpage: false
 ---
 
 # voltec.link
 
----
-
-This URL shortener is built with NextJS, MongoDB, ReactJS, and Vercel. It is an application that will allow the team to shorten URLs for use in social media posts, presentations, and other places where a URL is needed. The application is hosted on Vercel, and the database is hosted on MongoDB Atlas.
+An internal URL shortener for sharing clean links in social posts, presentations and anywhere else a long URL gets in the way. Built with Next.js, React and MongoDB Atlas, and hosted on Vercel.

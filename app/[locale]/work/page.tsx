@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { width } from "../../../lib/constants";
 import Navbar from "../../../components/layouts/Navbar";
 import Footer from "../../../components/Footer";
-import Project from "../../../components/Project";
+import WorkList from "../../../components/WorkList";
 import { getAllProjects } from "../../../lib/projects";
-import { Container, Heading, Grid, Separator, Text } from "@chakra-ui/react";
+import { Separator } from "@/components/ui/separator";
 import { MotionDiv } from "../../../components/ui/MotionDiv";
 
 export async function generateMetadata({
@@ -17,8 +16,6 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "meta.work" });
   return { title: t("title"), description: t("description") };
 }
-
-const padding = 6;
 
 export default async function Projects({
   params,
@@ -51,45 +48,17 @@ export default async function Projects({
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.25, type: "tween" }}
       >
-        <Container pt={16} maxW={width} px={padding} pb={12}>
-          <Heading
-            fontSize={{ base: "2.3em", md: "3em" }}
-            mb={4}
-            letterSpacing={"-1px"}
-          >
-            {t("heading")}
-          </Heading>
-          <Text mb={4} color="fg.muted">
-            {t("subtitle")}
-          </Text>
-          <Grid
-            templateColumns={{
-              base: "repeat(1, 1fr)",
-              md: "repeat(2, 1fr)",
-            }}
-            gap={4}
-          >
-            {projects.map((project, index) => {
-              return (
-                <Project
-                  key={index}
-                  title={project.title}
-                  icon={project.icon}
-                  slug={project.slug}
-                  description={project.description}
-                  excerpt={project.excerpt}
-                  image={project.image}
-                />
-              );
-            })}
-          </Grid>
-        </Container>
-        <Container pb={10} maxW={width} px={padding}>
+        <div className="page pb-12 pt-16">
+          <h1 className="mb-4 text-[2.3em] font-semibold tracking-[-1px] md:text-[3em]">{t("heading")}</h1>
+          <p className="mb-10 text-muted-foreground">{t("subtitle")}</p>
+          <WorkList projects={projects.map(({ slug, title, excerpt, image, date }) => ({ slug, title, excerpt, image, date }))} />
+        </div>
+        <div className="page pb-10">
           <Separator />
-        </Container>
-        <Container maxW={width} px={padding}>
+        </div>
+        <div className="page">
           <Footer />
-        </Container>
+        </div>
       </MotionDiv>
     </div>
   );

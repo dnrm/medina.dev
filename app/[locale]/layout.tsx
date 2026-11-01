@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Provider } from "@/components/ui/provider";
 import "../../styles/globals.css";
-import { Geist, Lora } from "next/font/google";
+import { Geist } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -9,13 +9,9 @@ import { routing } from "@/i18n/routing";
 
 const geist = Geist({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-geist",
 });
 
-const lora = Lora({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -78,7 +74,7 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={`${lora.className}`} suppressHydrationWarning>
+    <html lang={locale} className={geist.variable} suppressHydrationWarning>
       <head>
         <script
           async

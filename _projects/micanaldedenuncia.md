@@ -5,10 +5,10 @@ address: "https://mc2.legal/"
 slug: "micanaldedenuncia"
 icon: "🧑‍⚖️"
 image: "/micanaldedenuncia.jpeg"
-excerpt: "A service developed for law firm MC2.Legal as a SaaS."
+excerpt: "An anonymous reporting platform built as a SaaS for MC2.Legal."
 order: 5
 ---
 
 # micanaldedenuncia.mx
 
-Micanaldedenuncia.mx features a completely anonymous way to report and speak out about incidents within a company. This service is offered by the mexican law firm MC2.Legal to their clients as a communication channel between the team of lawyers at MC2 and client company personel.
+micanaldedenuncia.mx is an anonymous channel for reporting incidents within a company. MC2.Legal offers it to their clients as a secure line of communication between their legal team and the client's employees.

@@ -1,10 +1,16 @@
 "use client";
 
-import { Flex, Container, Button, Link as StyledLink } from "@chakra-ui/react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
-import { width, padding } from "../../lib/constants";
-import { ColorModeButton } from "@/components/ui/color-mode";
+import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/ThemeToggle";
+import { cn } from "@/lib/utils";
+
+const links = [
+  { href: "/", key: "home" },
+  { href: "/work", key: "work" },
+  { href: "/contact", key: "contact" },
+] as const;
 
 export default function Navbar({ floating = false }: { floating?: boolean }) {
   const t = useTranslations("nav");
@@ -13,56 +19,42 @@ export default function Navbar({ floating = false }: { floating?: boolean }) {
   const router = useRouter();
   const otherLocale = locale === "en" ? "es" : "en";
   return (
-    <Container
-      pt={{ base: "12", md: "28" }}
-      maxW={width}
-      px={padding}
-      {...(floating && { position: "absolute", top: 0, insetX: 0, zIndex: 2 })}
+    <div
+      className={cn(
+        "page pt-12 md:pt-28",
+        floating && "absolute inset-x-0 top-0 z-[2]"
+      )}
     >
-      <Flex justifyContent="space-between" alignItems="center">
-        <Flex>
-          <StyledLink
-            asChild
-            target={"_self"}
-            fontSize={{ base: "0.8em", md: "1em" }}
-            color="gray.500"
-            pr={2}
-          >
-            <Link href="/">{t("home")}</Link>
-          </StyledLink>
-          <StyledLink
-            target={"_self"}
-            fontSize={{ base: "0.8em", md: "1em" }}
-            color="gray.500"
-            px={2}
-            asChild
-          >
-            <Link href="/work">{t("work")}</Link>
-          </StyledLink>
-          <StyledLink
-            target={"_self"}
-            fontSize={{ base: "0.8em", md: "1em" }}
-            color="gray.500"
-            px={2}
-            asChild
-          >
-            <Link href="/contact">{t("contact")}</Link>
-          </StyledLink>
-        </Flex>
-        <Flex alignItems="center" gap={1}>
+      <div className="flex items-center justify-between">
+        <nav className="flex">
+          {links.map(({ href, key }) => (
+            <Link
+              key={key}
+              href={href}
+              className="px-2 text-[0.8em] text-muted-foreground first:pl-0 hover:underline md:text-[1em]"
+            >
+              {t(key)}
+            </Link>
+          ))}
+        </nav>
+        <div
+          className={cn(
+            "flex items-center gap-1",
+            floating && "rounded-lg border border-border bg-background/80 p-0.5 backdrop-blur-sm"
+          )}
+        >
           <Button
             variant="ghost"
             size="sm"
-            px={2}
-            fontWeight="semibold"
+            className="px-2 font-semibold"
             aria-label={t("switchLanguage")}
             onClick={() => router.replace(pathname, { locale: otherLocale })}
           >
             {t("otherLanguage")}
           </Button>
-          <ColorModeButton />
-        </Flex>
-      </Flex>
-    </Container>
+          <ThemeToggle />
+        </div>
+      </div>
+    </div>
   );
 }

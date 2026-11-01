@@ -1,7 +1,7 @@
 ---
-excerpt: "The Blue Bird es una poderosa aplicación de estadísticas para corredores de seguros."
+excerpt: "Analítica de flotillas para corredores de seguros y administradores de flotillas."
 ---
 
 # The Blue Bird
 
-The Blue Bird es una poderosa herramienta de análisis estadístico diseñada para ayudar a corredores de seguros, administradores de flotillas y profesionales afines a optimizar sus operaciones. Permite monitorear y administrar flotillas de vehículos con precisión, combinando información detallada basada en datos con funciones prácticas de gestión de flotillas. Ya sea para evaluar el desempeño de los vehículos, analizar riesgos o pronosticar tendencias, The Blue Bird consolida métricas complejas en información clara y accionable, lo que permite tomar decisiones más rápidas e inteligentes y planear estrategias con mayor certeza.
+The Blue Bird es una plataforma de analítica para corredores de seguros, administradores de flotillas y profesionales afines. Convierte datos complejos de flotillas en información clara para monitorear el desempeño de los vehículos, evaluar riesgos y anticipar tendencias, y así tomar decisiones más rápidas y mejor fundamentadas.
