@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Provider } from "@/components/ui/provider";
 import "../../styles/globals.css";
-import { Geist } from "next/font/google";
+import { Geist, Source_Serif_4 } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -12,6 +12,11 @@ import { pageSeo, SITE_URL } from "@/lib/seo";
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-geist",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-source-serif",
 });
 
 
@@ -93,7 +98,7 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={locale} className={geist.variable} suppressHydrationWarning>
+    <html lang={locale} className={`${geist.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

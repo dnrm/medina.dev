@@ -26,7 +26,7 @@
 @plugin "@tailwindcss/typography";
 
 @theme inline {
-    --font-heading: 'General Sans', var(--font-geist), system-ui, sans-serif;
+    --font-heading: var(--font-source-serif), Georgia, serif;
     --font-sans: var(--font-geist), system-ui, sans-serif;
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
