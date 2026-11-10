@@ -22,7 +22,7 @@ export default function AboutMe() {
             priority
             className="mb-6 size-[120px] rounded-full border-2 border-border object-cover object-[50%_45%] md:size-[150px]"
           />
-          <h1 className="pointer-events-auto mb-2 cursor-default text-[2.3em] font-semibold tracking-[-0.05em] md:text-[3em]">
+          <h1 className="pointer-events-auto mb-2 cursor-default text-[2.3em] font-medium tracking-[-0.05em] md:text-[3em]">
             <ScrambleText text={t("greeting")} />
           </h1>
           <p className="mb-4 text-sm font-medium text-foreground/80 md:text-base">{t("position")}</p>

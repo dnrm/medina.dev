@@ -29,7 +29,7 @@ export default async function Certifications({ params }: Props) {
         transition={{ duration: 0.25, type: "tween" }}
       >
         <div className="page pb-12 pt-16">
-          <h1 className="mb-4 text-[2.3em] font-semibold tracking-[-1px] md:text-[3em]">{t("heading")}</h1>
+          <h1 className="mb-4 text-[2.3em] font-medium tracking-[-1px] md:text-[3em]">{t("heading")}</h1>
           <p className="mb-4 text-muted-foreground">{t("subtitle")}</p>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {certifications.map((cert) => {

@@ -22,7 +22,7 @@ const VinylRecord = ({ title, artist, cover, link }) => {
         </a>
       </div>
       <div className="flex w-full flex-col p-4">
-        <h3 className="block text-[1em] font-bold tracking-tighter md:text-[1.5em]">
+        <h3 className="block text-[1em] font-semibold tracking-tighter md:text-[1.5em]">
           <a className="block" href={link} target="_blank" rel="noreferrer">
             {title}
           </a>

@@ -15,7 +15,7 @@ const Technology = (props) => {
         />
       )}
       <div className="flex flex-col">
-        <h3 className="font-semibold tracking-tight">{props.title}</h3>
+        <h3 className="font-medium tracking-tight">{props.title}</h3>
         <p className="text-pretty text-muted-foreground">{props.description}</p>
       </div>
     </div>

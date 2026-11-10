@@ -52,7 +52,7 @@ export default function WorkList({ projects: items }: { projects: Item[] }) {
               <Image src={p.image} alt="" width={160} height={120} className="aspect-[4/3] w-20 shrink-0 rounded-lg object-cover md:hidden" />
             )}
             <div className="min-w-0 flex-1">
-              <h2 className="text-2xl font-semibold tracking-tight transition-transform duration-300 ease-out group-hover:translate-x-2 md:text-5xl">
+              <h2 className="text-2xl font-medium tracking-tight transition-transform duration-300 ease-out group-hover:translate-x-2 md:text-5xl">
                 {p.title}
               </h2>
               <p className="mt-1 line-clamp-2 text-pretty text-muted-foreground md:max-w-xl">{p.excerpt}</p>

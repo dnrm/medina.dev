@@ -18,7 +18,7 @@ const Project = (props) => {
         </div>
       )}
       <div className="mt-4 flex items-start justify-between gap-4">
-        <h3 className="text-xl font-semibold tracking-tight md:text-2xl">{props.title}</h3>
+        <h3 className="text-xl font-medium tracking-tight md:text-2xl">{props.title}</h3>
         <span
           aria-hidden
           className="mt-1 text-xl text-muted-foreground transition-transform duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-foreground"

@@ -52,7 +52,7 @@ export default async function Links({ params }: Props) {
           priority
           className="size-28 rounded-full object-cover object-[50%_45%]"
         />
-        <h1 className="text-3xl font-semibold tracking-tight">Daniel Medina</h1>
+        <h1 className="text-3xl font-medium tracking-tight">Daniel Medina</h1>
         <p className="text-sm text-muted-foreground">{about("position")}</p>
       </header>
 

@@ -39,7 +39,7 @@ export default function ProjectClient({ project, content }: ProjectClientProps) 
             {t("back")}
           </Link>
 
-          <h1 className="mt-8 text-balance text-5xl font-semibold leading-[0.95] tracking-[-0.04em] md:text-8xl">
+          <h1 className="mt-8 text-balance text-5xl font-medium leading-[0.95] tracking-[-0.04em] md:text-8xl">
             {project.title}
           </h1>
           {project.excerpt && (

@@ -176,7 +176,7 @@ export default async function Vinyl({ params }: Props) {
         transition={{ duration: 0.25, type: "tween" }}
       >
         <div className="page mb-4 pt-12 md:pt-16">
-          <h1 className="text-[2.3em] font-semibold md:text-[3em]">{t("heading")}</h1>
+          <h1 className="text-[2.3em] font-medium md:text-[3em]">{t("heading")}</h1>
         </div>
         <div className="page pt-4">
           <p className="font-bold text-muted-foreground">

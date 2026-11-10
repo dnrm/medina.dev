@@ -19,7 +19,7 @@ const Certification = ({ title, src, children, href }) => {
           placeholder="blur"
         />
       </div>
-      <h3 className="mt-4 text-xl font-semibold tracking-tight">
+      <h3 className="mt-4 text-xl font-medium tracking-tight">
         {/* stretched link: whole card is clickable */}
         <a href={href} className="after:absolute after:inset-0">
           {title}
