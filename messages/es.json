@@ -56,8 +56,8 @@
     "asciiAlt": "Arte ASCII del Puente de Brooklyn y el skyline del Bajo Manhattan",
     "intro": "Desarrollador full-stack y estudiante de Ciencias Computacionales en el Tecnológico de Monterrey, creando soluciones tecnológicas que generan un impacto real.",
     "heading": "Sobre Mí",
-    "p1": "Soy desarrollador de software full-stack y actualmente trabajo en SAMLA, MedicFlow y Blue Bird Consulting, donde combino la experiencia técnica con la estrategia de negocio. Me especializo en crear aplicaciones web escalables con React.js, Next.js y SQL que resuelven retos reales de negocio mediante una arquitectura backend sólida y un diseño frontend intuitivo.",
-    "p2": "Mi portafolio presenta proyectos en los sectores de salud, legal y seguros, donde he logrado un impacto medible. Desde desarrollar aplicaciones médicas con IA que cumplen con HIPAA hasta crear sitios web para despachos de abogados con sistemas de reservación integrados, me enfoco en traducir los requerimientos del negocio en aplicaciones listas para producción que aportan valor genuino a usuarios y clientes."
+    "p1": "Soy ingeniero de software full-stack y fundador de Studio Kastanien, donde desarrollo software para clientes que van desde pequeños negocios hasta grandes empresas. También soy FDE en Blue Light Project y CTO de Ilex Terra. Me enfoco en productos sólidos, confiables y diseñados para mejorar la forma en que un negocio realmente opera.",
+    "p2": "Mi trabajo abarca los sectores de salud, legal y seguros. He creado aplicaciones médicas con IA que cumplen con HIPAA y sitios web para despachos de abogados con sistemas de reservación integrados. En cada proyecto convierto los requerimientos del negocio en software listo para producción, para que tanto quienes lo usan como los clientes que lo encargan vean resultados claros y medibles."
   },
   "skills": {
     "heading": "Habilidades"
