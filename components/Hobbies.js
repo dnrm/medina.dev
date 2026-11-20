@@ -21,9 +21,10 @@ const Hobbies = () => {
           })}
         </p>
       </div>
-      <div className="mt-12 grid auto-rows-[16rem] grid-cols-1 gap-4 md:auto-rows-[14rem] md:grid-cols-4">
+      <div className="-mx-6 mt-12 overflow-x-clip md:mx-0 md:overflow-visible">
+      <div className="hobbies-pan flex snap-x snap-mandatory gap-4 overflow-x-auto [scrollbar-width:none] px-6 md:grid md:auto-rows-[14rem] md:grid-cols-4 md:overflow-visible md:px-0">
         {photos.map(({ src, altKey, blur, span }) => (
-          <div key={src} className={`relative overflow-hidden rounded-2xl bg-muted ${span}`}>
+          <div key={src} className={`relative h-64 w-[80%] shrink-0 snap-center overflow-hidden rounded-2xl bg-muted md:h-auto md:w-auto ${span}`}>
             <Image
               src={src}
               alt={t(altKey)}
@@ -35,6 +36,7 @@ const Hobbies = () => {
             />
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

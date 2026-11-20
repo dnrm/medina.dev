@@ -18,7 +18,7 @@ export default function AboutMe() {
             src="/me.jpg"
             alt={t("photoAlt")}
             width={600}
-            height={800}
+            height={900}
             priority
             className="mb-6 size-[120px] rounded-full border-2 border-border object-cover object-[50%_45%] md:size-[150px]"
           />

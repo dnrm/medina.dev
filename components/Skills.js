@@ -6,6 +6,7 @@ const skills = [
   "Next.js", "Supabase", "Typescript", "Javascript", "Prisma", "React", "Node.js", "ShadCN",
   "CSS", "MongoDB", "HTML", "AWS", "Docker", "Sass", "Cursor", "Tailwind CSS",
   "Vercel", "Bootstrap", "Chakra UI", "MySQL", "PostgreSQL", "Angular", "Git", "Figma",
+  "Claude", "Codex",
 ];
 
 // brand colors on hover; near-black brands use a mid grey so they stay visible in dark mode
@@ -16,6 +17,7 @@ const colors = {
   Docker: "#2496ed", Sass: "#cc6699", Cursor: "#a1a1aa", "Tailwind CSS": "#38bdf8",
   Vercel: "#a1a1aa", Bootstrap: "#7952b3", "Chakra UI": "#319795", MySQL: "#4479a1",
   PostgreSQL: "#336791", Angular: "#dd0031", Git: "#f05032", Figma: "#a259ff",
+  Claude: "#d97757", Codex: "#a1a1aa",
 };
 
 // three rows, alternating direction and speed

@@ -206,3 +206,19 @@
 .disco:hover {
   animation: disco 0.6s steps(1, end) infinite;
 }
+
+/* Mobile: page scroll pans the photo row sideways. Browsers without scroll-driven
+   animations keep the native swipe row. */
+@keyframes hobbies-pan {
+  to { transform: translateX(calc(-140% - 2rem)); }
+}
+@supports (animation-timeline: view()) {
+  @media (width < 48rem) {
+    .hobbies-pan {
+      overflow: visible;
+      animation: hobbies-pan linear both;
+      animation-timeline: view();
+      animation-range: entry 0% exit 50%;
+    }
+  }
+}
